@@ -5,6 +5,7 @@ Downloaded from http://rochet2.github.io/
 Bugs and contact with E-mail: Rochet2@post.com
 */
 
+-- Have to be ported to master branch
 SET
 @NPC_ENTRY := 9000000, -- teleporter entry
 
