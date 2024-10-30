@@ -1,3 +1,5 @@
+/* Ported to TrinityCore Master Branch by Wishmaster */
+
 SET
 @BROAD_TEXT     := 900000,
 @VBUILD         := 56819;
