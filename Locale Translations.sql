@@ -1,4 +1,4 @@
--- Ported to TrinityCore Master Branch by Wishmaster
+/* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
 @ENTRY          := 9000000,
