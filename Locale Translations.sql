@@ -1,3 +1,5 @@
+-- Ported to TrinityCore Master Branch by Wishmaster
+
 SET
 @ENTRY          := 9000000,
 @NAME           := "Portal Master",
