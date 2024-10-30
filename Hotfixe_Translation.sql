@@ -1,21 +1,10 @@
 SET
-@ENTRY          := 9000000,
-@NAME           := "Portal Master",
-@SUBNAME        := "Where do you go",
-@MODEL          := 21572,
-
-@AURA           := "30540", -- "35766" = casting
-
-@TEXT_ID        := 900000,
-@GOSSIP_MENU    := 200000,
 @BROAD_TEXT     := 900000,
-@VBUILD         := 56819,
-@RUNE           := 194394;
+@VBUILD         := 56819;
 
 -- Deleting code
-
-
-
+DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+4;
+DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+4;
 
 -- Table Hotfix -- Remettre le texte original de la ligne 200000 a chopper sur la bdd qui est en place sur le minipc
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES 
