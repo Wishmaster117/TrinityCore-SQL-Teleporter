@@ -483,7 +483,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+10, 7, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 (@GOSSIP_MENU+10, 8, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 (@GOSSIP_MENU+10, 9, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
-(@GOSSIP_MENU+10, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
+(@GOSSIP_MENU+10, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Pandaria
 (@GOSSIP_MENU+11, 0, NULL, "Sanctuaire des Deux Lunes", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Deux Lunes?"), -- Sanctuaire des deux lunes
 (@GOSSIP_MENU+11, 1, NULL, "Sanctuaire des Sept étoiles", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Sept étoiles?"), -- Sanctuaire des Sept étoiles Alliance
