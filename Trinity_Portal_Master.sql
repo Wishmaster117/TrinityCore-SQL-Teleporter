@@ -21,7 +21,6 @@ SET
 @RUNE           := 194394;
 
 -- Deleting code
-
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
@@ -35,7 +34,6 @@ DELETE from gameobject WHERE ID = @RUNE AND guid >= 1000000098;
 DELETE FROM creature_text WHERE CreatureID = @ENTRY;
 
 -- Teleporter
-
 -- Create Creature
 INSERT INTO `creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `name`, `femaleName`, `subname`, `TitleAlt`, `IconName`, `RequiredExpansion`, `VignetteID`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `Classification`, `dmgschool`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `unit_flags3`, `family`, `trainer_class`, `type`, `VehicleId`, `AIName`, `MovementType`, `ExperienceModifier`, `RacialLeader`, `movementId`, `WidgetSetID`, `WidgetSetUnitConditionID`, `RegenHealth`, `CreatureImmunitiesId`, `flags_extra`, `ScriptName`, `StringId`, `VerifiedBuild`) 
 VALUES (@ENTRY, 0, 0, @NAME, NULL, @SUBNAME, NULL, 'Directions', 0, 0, 35, 1, 1.14286, 1.25, 1, 2, 0, 0, 0, 1, 1, 1, 4, 0, 0, 0, 0, 7, 0, 'SmartAI', 0, 1, 0, 0, 0, 0, 1, 0, 2, '', NULL, 56421);
@@ -47,8 +45,6 @@ VALUES (@ENTRY, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, @AURA);
 -- Link menu to creature
 INSERT INTO `creature_template_gossip` (`CreatureID`, `MenuID`, `VerifiedBuild`) 
 VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
-
-
 
 -- Gossip header text link to menus
 INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
@@ -62,7 +58,6 @@ INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
 (@GOSSIP_MENU+5, @TEXT_ID+4),
 (@GOSSIP_MENU, @TEXT_ID+1),
 (@GOSSIP_MENU, @TEXT_ID);
-
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`) VALUES -- Remettre le texte original ID 200000
@@ -120,8 +115,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 469, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde");
 
--- Conditions for gossip option levels
-
+-- Conditions for gossip option levels (SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */)
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
 (15, @GOSSIP_MENU+8, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+8, 8, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -244,9 +238,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU, 11, 27, 30, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 10, 27, 57, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 9, 27, 67, 3, 0, "Portal Master - Level req"),
-
 -- Ajout The War Within
--- INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
 (15, @GOSSIP_MENU+10, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+10, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+10, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -268,7 +260,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+11, 2, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+11, 1, 27, 77, 3, 0, "Portal Master - Level req"), -- Sanctuaire des Sept étoiles Alliance
 (15, @GOSSIP_MENU+11, 0, 27, 77, 3, 0, "Portal Master - Level req"), -- Sanctuaire des deux lunes Horde
-
+-- Draenor
 (15, @GOSSIP_MENU+12, 9, 27, 77, 3, 0, "Portal Master - Level req"), 
 (15, @GOSSIP_MENU+12, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+12, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -279,7 +271,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+12, 2, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+12, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+12, 0, 27, 77, 3, 0, "Portal Master - Level req"),
-
+-- Legion
 (15, @GOSSIP_MENU+13, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+13, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+13, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -290,7 +282,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+13, 2, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+13, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+13, 0, 27, 77, 3, 0, "Portal Master - Level req"),
-
+-- BFA
 (15, @GOSSIP_MENU+14, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+14, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+14, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -301,7 +293,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+14, 2, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+14, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+14, 0, 27, 77, 3, 0, "Portal Master - Level req"),
-
+-- Shadowlands
 (15, @GOSSIP_MENU+15, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+15, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+15, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -312,7 +304,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+15, 2, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+15, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+15, 0, 27, 77, 3, 0, "Portal Master - Level req"),
-
+-- Dragonflight
 (15, @GOSSIP_MENU+16, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+16, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+16, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -325,7 +317,6 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+16, 0, 27, 77, 3, 0, "Portal Master - Level req");
 
 -- Gossip options:
-
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
 (@GOSSIP_MENU, 1, NULL, "Stormwind", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
 (@GOSSIP_MENU, 2, NULL, "Orgrimmar", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
@@ -505,7 +496,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+11, 8, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
 (@GOSSIP_MENU+11, 9, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
 (@GOSSIP_MENU+11, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
-
+  -- Draenor
 (@GOSSIP_MENU+12, 0, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 1, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 2, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
@@ -517,7 +508,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+12, 8, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 9, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
-
+-- Legion
 (@GOSSIP_MENU+13, 0, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 1, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 2, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
@@ -529,7 +520,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+13, 8, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 9, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
-
+-- BFA
 (@GOSSIP_MENU+14, 0, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 1, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 2, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
@@ -541,7 +532,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+14, 8, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 9, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
-
+-- Shadowlands
 (@GOSSIP_MENU+15, 0, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 1, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 2, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
@@ -553,7 +544,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+15, 8, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 9, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
-
+-- Dragonflight
 (@GOSSIP_MENU+16, 0, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 1, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 2, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
@@ -567,7 +558,6 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+16, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
 
 -- Teleport scripts:
-
 INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
 (@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script"),
 (@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1601.08, -4378.69, 9.9846, 2.14362, "Teleporter script"),
@@ -700,9 +690,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 129, 0, 62, 0, 100, 0, @GOSSIP_MENU+8, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Teleporter script"),
 (@ENTRY, 0, 130, 0, 62, 0, 100, 0, @GOSSIP_MENU+8, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Teleporter script"),
 (@ENTRY, 0, 131, 0, 62, 0, 100, 0, @GOSSIP_MENU+8, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Teleporter script"),
-
 -- The War Within
--- INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES
 (@ENTRY, 0, 132, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 133, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 134, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -713,7 +701,6 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 139, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 140, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 141, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
 -- Pandaria 
 (@ENTRY, 0, 142, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 0, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1581.477051, 918.753906, 473.700897, 6.224266, "Sanctuaire des deux lunes"), -- Sanctuaire des deux lunes Horde
 (@ENTRY, 0, 143, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 1, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 891.921082, 305.094269, 506.095520, 3.648135, "Sanctuaire des Sept étoiles"),-- Sanctuaire des Sept étoiles Alliance
@@ -725,7 +712,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 149, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 150, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 151, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
+-- Draenor
 (@ENTRY, 0, 152, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 153, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 154, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -736,7 +723,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 159, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 160, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 161, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
+-- Legion
 (@ENTRY, 0, 162, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 163, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 164, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -747,7 +734,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 169, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 170, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 171, 0, 62, 0, 100, 0, @GOSSIP_MENU+13, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
+-- BFA
 (@ENTRY, 0, 172, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 173, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 174, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -758,7 +745,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 179, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 180, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 181, 0, 62, 0, 100, 0, @GOSSIP_MENU+14, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
+-- Shadowlands
 (@ENTRY, 0, 182, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 183, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 184, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -769,7 +756,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 189, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 190, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 191, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
-
+-- Dragonflight
 (@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
@@ -780,12 +767,6 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 2071, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10");
-
--- Locals:
-
-
-
-
 
 
 -- dornogal Mapid: 2552 X: 2871.7 Y: -2444.6 Z: 266.761 Orientacion:3.93463
