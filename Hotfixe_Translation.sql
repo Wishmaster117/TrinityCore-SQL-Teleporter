@@ -10,6 +10,7 @@ DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+4
 
 -- Table Hotfix -- Remettre le texte original de la ligne 200000 a chopper sur la bdd qui est en place sur le minipc
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES 
+('$BRemember, Pandaria’s beauty is matched only by its danger. Last chance to chicken out!$B', '', @BROAD_TEXT+5, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Pandaria
 ('$BWhere would you like to be ported?$B', '', @BROAD_TEXT+4, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
 ('$BBe careful with choosing raids, I wont be there if you wipe.$B', '', @BROAD_TEXT+3, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
 ('$BUp for some dungeon exploring?$B', '', @BROAD_TEXT+2, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),

@@ -48,6 +48,7 @@ VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
 
 -- Gossip header text link to menus
 INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
+(@GOSSIP_MENU+11, @TEXT_ID+5), -- Pandaria header
 (@GOSSIP_MENU+4, @TEXT_ID+3),
 (@GOSSIP_MENU+3, @TEXT_ID+2),
 (@GOSSIP_MENU+2, @TEXT_ID+2),
@@ -61,6 +62,7 @@ INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`) VALUES -- Remettre le texte original ID 200000
+(@TEXT_ID+5, 1, @BROAD_TEXT+5), -- Pandaria header
 (@TEXT_ID+4, 1, @BROAD_TEXT+4),
 (@TEXT_ID+3, 1, @BROAD_TEXT+3),
 (@TEXT_ID+2, 1, @BROAD_TEXT+2),
