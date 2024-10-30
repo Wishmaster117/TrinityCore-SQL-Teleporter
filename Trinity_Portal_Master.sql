@@ -9,7 +9,7 @@ Ported to TrinityCore Master Branch by Wishmaster
 SET
 @ENTRY          := 9000000,
 @NAME           := "Portal Master",
-@SUBNAME        := "Where do you go",
+@SUBNAME        := "Where do you go ?",
 @MODEL          := 21572,
 
 @AURA           := "30540", -- "35766" = casting
