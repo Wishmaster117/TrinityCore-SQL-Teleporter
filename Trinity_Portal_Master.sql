@@ -85,28 +85,9 @@ INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) V
 /*INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `SoundPlayType`, `BroadcastTextId`, `TextRange`, `comment`) 
 VALUES (@ENTRY, 0, 2, 'For the Horde!', 12, 7, 100, 0, 0, 0, 0, 1867, 0, 'Test'); */
 
--- Conditions for gossip option and menu factions : ConditionValue1 469 = Alliance, 67 = Horde
+-- Conditions for gossip option and menu factions : ConditionValue1 469 = Alliance, 67 = Horde , [SourceGroup = OptionID of gossip_menu_option table]
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, `Comment`) VALUES
 (15, @GOSSIP_MENU, 1, 6, 469, "Stormwind"),
-(15, @GOSSIP_MENU+5, 2, 6, 469, "Dun Morogh"),
-(15, @GOSSIP_MENU+5, 3, 6, 67, "Tirisfal Glades"),
-(15, @GOSSIP_MENU+5, 4, 6, 67, "Ghostlands"),
-(15, @GOSSIP_MENU+5, 5, 6, 469, "Loch modan"),
-(15, @GOSSIP_MENU+5, 6, 6, 67, "Silverpine Forest"),
-(15, @GOSSIP_MENU+5, 7, 6, 469, "Westfall"),
-(15, @GOSSIP_MENU+5, 8, 6, 469, "Redridge mountains"),
-(15, @GOSSIP_MENU+5, 9, 6, 469, "Duskwood"),
-(15, @GOSSIP_MENU+5, 11, 6, 469, "Wetlands"),
-(15, @GOSSIP_MENU+6, 0, 6, 469, "Azuremyst Isle"),
-(15, @GOSSIP_MENU+6, 1, 6, 469, "Teldrassil"),
-(15, @GOSSIP_MENU+6, 2, 6, 67, "Durotar"),
-(15, @GOSSIP_MENU+6, 3, 6, 67, "Mulgore"),
-(15, @GOSSIP_MENU+6, 4, 6, 469, "Bloodmyst Isle"),
-(15, @GOSSIP_MENU+6, 5, 6, 469, "Darkshore"),
-(15, @GOSSIP_MENU+6, 6, 6, 67, "The Barrens"),
-(15, @GOSSIP_MENU+5, 1, 6, 67, "Eversong Woods"),
-(15, @GOSSIP_MENU+5, 0, 6, 469, "Elwynn Forest"),
-(15, @GOSSIP_MENU+4, 22, 6, 67, "Zul'Aman"),
 (15, @GOSSIP_MENU, 2, 6, 67, "Orgrimmar"),
 (15, @GOSSIP_MENU, 3, 6, 469, "Darnassus"),
 (15, @GOSSIP_MENU, 4, 6, 469, "Ironforge"),
@@ -123,11 +104,40 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+1, 6, 6, 67, "Scarlet Monastery"),
 (15, @GOSSIP_MENU+1, 7, 6, 67, "Shadowfang Keep"),
 (15, @GOSSIP_MENU+1, 8, 6, 67, "Wailing Caverns"),
+(15, @GOSSIP_MENU+4, 22, 6, 67, "Zul'Aman"),
+(15, @GOSSIP_MENU+5, 2, 6, 469, "Dun Morogh"),
+(15, @GOSSIP_MENU+5, 3, 6, 67, "Tirisfal Glades"),
+(15, @GOSSIP_MENU+5, 4, 6, 67, "Ghostlands"),
+(15, @GOSSIP_MENU+5, 5, 6, 469, "Loch modan"),
+(15, @GOSSIP_MENU+5, 6, 6, 67, "Silverpine Forest"),
+(15, @GOSSIP_MENU+5, 7, 6, 469, "Westfall"),
+(15, @GOSSIP_MENU+5, 8, 6, 469, "Redridge mountains"),
+(15, @GOSSIP_MENU+5, 9, 6, 469, "Duskwood"),
+(15, @GOSSIP_MENU+5, 11, 6, 469, "Wetlands"),
+(15, @GOSSIP_MENU+5, 1, 6, 67, "Eversong Woods"),
+(15, @GOSSIP_MENU+5, 0, 6, 469, "Elwynn Forest"),
+(15, @GOSSIP_MENU+6, 0, 6, 469, "Azuremyst Isle"),
+(15, @GOSSIP_MENU+6, 1, 6, 469, "Teldrassil"),
+(15, @GOSSIP_MENU+6, 2, 6, 67, "Durotar"),
+(15, @GOSSIP_MENU+6, 3, 6, 67, "Mulgore"),
+(15, @GOSSIP_MENU+6, 4, 6, 469, "Bloodmyst Isle"),
+(15, @GOSSIP_MENU+6, 5, 6, 469, "Darkshore"),
+(15, @GOSSIP_MENU+6, 6, 6, 67, "The Barrens"),
 (15, @GOSSIP_MENU+6, 9, 6, 67, "Thousand Needles"),
 (15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Pandarie Horde
 (15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 469, "For the Alliance"),
-(14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde");
+(14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde"),
+-- Debut test conditions regroupées
+(15, @GOSSIP_MENU+17, 0, 6, 469, "Stormwind"),
+(15, @GOSSIP_MENU+17, 1, 6, 67, "Orgrimmar"),
+(15, @GOSSIP_MENU+17, 2, 6, 469, "Darnassus"),
+(15, @GOSSIP_MENU+17, 3, 6, 469, "Ironforge"),
+(15, @GOSSIP_MENU+17, 4, 6, 469, "Exodar"),
+(15, @GOSSIP_MENU+17, 5, 6, 67, "Thunder bluff"),
+(15, @GOSSIP_MENU+17, 6, 6, 67, "Undercity"),
+(15, @GOSSIP_MENU+17, 7, 6, 67, "Silvermoon city");
+-- Fin test conditions regroupées
 
 -- Conditions for gossip option levels (SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */)
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
@@ -359,6 +369,21 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU, 25, NULL, "BFA", @GOSSIP_MENU+14, 0, 0, 0, NULL), -- Ajout BFA = menu + 14
 (@GOSSIP_MENU, 26, NULL, "Shadowlands", @GOSSIP_MENU+15, 0, 0, 0, NULL), -- Ajout Shadowlands = menu + 15
 (@GOSSIP_MENU, 27, NULL, "Dragonflight", @GOSSIP_MENU+16, 0, 0, 0, NULL), -- Ajout Dragonflight = menu + 16
+-- Test regroupage --
+(@GOSSIP_MENU, 28, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Test regroupper les capitales
+(@GOSSIP_MENU+17, 0, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
+(@GOSSIP_MENU+17, 1, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
+(@GOSSIP_MENU+17, 2, NULL, "Darnassus", 0, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
+(@GOSSIP_MENU+17, 3, NULL, "Ironforge", 0, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
+(@GOSSIP_MENU+17, 4, NULL, "Exodar", 0, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
+(@GOSSIP_MENU+17, 5, NULL, "Thunder bluff", 0, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
+(@GOSSIP_MENU+17, 6, NULL, "Undercity", 0, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
+(@GOSSIP_MENU+17, 7, NULL, "Silvermoon city", 0, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
+(@GOSSIP_MENU+17, 8, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
+(@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
+(@GOSSIP_MENU+17, 10, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
+(@GOSSIP_MENU+17, 11, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+-- Fin de test regroupage --
 (@GOSSIP_MENU+1, 0, NULL, "Gnomeregan", 0, 0, 0, 0, "Are you sure, that you want to go to Gnomeregan?"),
 (@GOSSIP_MENU+1, 1, NULL, "The Deadmines", 0, 0, 0, 0, "Are you sure, that you want to go to The Deadmines?"),
 (@GOSSIP_MENU+1, 2, NULL, "The Stockade", 0, 0, 0, 0, "Are you sure, that you want to go to The Stockade?"),
