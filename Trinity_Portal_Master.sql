@@ -25,7 +25,7 @@ DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
 DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
-DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+11;
+DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+12;
 DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
 DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
@@ -131,14 +131,14 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 469, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde"),
 -- Debut test conditions regroupées
-(15, @GOSSIP_MENU+17, 0, 6, 469, "Stormwind"),
-(15, @GOSSIP_MENU+17, 1, 6, 67, "Orgrimmar"),
-(15, @GOSSIP_MENU+17, 2, 6, 469, "Darnassus"),
-(15, @GOSSIP_MENU+17, 3, 6, 469, "Ironforge"),
-(15, @GOSSIP_MENU+17, 4, 6, 469, "Exodar"),
-(15, @GOSSIP_MENU+17, 5, 6, 67, "Thunder bluff"),
-(15, @GOSSIP_MENU+17, 6, 6, 67, "Undercity"),
-(15, @GOSSIP_MENU+17, 7, 6, 67, "Silvermoon city");
+(15, @GOSSIP_MENU+17, 1, 6, 469, "Stormwind"),
+(15, @GOSSIP_MENU+17, 2, 6, 67, "Orgrimmar"),
+(15, @GOSSIP_MENU+17, 3, 6, 469, "Darnassus"),
+(15, @GOSSIP_MENU+17, 4, 6, 469, "Ironforge"),
+(15, @GOSSIP_MENU+17, 5, 6, 469, "Exodar"),
+(15, @GOSSIP_MENU+17, 6, 6, 67, "Thunder bluff"),
+(15, @GOSSIP_MENU+17, 7, 6, 67, "Undercity"),
+(15, @GOSSIP_MENU+17, 8, 6, 67, "Silvermoon city");
 -- Fin test conditions regroupées
 
 -- Conditions for gossip option levels (SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */)
@@ -356,19 +356,20 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- (@GOSSIP_MENU, 10, NULL, "Shattrath", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
 -- (@GOSSIP_MENU, 11, NULL, "Booty bay", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
 -- Test regroupage --
+
 (@GOSSIP_MENU, 1, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Test regroupper les capitales
-(@GOSSIP_MENU+17, 0, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
-(@GOSSIP_MENU+17, 1, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
-(@GOSSIP_MENU+17, 2, NULL, "Darnassus", 0, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
-(@GOSSIP_MENU+17, 3, NULL, "Ironforge", 0, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
-(@GOSSIP_MENU+17, 4, NULL, "Exodar", 0, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
-(@GOSSIP_MENU+17, 5, NULL, "Thunder bluff", 0, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
-(@GOSSIP_MENU+17, 6, NULL, "Undercity", 0, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
-(@GOSSIP_MENU+17, 7, NULL, "Silvermoon city", 0, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
-(@GOSSIP_MENU+17, 8, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
+(@GOSSIP_MENU+17, 1, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
+(@GOSSIP_MENU+17, 2, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
+(@GOSSIP_MENU+17, 3, NULL, "Darnassus", 0, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
+(@GOSSIP_MENU+17, 4, NULL, "Ironforge", 0, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
+(@GOSSIP_MENU+17, 5, NULL, "Exodar", 0, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
+(@GOSSIP_MENU+17, 6, NULL, "Thunder bluff", 0, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
+(@GOSSIP_MENU+17, 7, NULL, "Undercity", 0, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
+(@GOSSIP_MENU+17, 8, NULL, "Silvermoon city", 0, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
+(@GOSSIP_MENU+17, 10, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
 (@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
-(@GOSSIP_MENU+17, 10, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
-(@GOSSIP_MENU+17, 11, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+17, 11, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
+(@GOSSIP_MENU+17, 12, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Fin de test regroupage --
 (@GOSSIP_MENU, 12, NULL, "Gurubashi arena", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Arena?"),
 (@GOSSIP_MENU, 13, NULL, "Eastern Kingdoms", @GOSSIP_MENU+5, 0, 0, 0, NULL),
@@ -600,18 +601,31 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 
 -- Teleport scripts:
 INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
-(@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script"),
-(@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1601.08, -4378.69, 9.9846, 2.14362, "Teleporter script"),
-(@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script"),
-(@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script"),
-(@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script"),
-(@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script"),
-(@ENTRY, 0, 7, 0, 62, 0, 100, 0, @GOSSIP_MENU, 3, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script"),
-(@ENTRY, 0, 8, 0, 62, 0, 100, 0, @GOSSIP_MENU, 4, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script"),
-(@ENTRY, 0, 9, 0, 62, 0, 100, 0, @GOSSIP_MENU, 5, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script"),
-(@ENTRY, 0, 10, 0, 62, 0, 100, 0, @GOSSIP_MENU, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script"),
-(@ENTRY, 0, 11, 0, 62, 0, 100, 0, @GOSSIP_MENU, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script"),
-(@ENTRY, 0, 12, 0, 62, 0, 100, 0, @GOSSIP_MENU, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script"),
+-- (@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script"),
+-- (@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1601.08, -4378.69, 9.9846, 2.14362, "Teleporter script"),
+-- (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script"),
+-- (@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script"),
+-- (@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script"),
+-- (@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script"),
+-- (@ENTRY, 0, 7, 0, 62, 0, 100, 0, @GOSSIP_MENU, 3, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script"),
+-- (@ENTRY, 0, 8, 0, 62, 0, 100, 0, @GOSSIP_MENU, 4, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script"),
+-- (@ENTRY, 0, 9, 0, 62, 0, 100, 0, @GOSSIP_MENU, 5, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script"),
+-- (@ENTRY, 0, 10, 0, 62, 0, 100, 0, @GOSSIP_MENU, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script"),
+-- (@ENTRY, 0, 11, 0, 62, 0, 100, 0, @GOSSIP_MENU, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script"),
+
+(@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script Hurlevent"),
+(@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script Orgrimmar"),
+(@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script Baie du butin"),
+(@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script Shattrath"),
+(@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script Dalaran"),
+(@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
+(@ENTRY, 0, 7, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 3, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script Darnassus"),
+(@ENTRY, 0, 8, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 4, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script Forgefer"),
+(@ENTRY, 0, 9, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 5, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script Exodar"),
+(@ENTRY, 0, 10, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script pitons du tonnerre"),
+(@ENTRY, 0, 11, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script Fossoyeuses"),
+(@ENTRY, 0, 12, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script Lune D'argent"),
+
 (@ENTRY, 0, 13, 0, 62, 0, 100, 0, @GOSSIP_MENU+1, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -5163.54, 925.423, 257.181, 1.57423, "Teleporter script"),
 (@ENTRY, 0, 14, 0, 62, 0, 100, 0, @GOSSIP_MENU+1, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -11209.6, 1666.54, 24.6974, 1.42053, "Teleporter script"),
 (@ENTRY, 0, 15, 0, 62, 0, 100, 0, @GOSSIP_MENU+1, 2, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8799.15, 832.718, 97.6348, 6.04085, "Teleporter script"),
