@@ -47,39 +47,39 @@ INSERT INTO `creature_template_gossip` (`CreatureID`, `MenuID`, `VerifiedBuild`)
 VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
 
 -- Gossip header text link to menus
-INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
-(@GOSSIP_MENU+10, @TEXT_ID+11), -- War Within header
-(@GOSSIP_MENU+16, @TEXT_ID+10), -- Dragonflight header
-(@GOSSIP_MENU+15, @TEXT_ID+9), -- Shadowlands header
-(@GOSSIP_MENU+14, @TEXT_ID+8), -- BFA header
-(@GOSSIP_MENU+13, @TEXT_ID+7), -- Legion header
-(@GOSSIP_MENU+12, @TEXT_ID+6), -- Draenor header
-(@GOSSIP_MENU+11, @TEXT_ID+5), -- Pandaria header
-(@GOSSIP_MENU+4, @TEXT_ID+3),
-(@GOSSIP_MENU+3, @TEXT_ID+2),
-(@GOSSIP_MENU+2, @TEXT_ID+2),
-(@GOSSIP_MENU+1, @TEXT_ID+2),
-(@GOSSIP_MENU+8, @TEXT_ID+4),
-(@GOSSIP_MENU+7, @TEXT_ID+4),
-(@GOSSIP_MENU+6, @TEXT_ID+4),
-(@GOSSIP_MENU+5, @TEXT_ID+4),
-(@GOSSIP_MENU, @TEXT_ID+1),
-(@GOSSIP_MENU, @TEXT_ID);
+INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
+(@GOSSIP_MENU+10, @TEXT_ID+11, @VBUILD), -- War Within header
+(@GOSSIP_MENU+16, @TEXT_ID+10, @VBUILD), -- Dragonflight header
+(@GOSSIP_MENU+15, @TEXT_ID+9, @VBUILD), -- Shadowlands header
+(@GOSSIP_MENU+14, @TEXT_ID+8, @VBUILD), -- BFA header
+(@GOSSIP_MENU+13, @TEXT_ID+7, @VBUILD), -- Legion header
+(@GOSSIP_MENU+12, @TEXT_ID+6, @VBUILD), -- Draenor header
+(@GOSSIP_MENU+11, @TEXT_ID+5, @VBUILD), -- Pandaria header
+(@GOSSIP_MENU+4, @TEXT_ID+3, @VBUILD),
+(@GOSSIP_MENU+3, @TEXT_ID+2, @VBUILD),
+(@GOSSIP_MENU+2, @TEXT_ID+2, @VBUILD),
+(@GOSSIP_MENU+1, @TEXT_ID+2, @VBUILD),
+(@GOSSIP_MENU+8, @TEXT_ID+4, @VBUILD),
+(@GOSSIP_MENU+7, @TEXT_ID+4, @VBUILD),
+(@GOSSIP_MENU+6, @TEXT_ID+4, @VBUILD),
+(@GOSSIP_MENU+5, @TEXT_ID+4, @VBUILD),
+(@GOSSIP_MENU, @TEXT_ID+1, @VBUILD),
+(@GOSSIP_MENU, @TEXT_ID, @VBUILD);
 
 -- Gossip header texts
-INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`) VALUES -- Remettre le texte original ID 200000
-(@TEXT_ID+11, 1, @BROAD_TEXT+11), -- War Within header
-(@TEXT_ID+10, 1, @BROAD_TEXT+10), -- Dragonflight header
-(@TEXT_ID+9, 1, @BROAD_TEXT+9), -- Shadowlands header
-(@TEXT_ID+8, 1, @BROAD_TEXT+8), -- BFA header
-(@TEXT_ID+7, 1, @BROAD_TEXT+7), -- Legion header
-(@TEXT_ID+6, 1, @BROAD_TEXT+6), -- Draenor header
-(@TEXT_ID+5, 1, @BROAD_TEXT+5), -- Pandaria header
-(@TEXT_ID+4, 1, @BROAD_TEXT+4),
-(@TEXT_ID+3, 1, @BROAD_TEXT+3),
-(@TEXT_ID+2, 1, @BROAD_TEXT+2),
-(@TEXT_ID+1, 1, @BROAD_TEXT+1),
-(@TEXT_ID, 1, @BROAD_TEXT);
+INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) VALUES -- Remettre le texte original ID 200000
+(@TEXT_ID+11, 1, @BROAD_TEXT+11, @VBUILD), -- War Within header
+(@TEXT_ID+10, 1, @BROAD_TEXT+10, @VBUILD), -- Dragonflight header
+(@TEXT_ID+9, 1, @BROAD_TEXT+9, @VBUILD), -- Shadowlands header
+(@TEXT_ID+8, 1, @BROAD_TEXT+8, @VBUILD), -- BFA header
+(@TEXT_ID+7, 1, @BROAD_TEXT+7, @VBUILD), -- Legion header
+(@TEXT_ID+6, 1, @BROAD_TEXT+6, @VBUILD), -- Draenor header
+(@TEXT_ID+5, 1, @BROAD_TEXT+5, @VBUILD), -- Pandaria header
+(@TEXT_ID+4, 1, @BROAD_TEXT+4, @VBUILD),
+(@TEXT_ID+3, 1, @BROAD_TEXT+3, @VBUILD),
+(@TEXT_ID+2, 1, @BROAD_TEXT+2, @VBUILD),
+(@TEXT_ID+1, 1, @BROAD_TEXT+1, @VBUILD),
+(@TEXT_ID, 1, @BROAD_TEXT, @VBUILD);
 
 -- Test
 INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `SoundPlayType`, `BroadcastTextId`, `TextRange`, `comment`) 
