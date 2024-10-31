@@ -24,11 +24,11 @@ SET
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
-DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+16;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
 DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+11;
-DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+16;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
-DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+16;
+DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
 DELETE from creature WHERE ID = @ENTRY;
 -- DELETE from gameobject WHERE ID = @RUNE AND guid >= 1000000098;
 DELETE FROM creature_text WHERE CreatureID = @ENTRY;
@@ -48,6 +48,7 @@ VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
 
 -- Gossip header text link to menus
 INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
+(@GOSSIP_MENU+17, @TEXT_ID+12, @VBUILD), -- test groupées
 (@GOSSIP_MENU+10, @TEXT_ID+11, @VBUILD), -- War Within header
 (@GOSSIP_MENU+16, @TEXT_ID+10, @VBUILD), -- Dragonflight header
 (@GOSSIP_MENU+15, @TEXT_ID+9, @VBUILD), -- Shadowlands header
@@ -68,6 +69,7 @@ INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) VALUES -- Remettre le texte original ID 200000
+(@TEXT_ID+12, 1, @BROAD_TEXT+12, @VBUILD), -- test groupées
 (@TEXT_ID+11, 1, @BROAD_TEXT+11, @VBUILD), -- War Within header
 (@TEXT_ID+10, 1, @BROAD_TEXT+10, @VBUILD), -- Dragonflight header
 (@TEXT_ID+9, 1, @BROAD_TEXT+9, @VBUILD), -- Shadowlands header

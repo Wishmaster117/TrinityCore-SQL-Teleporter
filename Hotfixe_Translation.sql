@@ -5,11 +5,12 @@ SET
 @VBUILD         := 56819;
 
 -- Deleting code
-DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+11;
-DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+11;
+DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+12;
+DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+12;
 
 -- Table Hotfix -- Remettre le texte original de la ligne 200000 a chopper sur la bdd qui est en place sur le minipc
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES
+('$B So what city do you want to visit ? $B', '', @BROAD_TEXT+12, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
 ('$B Steady yourself… you’re heading into the heart of conflict. The War Within waits, no turning back from here! $B', '', @BROAD_TEXT+11, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
 ('$B Wings ready? The Dragon Isles call, but the skies are no place for the faint-hearted. Last chance to stay grounded! $B', '', @BROAD_TEXT+10, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
 ('$B Take a deep breath… the Shadowlands don’t offer return tickets. Last chance to stay among the living! $B', '', @BROAD_TEXT+9, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
@@ -144,7 +145,17 @@ INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, 
 (@BROAD_TEXT+11, 'ptBR', '$B Prepare-se... você está indo para o coração do conflito. A Guerra Interior espera, sem volta a partir daqui!$B', '', @VBUILD),
 (@BROAD_TEXT+11, 'ruRU', '$B Соберитесь с духом… вы направляетесь в центр конфликта. Война внутри ждет, пути назад нет!$B', '', @VBUILD),
 (@BROAD_TEXT+11, 'zhCN', '$B 稳住自己…你正走向冲突的核心。内战在等待，从这里没有回头路！$B', '', @VBUILD),
-(@BROAD_TEXT+11, 'zhTW', '$B 穩住自己…你正走向衝突的核心。內戰在等待，從此無回頭路！$B', '', @VBUILD);
+(@BROAD_TEXT+11, 'zhTW', '$B 穩住自己…你正走向衝突的核心。內戰在等待，從此無回頭路！$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'deDE', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'esES', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'esMX', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'frFR', '$B Alors quelle ville voulez-vous visiter ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'itIT', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'koKR', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'ptBR', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'ruRU', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'zhCN', '$B So what city do you want to visit ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'zhTW', '$B So what city do you want to visit ?$B', '', @VBUILD);
 
 
 
