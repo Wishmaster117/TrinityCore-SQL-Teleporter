@@ -2,7 +2,7 @@
 
 SET
 @ENTRY          := 9000000, -- Entry NPC
-@GOSSIP_MENU    := 200000,
+@GOSSIP_MENU    := 2000000,
 @VBUILD         := 56819;
 
 DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;

@@ -1,7 +1,7 @@
 /* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
-@BROAD_TEXT     := 900000,
+@BROAD_TEXT     := 9000000,
 @VBUILD         := 56819;
 
 -- Deleting code
