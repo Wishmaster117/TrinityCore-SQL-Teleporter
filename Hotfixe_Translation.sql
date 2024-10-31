@@ -146,16 +146,17 @@ INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, 
 (@BROAD_TEXT+11, 'ruRU', '$B Соберитесь с духом… вы направляетесь в центр конфликта. Война внутри ждет, пути назад нет!$B', '', @VBUILD),
 (@BROAD_TEXT+11, 'zhCN', '$B 稳住自己…你正走向冲突的核心。内战在等待，从这里没有回头路！$B', '', @VBUILD),
 (@BROAD_TEXT+11, 'zhTW', '$B 穩住自己…你正走向衝突的核心。內戰在等待，從此無回頭路！$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'deDE', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'esES', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'esMX', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'frFR', '$B Alors quelle ville voulez-vous visiter ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'itIT', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'koKR', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'ptBR', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'ruRU', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'zhCN', '$B So what city do you want to visit ?$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'zhTW', '$B So what city do you want to visit ?$B', '', @VBUILD);
+(@BROAD_TEXT+12, 'deDE', '$B Also, welche Stadt möchtest du besuchen?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'esES', '$B Entonces, ¿qué ciudad quieres visitar?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'esMX', '$B Entonces, ¿qué ciudad quieres visitar?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'frFR', '$B Alors, quelle ville voulez-vous visiter ?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'itIT', '$B Allora, quale città vuoi visitare?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'koKR', '$B 어느 도시를 방문하고 싶으신가요?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'ptBR', '$B Então, qual cidade você quer visitar?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'ruRU', '$B Итак, какой город вы хотите посетить?$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'zhCN', '$B 那么您想参观哪个城市？$B', '', @VBUILD),
+(@BROAD_TEXT+12, 'zhTW', '$B 那麼您想參觀哪個城市？$B', '', @VBUILD);
+
 
 
 
