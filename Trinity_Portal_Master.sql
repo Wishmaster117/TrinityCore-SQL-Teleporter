@@ -82,8 +82,8 @@ INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) V
 (@TEXT_ID, 1, @BROAD_TEXT, @VBUILD);
 
 -- Test
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `SoundPlayType`, `BroadcastTextId`, `TextRange`, `comment`) 
-VALUES (@ENTRY, 0, 2, 'For the Horde!', 12, 7, 100, 0, 0, 0, 0, 1867, 0, 'Test');
+/*INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `SoundPlayType`, `BroadcastTextId`, `TextRange`, `comment`) 
+VALUES (@ENTRY, 0, 2, 'For the Horde!', 12, 7, 100, 0, 0, 0, 0, 1867, 0, 'Test'); */
 
 -- Conditions for gossip option and menu factions : ConditionValue1 469 = Alliance, 67 = Horde
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, `Comment`) VALUES
@@ -124,8 +124,8 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+1, 7, 6, 67, "Shadowfang Keep"),
 (15, @GOSSIP_MENU+1, 8, 6, 67, "Wailing Caverns"),
 (15, @GOSSIP_MENU+6, 9, 6, 67, "Thousand Needles"),
-(15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Horde
-(15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Alliance
+(15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Pandarie Horde
+(15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 469, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde");
 
