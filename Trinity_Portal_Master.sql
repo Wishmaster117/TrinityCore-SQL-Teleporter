@@ -598,7 +598,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+17, 10, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
 (@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
 (@GOSSIP_MENU+17, 11, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
-(@GOSSIP_MENU+17, 12, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
+(@GOSSIP_MENU+17, 13, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
 -- Fin villes et Capitales --
 
 -- Teleport scripts:
