@@ -48,6 +48,12 @@ VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
 
 -- Gossip header text link to menus
 INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
+(@GOSSIP_MENU+10, @TEXT_ID+11), -- War Within header
+(@GOSSIP_MENU+16, @TEXT_ID+10), -- Dragonflight header
+(@GOSSIP_MENU+15, @TEXT_ID+9), -- Shadowlands header
+(@GOSSIP_MENU+14, @TEXT_ID+8), -- BFA header
+(@GOSSIP_MENU+13, @TEXT_ID+7), -- Legion header
+(@GOSSIP_MENU+12, @TEXT_ID+6), -- Draenor header
 (@GOSSIP_MENU+11, @TEXT_ID+5), -- Pandaria header
 (@GOSSIP_MENU+4, @TEXT_ID+3),
 (@GOSSIP_MENU+3, @TEXT_ID+2),
@@ -62,6 +68,12 @@ INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`) VALUES -- Remettre le texte original ID 200000
+(@TEXT_ID+11, 1, @BROAD_TEXT+11), -- War Within header
+(@TEXT_ID+10, 1, @BROAD_TEXT+10), -- Dragonflight header
+(@TEXT_ID+9, 1, @BROAD_TEXT+9), -- Shadowlands header
+(@TEXT_ID+8, 1, @BROAD_TEXT+8), -- BFA header
+(@TEXT_ID+7, 1, @BROAD_TEXT+7), -- Legion header
+(@TEXT_ID+6, 1, @BROAD_TEXT+6), -- Draenor header
 (@TEXT_ID+5, 1, @BROAD_TEXT+5), -- Pandaria header
 (@TEXT_ID+4, 1, @BROAD_TEXT+4),
 (@TEXT_ID+3, 1, @BROAD_TEXT+3),
