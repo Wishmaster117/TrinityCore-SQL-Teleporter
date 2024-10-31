@@ -344,17 +344,32 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 
 -- Gossip options:
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
-(@GOSSIP_MENU, 1, NULL, "Stormwind", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
-(@GOSSIP_MENU, 2, NULL, "Orgrimmar", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
-(@GOSSIP_MENU, 3, NULL, "Darnassus", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
-(@GOSSIP_MENU, 4, NULL, "Ironforge", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
-(@GOSSIP_MENU, 5, NULL, "Exodar", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
-(@GOSSIP_MENU, 6, NULL, "Thunder bluff", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
-(@GOSSIP_MENU, 7, NULL, "Undercity", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
-(@GOSSIP_MENU, 8, NULL, "Silvermoon city", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
-(@GOSSIP_MENU, 9, NULL, "Dalaran", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
-(@GOSSIP_MENU, 10, NULL, "Shattrath", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
-(@GOSSIP_MENU, 11, NULL, "Booty bay", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
+-- (@GOSSIP_MENU, 1, NULL, "Stormwind", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
+-- (@GOSSIP_MENU, 2, NULL, "Orgrimmar", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
+-- (@GOSSIP_MENU, 3, NULL, "Darnassus", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
+-- (@GOSSIP_MENU, 4, NULL, "Ironforge", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
+-- (@GOSSIP_MENU, 5, NULL, "Exodar", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
+-- (@GOSSIP_MENU, 6, NULL, "Thunder bluff", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
+-- (@GOSSIP_MENU, 7, NULL, "Undercity", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
+-- (@GOSSIP_MENU, 8, NULL, "Silvermoon city", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
+-- (@GOSSIP_MENU, 9, NULL, "Dalaran", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
+-- (@GOSSIP_MENU, 10, NULL, "Shattrath", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
+-- (@GOSSIP_MENU, 11, NULL, "Booty bay", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
+-- Test regroupage --
+(@GOSSIP_MENU, 1, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Test regroupper les capitales
+(@GOSSIP_MENU+17, 0, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
+(@GOSSIP_MENU+17, 1, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
+(@GOSSIP_MENU+17, 2, NULL, "Darnassus", 0, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
+(@GOSSIP_MENU+17, 3, NULL, "Ironforge", 0, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
+(@GOSSIP_MENU+17, 4, NULL, "Exodar", 0, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
+(@GOSSIP_MENU+17, 5, NULL, "Thunder bluff", 0, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
+(@GOSSIP_MENU+17, 6, NULL, "Undercity", 0, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
+(@GOSSIP_MENU+17, 7, NULL, "Silvermoon city", 0, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
+(@GOSSIP_MENU+17, 8, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
+(@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
+(@GOSSIP_MENU+17, 10, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
+(@GOSSIP_MENU+17, 11, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+-- Fin de test regroupage --
 (@GOSSIP_MENU, 12, NULL, "Gurubashi arena", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Arena?"),
 (@GOSSIP_MENU, 13, NULL, "Eastern Kingdoms", @GOSSIP_MENU+5, 0, 0, 0, NULL),
 (@GOSSIP_MENU, 14, NULL, "Kalimdor", @GOSSIP_MENU+6, 0, 0, 0, NULL),
@@ -371,21 +386,6 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU, 25, NULL, "BFA", @GOSSIP_MENU+14, 0, 0, 0, NULL), -- Ajout BFA = menu + 14
 (@GOSSIP_MENU, 26, NULL, "Shadowlands", @GOSSIP_MENU+15, 0, 0, 0, NULL), -- Ajout Shadowlands = menu + 15
 (@GOSSIP_MENU, 27, NULL, "Dragonflight", @GOSSIP_MENU+16, 0, 0, 0, NULL), -- Ajout Dragonflight = menu + 16
--- Test regroupage --
-(@GOSSIP_MENU, 28, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Test regroupper les capitales
-(@GOSSIP_MENU+17, 0, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
-(@GOSSIP_MENU+17, 1, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
-(@GOSSIP_MENU+17, 2, NULL, "Darnassus", 0, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
-(@GOSSIP_MENU+17, 3, NULL, "Ironforge", 0, 0, 0, 0, "Are you sure, that you want to go to Ironforge?"),
-(@GOSSIP_MENU+17, 4, NULL, "Exodar", 0, 0, 0, 0, "Are you sure, that you want to go to Exodar?"),
-(@GOSSIP_MENU+17, 5, NULL, "Thunder bluff", 0, 0, 0, 0, "Are you sure, that you want to go to Thunder bluff?"),
-(@GOSSIP_MENU+17, 6, NULL, "Undercity", 0, 0, 0, 0, "Are you sure, that you want to go to Undercity?"),
-(@GOSSIP_MENU+17, 7, NULL, "Silvermoon city", 0, 0, 0, 0, "Are you sure, that you want to go to Silvermoon city?"),
-(@GOSSIP_MENU+17, 8, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
-(@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
-(@GOSSIP_MENU+17, 10, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
-(@GOSSIP_MENU+17, 11, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
--- Fin de test regroupage --
 (@GOSSIP_MENU+1, 0, NULL, "Gnomeregan", 0, 0, 0, 0, "Are you sure, that you want to go to Gnomeregan?"),
 (@GOSSIP_MENU+1, 1, NULL, "The Deadmines", 0, 0, 0, 0, "Are you sure, that you want to go to The Deadmines?"),
 (@GOSSIP_MENU+1, 2, NULL, "The Stockade", 0, 0, 0, 0, "Are you sure, that you want to go to The Stockade?"),
