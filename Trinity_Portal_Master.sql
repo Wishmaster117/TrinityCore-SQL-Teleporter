@@ -17,8 +17,8 @@ SET
 @TEXT_ID        := 900000,
 @GOSSIP_MENU    := 200000,
 @BROAD_TEXT     := 900000,
-@VBUILD         := 56819,
-@RUNE           := 194394;
+@VBUILD         := 56819;
+-- @RUNE           := 194394;
 
 -- Deleting code
 DELETE FROM creature_template WHERE entry = @ENTRY;
