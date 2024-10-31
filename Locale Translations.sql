@@ -1,18 +1,9 @@
 /* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
-@ENTRY          := 9000000,
-@NAME           := "Portal Master",
-@SUBNAME        := "Where do you go",
-@MODEL          := 21572,
-
-@AURA           := "30540", -- "35766" = casting
-
-@TEXT_ID        := 900000,
+@ENTRY          := 9000000, -- Entry NPC
 @GOSSIP_MENU    := 200000,
-@BROAD_TEXT     := 900000,
-@VBUILD         := 56819,
-@RUNE           := 194394;
+@VBUILD         := 56819;
 
 DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
 DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+16;
