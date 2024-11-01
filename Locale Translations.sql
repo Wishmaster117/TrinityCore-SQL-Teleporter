@@ -7,7 +7,7 @@ SET
 
 DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
 DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
-DELETE FROM creature_template_locale WHERE entry = @ENTRY;
+-- DELETE FROM creature_template_locale WHERE entry = @ENTRY;
 
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `Title`, `TitleAlt`, `VerifiedBuild`) VALUES 
 (@ENTRY, 'deDE', 'Portalmeister', NULL, 'Wohin gehst du?', NULL, @VBUILD ),
@@ -21,7 +21,7 @@ INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `T
 (@ENTRY, 'zhCN', '传送门大师', NULL, '你去哪里？', NULL, @VBUILD ),
 (@ENTRY, 'zhTW', '传送门大师', NULL, '你去哪里？', NULL, @VBUILD );
 
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES
+/*INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES
 (@ENTRY, 0, 0, 'deDE', 'Test'),
 (@ENTRY, 0, 0, 'esES', 'Test'),
 (@ENTRY, 0, 0, 'esMX', 'Test'),
@@ -31,7 +31,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 (@ENTRY, 0, 0, 'ptBR', 'Test'),
 (@ENTRY, 0, 0, 'ruRU', 'Test'),
 (@ENTRY, 0, 0, 'zhCN', 'Test'),
-(@ENTRY, 0, 0, 'zhTW', 'Test');
+(@ENTRY, 0, 0, 'zhTW', 'Test');*/
 
 
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES 
