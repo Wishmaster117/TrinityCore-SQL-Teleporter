@@ -9,9 +9,9 @@ Bugs and contact with E-mail: Rochet2@post.com
 SET
 @NPC_ENTRY := 9000000, -- teleporter entry
 
-@MENU_ID := 100000, -- the menu's id, see gossip_menu_option.menu_id
-@ID := 1, -- position in menu where you want the option to be in, see gossip_menu_option.id
-@ICON := 2,
+@MENU_ID := 2000000, -- the menu's id, see gossip_menu_option.menu_id
+@ID := 1, -- position in menu where you want the option to be in, see gossip_menu_option.id 0 to ......
+@ICON := NULL,
 @TELE_NAME := "Custom Location",
 @POPUP := "Are you sure?",
 
@@ -29,8 +29,9 @@ UPDATE `gossip_menu_option` SET `optionid` = `optionid`+1 WHERE `menuid` = @MENU
 UPDATE `conditions` SET `SourceEntry` = `SourceEntry`+1 WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = @MENU_ID AND `SourceEntry` >= @ID ORDER BY `SourceEntry` DESC;
 UPDATE `smart_scripts` SET `event_param2` = `event_param2`+1 WHERE `entryorguid` = @NPC_ENTRY AND `source_type` = 0 AND `event_param1` = @MENU_ID AND `event_param2` >= @ID ORDER BY `event_param2` DESC;
 
-INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optiontype`, `optionnpcflag`, `actionmenuid`, `boxmoney`, `boxtext`) VALUES
-(@MENU_ID, @ID, @ICON, @TELE_NAME, 1, 1, @MENU_ID, @COST, @POPUP);
+
+INSERT INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OverrideIconID`, `OptionText`, `ActionMenuID`, ActionPoiID, BoxCoded, `BoxMoney`, `BoxText`) VALUES
+(@MENU_ID, @ID, @ICON, @TELE_NAME, @MENU_ID, 0, 0, @COST, @POPUP);
 
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ConditionTypeOrReference`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `Comment`) VALUES
 (15, @MENU_ID, @ID, 27, @REQ_LEVEL, 3, 0, CONCAT("Portal Master Level req - ", @TELE_NAME));
