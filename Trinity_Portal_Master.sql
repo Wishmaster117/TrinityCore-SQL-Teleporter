@@ -575,7 +575,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+15, 9, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Dragonflight
-(@GOSSIP_MENU+16, 0, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
+(@GOSSIP_MENU+16, 0, NULL, "Valdrakken", 0, 0, 0, 0, "Are you sure, that you want to go to Valdrakken?"),
 (@GOSSIP_MENU+16, 1, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 2, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 3, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
@@ -814,7 +814,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 190, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 191, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Dragonflight
-(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
+(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2526, 0, 0, 0, 0, 0, 7, 0, 0, 0, -2.787829, -850.865723, 838.082947, 5.462425, "Valdrakken"),
 (@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
 (@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
 (@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4017.35, -3403.85, 290, 5.35431, "Zone 4"),

@@ -2377,16 +2377,16 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+15, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+15, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+15, 10, 'zhTW', "返回..", NULL),
-(@GOSSIP_MENU+16, 0, 'enUS', "Dragonflight", "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 0, 'deDE', "Dragonflight", "Bist du sicher, dass du zur Drachenflucht reisen möchtest?"),
-(@GOSSIP_MENU+16, 0, 'esES', "Dragonflight", "¿Estás seguro de que quieres ir a Vuelo de Dragón?"),
-(@GOSSIP_MENU+16, 0, 'frFR', "Dragonflight", "Êtes-vous sûr de vouloir aller au Vol des Dragons ?"),
-(@GOSSIP_MENU+16, 0, 'itIT', "Dragonflight", "Sei sicuro di voler andare al Volo dei Draghi?"),
-(@GOSSIP_MENU+16, 0, 'koKR', "Dragonflight", "드래곤 비행으로 가시겠습니까?"),
-(@GOSSIP_MENU+16, 0, 'ptBR', "Dragonflight", "Você tem certeza de que deseja ir para o Voo dos Dragões?"),
-(@GOSSIP_MENU+16, 0, 'ruRU', "Dragonflight", "Вы уверены, что хотите отправиться в Полет Драконов?"),
-(@GOSSIP_MENU+16, 0, 'zhCN', "Dragonflight", "您确定要去龙飞行吗？"),
-(@GOSSIP_MENU+16, 0, 'zhTW', "Dragonflight", "你確定要去飛龍嗎？"),
+-- Dragonflight
+(@GOSSIP_MENU+16, 0, 'deDE', "Valdrakken", "Bist du sicher, dass du nach Valdrakken reisen möchtest?"),
+(@GOSSIP_MENU+16, 0, 'esES', "Valdrakken", "¿Estás seguro de que quieres ir a Valdrakken?"),
+(@GOSSIP_MENU+16, 0, 'frFR', "Valdrakken", "Êtes-vous sûr de vouloir aller à Valdrakken?"),
+(@GOSSIP_MENU+16, 0, 'itIT', "Valdrakken", "Sei sicuro di voler andare a Valdrakken?"),
+(@GOSSIP_MENU+16, 0, 'koKR', "Valdrakken", "발드라켄으로 가시겠습니까?"),
+(@GOSSIP_MENU+16, 0, 'ptBR', "Valdrakken", "Você tem certeza de que deseja ir para Valdrakken?"),
+(@GOSSIP_MENU+16, 0, 'ruRU', "Valdrakken", "Вы уверены, что хотите отправиться в Вальдраккен?"),
+(@GOSSIP_MENU+16, 0, 'zhCN', "Valdrakken", "您确定要前往瓦尔德拉肯吗？"),
+(@GOSSIP_MENU+16, 0, 'zhTW', "Valdrakken", "你確定要前往瓦德拉肯嗎？"),
 (@GOSSIP_MENU+16, 1, 'enUS', "Dragonflight", "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 1, 'deDE', "Dragonflight", "Bist du sicher, dass du zur Drachenflucht reisen möchtest?"),
 (@GOSSIP_MENU+16, 1, 'esES', "Dragonflight", "¿Estás seguro de que quieres ir a Vuelo de Dragón?"),
@@ -2488,9 +2488,10 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+16, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+16, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+16, 10, 'zhTW', "返回..", NULL),
--- Test groupées avec traduction ok--
+-- Villes et Capitales --
 (@GOSSIP_MENU+17, 1, 'deDE', "Sturmwind", "Bist du sicher, dass du nach Sturmwind reisen möchtest?"),
 (@GOSSIP_MENU+17, 1, 'esES', "Ventormenta", "¿Estás seguro de que quieres ir a Ventormenta?"),
+(@GOSSIP_MENU+17, 1, 'esMX', "Ventormenta", "¿Estás seguro de que quieres ir a Ventormenta?"),
 (@GOSSIP_MENU+17, 1, 'frFR', "Hurlevent", "Êtes-vous sûr de vouloir aller à Hurlevent ?"),
 (@GOSSIP_MENU+17, 1, 'itIT', "Roccavento", "Sei sicuro di voler andare a Roccavento?"),
 (@GOSSIP_MENU+17, 1, 'koKR', "스톰윈드", "스톰윈드로 가시겠습니까?"),
@@ -2501,6 +2502,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 2, 'deDE', "Orgrimmar", "Bist du sicher, dass du nach Orgrimmar reisen möchtest?"),
 (@GOSSIP_MENU+17, 2, 'esES', "Orgrimmar", "¿Estás seguro de que quieres ir a Orgrimmar?"),
+(@GOSSIP_MENU+17, 2, 'esMX', "Orgrimmar", "¿Estás seguro de que quieres ir a Orgrimmar?"),
 (@GOSSIP_MENU+17, 2, 'frFR', "Orgrimmar", "Êtes-vous sûr de vouloir aller à Orgrimmar ?"),
 (@GOSSIP_MENU+17, 2, 'itIT', "Orgrimmar", "Sei sicuro di voler andare a Orgrimmar?"),
 (@GOSSIP_MENU+17, 2, 'koKR', "오그리마", "오그리마로 가시겠습니까?"),
@@ -2511,6 +2513,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 3, 'deDE', "Darnassus", "Bist du sicher, dass du nach Darnassus reisen möchtest?"),
 (@GOSSIP_MENU+17, 3, 'esES', "Darnassus", "¿Estás seguro de que quieres ir a Darnassus?"),
+(@GOSSIP_MENU+17, 3, 'esMX', "Darnassus", "¿Estás seguro de que quieres ir a Darnassus?"),
 (@GOSSIP_MENU+17, 3, 'frFR', "Darnassus", "Êtes-vous sûr de vouloir aller à Darnassus ?"),
 (@GOSSIP_MENU+17, 3, 'itIT', "Darnassus", "Sei sicuro di voler andare a Darnassus?"),
 (@GOSSIP_MENU+17, 3, 'koKR', "다르나서스", "다르나서스로 가시겠습니까?"),
@@ -2521,6 +2524,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 4, 'deDE', "Eisenschmiede", "Bist du sicher, dass du nach Eisenschmiede reisen möchtest?"),
 (@GOSSIP_MENU+17, 4, 'esES', "Forjaz", "¿Estás seguro de que quieres ir a Forjaz?"),
+(@GOSSIP_MENU+17, 4, 'esMX', "Forjaz", "¿Estás seguro de que quieres ir a Forjaz?"),
 (@GOSSIP_MENU+17, 4, 'frFR', "Forgefer", "Êtes-vous sûr de vouloir aller à Forgefer ?"),
 (@GOSSIP_MENU+17, 4, 'itIT', "Forgiardente", "Sei sicuro di voler andare a Forgiardente?"),
 (@GOSSIP_MENU+17, 4, 'koKR', "아이언포지", "아이언포지로 가시겠습니까?"),
@@ -2531,6 +2535,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 5, 'deDE', "Exodar", "Bist du sicher, dass du nach Exodar reisen möchtest?"),
 (@GOSSIP_MENU+17, 5, 'esES', "Exodar", "¿Estás seguro de que quieres ir a Exodar?"),
+(@GOSSIP_MENU+17, 5, 'esMX', "Exodar", "¿Estás seguro de que quieres ir a Exodar?"),
 (@GOSSIP_MENU+17, 5, 'frFR', "Exodar", "Êtes-vous sûr de vouloir aller à Exodar ?"),
 (@GOSSIP_MENU+17, 5, 'itIT', "Exodar", "Sei sicuro di voler andare a Exodar?"),
 (@GOSSIP_MENU+17, 5, 'koKR', "엑소다르", "엑소다르로 가시겠습니까?"),
@@ -2541,6 +2546,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 6, 'deDE', "Donnerfels", "Bist du sicher, dass du nach Donnerfels reisen möchtest?"),
 (@GOSSIP_MENU+17, 6, 'esES', "Cima del Trueno", "¿Estás seguro de que quieres ir a Cima del Trueno?"),
+(@GOSSIP_MENU+17, 6, 'esMX', "Cima del Trueno", "¿Estás seguro de que quieres ir a Cima del Trueno?"),
 (@GOSSIP_MENU+17, 6, 'frFR', "Pitons-du-Tonnerre", "Êtes-vous sûr de vouloir aller aux Pitons-du-Tonnerre ?"),
 (@GOSSIP_MENU+17, 6, 'itIT', "Picco del Tuono", "Sei sicuro di voler andare al Picco del Tuono?"),
 (@GOSSIP_MENU+17, 6, 'koKR', "썬더 블러프", "썬더 블러프로 가시겠습니까?"),
@@ -2551,6 +2557,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 7, 'deDE', "Undercity", "Bist du sicher, dass du nach Unterstadt reisen möchtest?"),
 (@GOSSIP_MENU+17, 7, 'esES', "Entrañas", "¿Estás seguro de que quieres ir a Entrañas?"),
+(@GOSSIP_MENU+17, 7, 'esMX', "Entrañas", "¿Estás seguro de que quieres ir a Entrañas?"),
 (@GOSSIP_MENU+17, 7, 'frFR', "Fossoyeuse", "Êtes-vous sûr de vouloir aller à Fossoyeuse ?"),
 (@GOSSIP_MENU+17, 7, 'itIT', "Sepulcra", "Sei sicuro di voler andare a Sepulcra?"),
 (@GOSSIP_MENU+17, 7, 'koKR', "언더시티", "언더시티로 가시겠습니까?"),
@@ -2561,6 +2568,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 8, 'deDE', "Silbermond", "Bist du sicher, dass du nach Silbermond reisen möchtest?"),
 (@GOSSIP_MENU+17, 8, 'esES', "Lunargenta", "¿Estás seguro de que quieres ir a Lunargenta?"),
+(@GOSSIP_MENU+17, 8, 'esMX', "Lunargenta", "¿Estás seguro de que quieres ir a Lunargenta?"),
 (@GOSSIP_MENU+17, 8, 'frFR', "Lune d'Argent", "Êtes-vous sûr de vouloir aller à Lune d'Argent ?"),
 (@GOSSIP_MENU+17, 8, 'itIT', "Lunargenta", "Sei sicuro di voler andare a Lunargenta?"),
 (@GOSSIP_MENU+17, 8, 'koKR', "실버문", "실버문으로 가시겠습니까?"),
@@ -2571,6 +2579,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 10, 'deDE', "Shattrath", "Bist du sicher, dass du nach Shattrath reisen möchtest?"),
 (@GOSSIP_MENU+17, 10, 'esES', "Shattrath", "¿Estás seguro de que quieres ir a Shattrath?"),
+(@GOSSIP_MENU+17, 10, 'esMX', "Shattrath", "¿Estás seguro de que quieres ir a Shattrath?"),
 (@GOSSIP_MENU+17, 10, 'frFR', "Shattrath", "Êtes-vous sûr de vouloir aller à Shattrath ?"),
 (@GOSSIP_MENU+17, 10, 'itIT', "Shattrath", "Sei sicuro di voler andare a Shattrath?"),
 (@GOSSIP_MENU+17, 10, 'koKR', "샤트라스", "샤트라스로 가시겠습니까?"),
@@ -2581,6 +2590,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 9, 'deDE', "Dalaran", "Bist du sicher, dass du nach Dalaran reisen möchtest?"),
 (@GOSSIP_MENU+17, 9, 'esES', "Dalaran", "¿Estás seguro de que quieres ir a Dalaran?"),
+(@GOSSIP_MENU+17, 9, 'esMX', "Dalaran", "¿Estás seguro de que quieres ir a Dalaran?"),
 (@GOSSIP_MENU+17, 9, 'frFR', "Dalaran", "Êtes-vous sûr de vouloir aller à Dalaran ?"),
 (@GOSSIP_MENU+17, 9, 'itIT', "Dalaran", "Sei sicuro di voler andare a Dalaran?"),
 (@GOSSIP_MENU+17, 9, 'koKR', "달라란", "달라란으로 가시겠습니까?"),
@@ -2591,6 +2601,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 (@GOSSIP_MENU+17, 11, 'deDE', "Beutebucht", "Bist du sicher, dass du nach Beutebucht reisen möchtest?"),
 (@GOSSIP_MENU+17, 11, 'esES', "Bahía del Botín", "¿Estás seguro de que quieres ir a Bahía del Botín?"),
+(@GOSSIP_MENU+17, 11, 'esMX', "Bahía del Botín", "¿Estás seguro de que quieres ir a Bahía del Botín?"),
 (@GOSSIP_MENU+17, 11, 'frFR', "Baie-du-Butin", "Êtes-vous sûr de vouloir aller à Baie-du-Butin ?"),
 (@GOSSIP_MENU+17, 11, 'itIT', "Baia del Bottino", "Sei sicuro di voler andare a Baia del Bottino?"),
 (@GOSSIP_MENU+17, 11, 'koKR', "무법항", "무법항으로 가시겠습니까?"),
