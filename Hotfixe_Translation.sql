@@ -21,8 +21,8 @@ INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`
 ('$B Where would you like to be ported? $B', '', @BROAD_TEXT+4, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
 ('$B Be careful with choosing raids, I wont be there if you wipe. $B', '', @BROAD_TEXT+3, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
 ('$B Up for some dungeon exploring? $B', '', @BROAD_TEXT+2, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
-('$B For the Horde! $B', '', @BROAD_TEXT+1, 0, 0, 0, 67, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
-('$B For The Alliance! $B', '', @BROAD_TEXT, 0, 0, 0, 69, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD);
+('$B For the Horde! $B', '', @BROAD_TEXT+1, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
+('$B For The Alliance! $B', '', @BROAD_TEXT, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD);
 
 -- Table Hotfix locale
 INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, `VerifiedBuild`) VALUES 
