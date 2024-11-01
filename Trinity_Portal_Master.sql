@@ -36,7 +36,7 @@ DELETE FROM creature_text WHERE CreatureID = @ENTRY;
 -- Teleporter
 -- Create Creature
 INSERT INTO `creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `name`, `femaleName`, `subname`, `TitleAlt`, `IconName`, `RequiredExpansion`, `VignetteID`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `Classification`, `dmgschool`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `unit_flags3`, `family`, `trainer_class`, `type`, `VehicleId`, `AIName`, `MovementType`, `ExperienceModifier`, `RacialLeader`, `movementId`, `WidgetSetID`, `WidgetSetUnitConditionID`, `RegenHealth`, `CreatureImmunitiesId`, `flags_extra`, `ScriptName`, `StringId`, `VerifiedBuild`) 
-VALUES (@ENTRY, 0, 0, @NAME, NULL, @SUBNAME, NULL, 'Directions', 0, 0, 35, 1, 1.14286, 1.25, 1, 2, 0, 0, 0, 1, 1, 1, 4, 0, 0, 0, 0, 7, 0, 'SmartAI', 0, 1, 0, 0, 0, 0, 1, 0, 2, '', NULL, 56421);
+VALUES (@ENTRY, 0, 0, @NAME, NULL, @SUBNAME, NULL, 'Directions', 0, 0, 35, 1, 1.14286, 1.25, 1, 2, 0, 0, 0, 1, 1, 1, 4, 0, 0, 0, 0, 7, 0, 'SmartAI', 0, 1, 0, 0, 0, 0, 1, 0, 2, '', NULL, @VBUILD);
 
 -- Teleporter aura
 INSERT INTO `creature_template_addon` (`entry`, `PathId`, `mount`, `MountCreatureID`, `StandState`, `AnimTier`, `VisFlags`, `SheathState`, `PvPFlags`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `visibilityDistanceType`, `auras`) 
