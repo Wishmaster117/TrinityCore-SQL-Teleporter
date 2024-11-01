@@ -128,8 +128,8 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+6, 9, 6, 67, "Thousand Needles"),
 (15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Pandarie Horde
 (15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
-(14, @GOSSIP_MENU, @TEXT_ID+1, 6, 469, "For the Alliance"),
-(14, @GOSSIP_MENU, @TEXT_ID, 6, 67, "For the Horde"),
+(14, @GOSSIP_MENU, @TEXT_ID+1, 6, 67, "For the Alliance"),
+(14, @GOSSIP_MENU, @TEXT_ID, 6, 469, "For the Horde"),
 -- Debut test conditions regroupées
 (15, @GOSSIP_MENU+17, 1, 6, 469, "Stormwind"),
 (15, @GOSSIP_MENU+17, 2, 6, 67, "Orgrimmar"),
