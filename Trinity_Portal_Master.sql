@@ -17,7 +17,7 @@ SET
 @TEXT_ID        := 9000000,
 @GOSSIP_MENU    := 2000000,
 @BROAD_TEXT     := 9000000,
-@VBUILD         := 56819;
+@VBUILD         := 57388;
 -- @RUNE           := 194394;
 
 -- Deleting code
