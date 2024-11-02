@@ -157,7 +157,7 @@ INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, 
 (@BROAD_TEXT+12, 'ptBR', '$B Então, qual cidade você quer visitar?$B', '', @VBUILD),
 (@BROAD_TEXT+12, 'ruRU', '$B Итак, какой город вы хотите посетить?$B', '', @VBUILD),
 (@BROAD_TEXT+12, 'zhCN', '$B 那么您想参观哪个城市？$B', '', @VBUILD),
-(@BROAD_TEXT+12, 'zhTW', '$B 那麼您想參觀哪個城市？$B', '', @VBUILD);
+(@BROAD_TEXT+12, 'zhTW', '$B 那麼您想參觀哪個城市？$B', '', @VBUILD),
 -- Pvp ZONE
 (@BROAD_TEXT+13, 'deDE', '$B $B Bereite dich auf eine Kuschelsession... mit Schwertern vor!$B$B Intensive Momente und vielleicht ein schnelles Ende sind garantiert...$B', '', @VBUILD),
 (@BROAD_TEXT+13, 'esES', '$B $B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
