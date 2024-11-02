@@ -24,11 +24,11 @@ SET
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
-DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
-DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+12;
-DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+18;
+DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+13;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+18;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
-DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
+DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+18;
 DELETE from creature WHERE ID = @ENTRY;
 -- DELETE from gameobject WHERE ID = @RUNE AND guid >= 1000000098;
 DELETE FROM creature_text WHERE CreatureID = @ENTRY;
@@ -48,7 +48,8 @@ VALUES (@ENTRY , @GOSSIP_MENU, @VBUILD);
 
 -- Gossip header text link to menus
 INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
-(@GOSSIP_MENU+17, @TEXT_ID+12, @VBUILD), -- test groupées
+(@GOSSIP_MENU+18, @TEXT_ID+13, @VBUILD), -- PvP Zones
+(@GOSSIP_MENU+17, @TEXT_ID+12, @VBUILD), -- Capitals and cities
 (@GOSSIP_MENU+10, @TEXT_ID+11, @VBUILD), -- War Within header
 (@GOSSIP_MENU+16, @TEXT_ID+10, @VBUILD), -- Dragonflight header
 (@GOSSIP_MENU+15, @TEXT_ID+9, @VBUILD), -- Shadowlands header
@@ -69,7 +70,8 @@ INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) VALUES -- Remettre le texte original ID 200000
-(@TEXT_ID+12, 1, @BROAD_TEXT+12, @VBUILD), -- test groupées
+(@TEXT_ID+13, 1, @BROAD_TEXT+13, @VBUILD), -- Capitals and cities
+(@TEXT_ID+12, 1, @BROAD_TEXT+12, @VBUILD), -- Capitals and cities
 (@TEXT_ID+11, 1, @BROAD_TEXT+11, @VBUILD), -- War Within header
 (@TEXT_ID+10, 1, @BROAD_TEXT+10, @VBUILD), -- Dragonflight header
 (@TEXT_ID+9, 1, @BROAD_TEXT+9, @VBUILD), -- Shadowlands header
@@ -130,7 +132,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 67, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 469, "For the Horde"),
--- Debut test conditions regroupées
+-- Capitals and cities
 (15, @GOSSIP_MENU+17, 1, 6, 469, "Stormwind"),
 (15, @GOSSIP_MENU+17, 2, 6, 67, "Orgrimmar"),
 (15, @GOSSIP_MENU+17, 3, 6, 469, "Darnassus"),
@@ -139,7 +141,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+17, 6, 6, 67, "Thunder bluff"),
 (15, @GOSSIP_MENU+17, 7, 6, 67, "Undercity"),
 (15, @GOSSIP_MENU+17, 8, 6, 67, "Silvermoon city");
--- Fin test conditions regroupées
+-- End Capitals and cities
 
 -- Conditions for gossip option levels (SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */)
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
@@ -260,7 +262,8 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU, 17, 27, 15, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 16, 27, 68, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 15, 27, 58, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU, 12, 27, 30, 3, 0, "Portal Master - Level req"),
+-- (15, @GOSSIP_MENU, 12, 27, 30, 3, 0, "Portal Master - Level req Gurubashi"),
+(15, @GOSSIP_MENU+18, 0, 27, 30, 3, 0, "Portal Master - Level req Gurubashi"),
 (15, @GOSSIP_MENU, 11, 27, 30, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 10, 27, 57, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU, 9, 27, 67, 3, 0, "Portal Master - Level req"),
@@ -355,11 +358,12 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- (@GOSSIP_MENU, 9, NULL, "Dalaran", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
 -- (@GOSSIP_MENU, 10, NULL, "Shattrath", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
 -- (@GOSSIP_MENU, 11, NULL, "Booty bay", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
--- Test regroupage --
 
-(@GOSSIP_MENU, 1, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Test regroupper les capitales
+-- Main menus
+(@GOSSIP_MENU, 1, NULL, "Capitals & Cities", @GOSSIP_MENU+17, 0, 0, 0, NULL), -- Viles et capitales = menu + 17
+(@GOSSIP_MENU, 2, NULL, "PvP Zones", @GOSSIP_MENU+18, 0, 0, 0, NULL), -- Viles et capitales = menu + 18
 
-(@GOSSIP_MENU, 12, NULL, "Gurubashi arena", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Arena?"),
+-- (@GOSSIP_MENU, 12, NULL, "Gurubashi arena", @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Gurubashi arena?"),
 (@GOSSIP_MENU, 13, NULL, "Eastern Kingdoms", @GOSSIP_MENU+5, 0, 0, 0, NULL),
 (@GOSSIP_MENU, 14, NULL, "Kalimdor", @GOSSIP_MENU+6, 0, 0, 0, NULL),
 (@GOSSIP_MENU, 15, NULL, "Outland", @GOSSIP_MENU+7, 0, 0, 0, NULL),
@@ -375,6 +379,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU, 25, NULL, "BFA", @GOSSIP_MENU+14, 0, 0, 0, NULL), -- Ajout BFA = menu + 14
 (@GOSSIP_MENU, 26, NULL, "Shadowlands", @GOSSIP_MENU+15, 0, 0, 0, NULL), -- Ajout Shadowlands = menu + 15
 (@GOSSIP_MENU, 27, NULL, "Dragonflight", @GOSSIP_MENU+16, 0, 0, 0, NULL), -- Ajout Dragonflight = menu + 16
+-- Submenus
 (@GOSSIP_MENU+1, 0, NULL, "Gnomeregan", 0, 0, 0, 0, "Are you sure, that you want to go to Gnomeregan?"),
 (@GOSSIP_MENU+1, 1, NULL, "The Deadmines", 0, 0, 0, 0, "Are you sure, that you want to go to The Deadmines?"),
 (@GOSSIP_MENU+1, 2, NULL, "The Stockade", 0, 0, 0, 0, "Are you sure, that you want to go to The Stockade?"),
@@ -600,6 +605,10 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+17, 11, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
 (@GOSSIP_MENU+17, 13, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
 -- Fin villes et Capitales --
+-- Pvp menu
+(@GOSSIP_MENU+18, 0, NULL, "Gurubashi arena", 0, 0, 0, 0, "Are you sure, that you want to go to Gurubashi arena?"),
+(@GOSSIP_MENU+18, 13, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
+-- Fin pvp Menu
 
 -- Teleport scripts:
 INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
@@ -620,7 +629,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script Baie du butin"),
 (@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script Shattrath"),
 (@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script Dalaran"),
-(@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
+--(@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 (@ENTRY, 0, 7, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 3, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script Darnassus"),
 (@ENTRY, 0, 8, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 4, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script Forgefer"),
 (@ENTRY, 0, 9, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 5, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script Exodar"),
@@ -823,8 +832,21 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
 (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 2071, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10");
+(@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10");
 
+-- Pvp menu
+(@ENTRY, 0, 202, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
+(@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script PvP"),
+(@ENTRY, 0, 204, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 2, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script PvP"),
+(@ENTRY, 0, 205, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 3, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script PvP"),
+(@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script PvP"),
+(@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 5, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script PvP"),
+(@ENTRY, 0, 208, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script PvP"),
+(@ENTRY, 0, 209, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script PvP"),
+(@ENTRY, 0, 210, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script PvP"),
+(@ENTRY, 0, 211, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 9, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script pitons du PvP"),
+(@ENTRY, 0, 212, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 10, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script PvP"),
+(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"),
 
 -- dornogal Mapid: 2552 X: 2871.7 Y: -2444.6 Z: 266.761 Orientacion:3.93463
 -- Teleporter spawns:

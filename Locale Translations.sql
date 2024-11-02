@@ -6,7 +6,7 @@ SET
 @VBUILD         := 57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
-DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+17;
+DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+18;
 DELETE FROM creature_template_locale WHERE entry = @ENTRY;
 
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `Title`, `TitleAlt`, `VerifiedBuild`) VALUES 
@@ -45,7 +45,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 -- (@GOSSIP_MENU, 1, 'ruRU', "Штормград", "Вы уверены, что хотите пойти в Штормград?"),
 -- (@GOSSIP_MENU, 1, 'zhCN', "暴风城", "你确定要去暴风城吗？"),
 -- (@GOSSIP_MENU, 1, 'zhTW', "暴風城", "你確定要去暴風城嗎？"),
- 
+ -- Menus
 (@GOSSIP_MENU, 1, 'deDE', "Capitals & Cities", NULL),
 (@GOSSIP_MENU, 1, 'esES', "Capitals & Cities", NULL),
 (@GOSSIP_MENU, 1, 'esMX', "Capitals & Cities", NULL),
@@ -56,6 +56,17 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU, 1, 'ruRU', "Capitals & Cities", NULL),
 (@GOSSIP_MENU, 1, 'zhCN', "Capitals & Cities", NULL),
 (@GOSSIP_MENU, 1, 'zhTW', "Capitals & Cities", NULL),
+
+(@GOSSIP_MENU, 2, 'deDE', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'esES', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'esMX', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'frFR', "Zones PvP", NULL),
+(@GOSSIP_MENU, 2, 'itIT', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'koKR', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'ptBR', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'ruRU', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'zhCN', "PvP Zone", NULL),
+(@GOSSIP_MENU, 2, 'zhTW', "PvP Zone", NULL),
 
 -- (@GOSSIP_MENU, 2, 'deDE', "Orgrimmar", "Bist du sicher, dass du nach Orgrimmar gehen willst?"),
 -- (@GOSSIP_MENU, 2, 'esES', "Orgrimmar", "¿Estás seguro de que quieres ir a Orgrimmar?"),
@@ -157,16 +168,16 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 -- (@GOSSIP_MENU, 11, 'ruRU', "Бухта Добычи", "Вы уверены, что хотите пойти в Бухту Добычи?"),
 -- (@GOSSIP_MENU, 11, 'zhCN', "藏宝海湾", "你确定要去藏宝海湾吗？"),
 -- (@GOSSIP_MENU, 11, 'zhTW', "寶藏灣", "你確定要去寶藏灣嗎？"),
-(@GOSSIP_MENU, 12, 'deDE', "Gurubashi-Arena", "Bist du sicher, dass du zur Gurubashi-Arena gehen willst?"),
-(@GOSSIP_MENU, 12, 'esES', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
-(@GOSSIP_MENU, 12, 'esMX', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
-(@GOSSIP_MENU, 12, 'frFR', "Arène de Gurubashi", "Es-tu sûr de vouloir aller à l'Arène des Gurubashi ?"),
-(@GOSSIP_MENU, 12, 'itIT', "Gurubashi Arena", "Sei sicuro di voler andare alla Gurubashi Arena?"),
-(@GOSSIP_MENU, 12, 'koKR', "구루바시 아레나", "구루바시 아레나로 가고 싶으신가요?"),
-(@GOSSIP_MENU, 12, 'ptBR', "Arena Gurubashi", "Você tem certeza de que deseja ir à Arena Gurubashi?"),
-(@GOSSIP_MENU, 12, 'ruRU', "Арена Гурубаши", "Вы уверены, что хотите пойти на арену Гурубаши?"),
-(@GOSSIP_MENU, 12, 'zhCN', "古拉巴什竞技场", "你确定要去古拉巴什竞技场吗？"),
-(@GOSSIP_MENU, 12, 'zhTW', "古拉巴什競技場", "你確定要去古拉巴什競技場嗎？"),
+--(@GOSSIP_MENU, 12, 'deDE', "Gurubashi-Arena", "Bist du sicher, dass du zur Gurubashi-Arena gehen willst?"),
+--(@GOSSIP_MENU, 12, 'esES', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
+--(@GOSSIP_MENU, 12, 'esMX', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
+--(@GOSSIP_MENU, 12, 'frFR', "Arène de Gurubashi", "Es-tu sûr de vouloir aller à l'Arène des Gurubashi ?"),
+--(@GOSSIP_MENU, 12, 'itIT', "Gurubashi Arena", "Sei sicuro di voler andare alla Gurubashi Arena?"),
+--(@GOSSIP_MENU, 12, 'koKR', "구루바시 아레나", "구루바시 아레나로 가고 싶으신가요?"),
+--(@GOSSIP_MENU, 12, 'ptBR', "Arena Gurubashi", "Você tem certeza de que deseja ir à Arena Gurubashi?"),
+--(@GOSSIP_MENU, 12, 'ruRU', "Арена Гурубаши", "Вы уверены, что хотите пойти на арену Гурубаши?"),
+--(@GOSSIP_MENU, 12, 'zhCN', "古拉巴什竞技场", "你确定要去古拉巴什竞技场吗？"),
+--(@GOSSIP_MENU, 12, 'zhTW', "古拉巴什競技場", "你確定要去古拉巴什競技場嗎？"),
 (@GOSSIP_MENU, 13, 'deDE', "Östliche Königreiche", NULL),
 (@GOSSIP_MENU, 13, 'esES', "Reinos del Este", NULL),
 (@GOSSIP_MENU, 13, 'esMX', "Reinos del Este", NULL),
@@ -317,6 +328,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU, 27, 'ruRU', "ПDragonflight Zone", NULL),
 (@GOSSIP_MENU, 27, 'zhCN', "Dragonflight Zone", NULL),
 (@GOSSIP_MENU, 27, 'zhTW', "Dragonflight Zone", NULL),
+-- Submenus
 (@GOSSIP_MENU+1, 0, 'enUS', "Gnomeregan", "Are you sure, that you want to go to Gnomeregan?"),
 (@GOSSIP_MENU+1, 0, 'deDE', "Gnomeregan", "Bist du sicher, dass du nach Gnomeregan gehen möchtest?"),
 (@GOSSIP_MENU+1, 0, 'esES', "Gnomeregan", "¿Estás seguro de que quieres ir a Gnomeregan?"),
@@ -1714,7 +1726,6 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+8, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+8, 10, 'zhTW', "返回..", NULL),
 -- The War Within
-
 (@GOSSIP_MENU+10, 0, 'deDE', "Dornogal (Insel von Dorn)", "Bist du sicher, dass du nach Dornogal gehen möchtest?"),
 (@GOSSIP_MENU+10, 0, 'esES', "Dornogal (Isla de Dorn)", "¿Estás seguro de que quieres ir a Dornogal?"),
 (@GOSSIP_MENU+10, 0, 'esMX', "Dornogal (Isla de Dorn)", "¿Estás seguro de que quieres ir a Dornogal?"),
@@ -1830,6 +1841,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+10, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+10, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+10, 10, 'zhTW', "返回..", NULL),
+-- Pandarie
 (@GOSSIP_MENU+11, 0, 'deDE', "Schrein der Zwei Monde", "Sind Sie sich sicher, dass Sie zum Heiligtum der Zwei Monde gehen möchten?"),
 (@GOSSIP_MENU+11, 0, 'esES', "Santuario de las Dos Lunas", "¿Estás seguro de que quieres ir al Santuario de las Dos Lunas?"),
 (@GOSSIP_MENU+11, 0, 'frFR', "Sanctuaire des Deux Lunes", "Êtes-vous sûr de vouloir aller au Sanctuaire des Deux Lunes ?"),
@@ -1939,6 +1951,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+11, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+11, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+11, 10, 'zhTW', "返回..", NULL),
+-- Draenor
 (@GOSSIP_MENU+12, 0, 'enUS', "Draenor", "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 0, 'deDE', "Draenor", "Bist du sicher, dass du nach Draenor reisen möchtest?"),
 (@GOSSIP_MENU+12, 0, 'esES', "Draenor", "¿Estás seguro de que quieres ir a Draenor?"),
@@ -2050,6 +2063,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+12, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+12, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+12, 10, 'zhTW', "返回..", NULL),
+-- Legion
 (@GOSSIP_MENU+13, 0, 'enUS', "Legion", "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 0, 'deDE', "Legion", "Bist du sicher, dass du zur Legion reisen möchtest?"),
 (@GOSSIP_MENU+13, 0, 'esES', "Legion", "¿Estás seguro de que quieres ir a la Legión?"),
@@ -2161,6 +2175,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+13, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+13, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+13, 10, 'zhTW', "返回..", NULL),
+-- BFA
 (@GOSSIP_MENU+14, 0, 'enUS', "BFA", "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 0, 'deDE', "BFA", "Bist du sicher, dass du nach BFA reisen möchtest?"),
 (@GOSSIP_MENU+14, 0, 'esES', "BFA", "¿Estás seguro de que quieres ir a BFA?"),
@@ -2272,6 +2287,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+14, 10, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+14, 10, 'zhCN', "返回..", NULL),
 (@GOSSIP_MENU+14, 10, 'zhTW', "返回..", NULL),
+-- Shadowlands
 (@GOSSIP_MENU+15, 0, 'enUS', "Shadowlands", "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 0, 'deDE', "Shadowlands", "Bist du sicher, dass du zu den Schattenlanden reisen möchtest?"),
 (@GOSSIP_MENU+15, 0, 'esES', "Shadowlands", "¿Estás seguro de que quieres ir a las Tierras Sombrías?"),
@@ -2625,6 +2641,26 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+17, 12, 'ptBR', "Voltar..", NULL),
 (@GOSSIP_MENU+17, 12, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+17, 12, 'zhCN', "返回..", NULL),
-(@GOSSIP_MENU+17, 12, 'zhTW', "返回..", NULL);
+(@GOSSIP_MENU+17, 12, 'zhTW', "返回..", NULL),
+-- Pvp Zones
+(@GOSSIP_MENU+18, 0, 'deDE', "Gurubashi-Arena", "Bist du sicher, dass du zur Gurubashi-Arena gehen willst?"),
+(@GOSSIP_MENU+18, 0, 'esES', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
+(@GOSSIP_MENU+18, 0, 'esMX', "Arena Gurubashi", "¿Estás seguro de que quieres ir a Arena Gurubashi?"),
+(@GOSSIP_MENU+18, 0, 'frFR', "Arène de Gurubashi", "Es-tu sûr de vouloir aller à l'Arène des Gurubashi ?"),
+(@GOSSIP_MENU+18, 0, 'itIT', "Gurubashi Arena", "Sei sicuro di voler andare alla Gurubashi Arena?"),
+(@GOSSIP_MENU+18, 0, 'koKR', "구루바시 아레나", "구루바시 아레나로 가고 싶으신가요?"),
+(@GOSSIP_MENU+18, 0, 'ptBR', "Arena Gurubashi", "Você tem certeza de que deseja ir à Arena Gurubashi?"),
+(@GOSSIP_MENU+18, 0, 'ruRU', "Арена Гурубаши", "Вы уверены, что хотите пойти на арену Гурубаши?"),
+(@GOSSIP_MENU+18, 0, 'zhCN', "古拉巴什竞技场", "你确定要去古拉巴什竞技场吗？"),
+(@GOSSIP_MENU+18, 0, 'zhTW', "古拉巴什競技場", "你確定要去古拉巴什競技場嗎？"),
 
--- Fin test groupées
+(@GOSSIP_MENU+18, 13, 'deDE', "Zurück..", NULL),
+(@GOSSIP_MENU+18, 13, 'esES', "Volver..", NULL),
+(@GOSSIP_MENU+18, 13, 'esMX', "Volver..", NULL),
+(@GOSSIP_MENU+18, 13, 'frFR', "Retour..", NULL),
+(@GOSSIP_MENU+18, 13, 'itIT', "Indietro..", NULL),
+(@GOSSIP_MENU+18, 13, 'koKR', "뒤로..", NULL),
+(@GOSSIP_MENU+18, 13, 'ptBR', "Voltar..", NULL),
+(@GOSSIP_MENU+18, 13, 'ruRU', "Назад..", NULL),
+(@GOSSIP_MENU+18, 13, 'zhCN', "返回..", NULL),
+(@GOSSIP_MENU+18, 13, 'zhTW', "返回..", NULL);
