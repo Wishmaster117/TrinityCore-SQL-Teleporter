@@ -70,7 +70,7 @@ INSERT INTO gossip_menu (`menuid`, `textid`, `VerifiedBuild`) VALUES
 
 -- Gossip header texts
 INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) VALUES -- Remettre le texte original ID 200000
-(@TEXT_ID+13, 1, @BROAD_TEXT+13, @VBUILD), -- Capitals and cities
+(@TEXT_ID+13, 1, @BROAD_TEXT+13, @VBUILD), -- PvP Zones
 (@TEXT_ID+12, 1, @BROAD_TEXT+12, @VBUILD), -- Capitals and cities
 (@TEXT_ID+11, 1, @BROAD_TEXT+11, @VBUILD), -- War Within header
 (@TEXT_ID+10, 1, @BROAD_TEXT+10, @VBUILD), -- Dragonflight header
@@ -629,7 +629,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script Baie du butin"),
 (@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script Shattrath"),
 (@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script Dalaran"),
---(@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
+-- (@ENTRY, 0, 6, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 12, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 (@ENTRY, 0, 7, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 3, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script Darnassus"),
 (@ENTRY, 0, 8, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 4, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script Forgefer"),
 (@ENTRY, 0, 9, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 5, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script Exodar"),
@@ -832,21 +832,20 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
 (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10");
-
+(@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Pvp menu
 (@ENTRY, 0, 202, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 (@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script PvP"),
 (@ENTRY, 0, 204, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 2, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script PvP"),
 (@ENTRY, 0, 205, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 3, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script PvP"),
 (@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script PvP"),
-(@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 5, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script PvP"),
+(@ENTRY, 0, 207, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 5, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script PvP"),
 (@ENTRY, 0, 208, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script PvP"),
 (@ENTRY, 0, 209, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script PvP"),
 (@ENTRY, 0, 210, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script PvP"),
 (@ENTRY, 0, 211, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 9, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script pitons du PvP"),
 (@ENTRY, 0, 212, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 10, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script PvP"),
-(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"),
+(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"):
 
 -- dornogal Mapid: 2552 X: 2871.7 Y: -2444.6 Z: 266.761 Orientacion:3.93463
 -- Teleporter spawns:
