@@ -5,14 +5,15 @@ SET
 @VBUILD         := 57388;
 
 -- Deleting code
-DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+12;
-DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+12;
+DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+13;
+DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+13;
 
--- Table Hotfix -- Remettre le texte original de la ligne 200000 a chopper sur la bdd qui est en place sur le minipc
+-- Table Hotfix -- Submenus headers
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES
-('$B So what city do you want to visit ? $B', '', @BROAD_TEXT+12, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
-('$B Steady yourself… you’re heading into the heart of conflict. The War Within waits, no turning back from here! $B', '', @BROAD_TEXT+11, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
-('$B Wings ready? The Dragon Isles call, but the skies are no place for the faint-hearted. Last chance to stay grounded! $B', '', @BROAD_TEXT+10, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
+('$B Get ready for a cuddle session... with swords!$ Intense moments and maybe a quick death await you...$B', '', @BROAD_TEXT+13, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Pvp Zones 
+('$B So what city do you want to visit ? $B', '', @BROAD_TEXT+12, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Capitals and cities 
+('$B Steady yourself… you’re heading into the heart of conflict. The War Within waits, no turning back from here! $B', '', @BROAD_TEXT+11, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- War within 
+('$B Wings ready? The Dragon Isles call, but the skies are no place for the faint-hearted. Last chance to stay grounded! $B', '', @BROAD_TEXT+10, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Dragonflight 
 ('$B Take a deep breath… the Shadowlands don’t offer return tickets. Last chance to stay among the living! $B', '', @BROAD_TEXT+9, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Shadowlands 
 ('$B Grab your courage! Azeroth’s battlefields await, and it’s every hero for themselves. Last call to back out! $B', '', @BROAD_TEXT+8, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- BFA 
 ('$B Ready your weapons! The Legion waits, and it doesn’t take kindly to visitors. Last chance to retreat! $B', '', @BROAD_TEXT+7, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Legion 
@@ -24,6 +25,7 @@ INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`
 ('$B For the Horde! $B', '', @BROAD_TEXT+1, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD),
 ('$B For The Alliance! $B', '', @BROAD_TEXT, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD);
 
+-- 
 -- Table Hotfix locale
 INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, `VerifiedBuild`) VALUES 
 (@BROAD_TEXT, 'deDE', '$B Für die Allianz!$B', '', @VBUILD),
@@ -156,6 +158,18 @@ INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, 
 (@BROAD_TEXT+12, 'ruRU', '$B Итак, какой город вы хотите посетить?$B', '', @VBUILD),
 (@BROAD_TEXT+12, 'zhCN', '$B 那么您想参观哪个城市？$B', '', @VBUILD),
 (@BROAD_TEXT+12, 'zhTW', '$B 那麼您想參觀哪個城市？$B', '', @VBUILD);
+-- Pvp ZONE
+(@BROAD_TEXT+13, 'deDE', '$B $B Bereite dich auf eine Kuschelsession... mit Schwertern vor!$B$B Intensive Momente und vielleicht ein schnelles Ende sind garantiert...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'esES', '$B $B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'esMX', '$B $B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'frFR', '$B $B Préparez-vous à une séance de câlins... avec des épées !$B$B On vous promet des moments intenses, et peut-être une mort rapide...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'itIT', '$B $B Preparati per una sessione di abbracci... con spade!$B$B Momenti intensi e forse una fine rapida ti attendono...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'koKR', '$B $B 칼로 하는 포옹 세션을 준비하세요!$B$B 짜릿한 순간과 빠른 죽음이 기다립니다...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'ptBR', '$B $B Prepare-se para uma sessão de abraços... com espadas!$B$B Momentos intensos e, quem sabe, uma morte rápida...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'ruRU', '$B $B Готовьтесь к сеансу обнимашек... с мечами!$B$B Вас ждут напряженные моменты и, возможно, быстрая смерть...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'zhCN', '$B $B 准备好接受剑刃般的拥抱吧！$B$B 激烈的时刻，或许还有快速的死亡等待着你…$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'zhTW', '$B $B 準備好迎接劍刃般的擁抱吧！$B$B 激烈的時刻，也許還有快速的死亡等著你…$B', '', @VBUILD);
+
 
 
 
