@@ -845,7 +845,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 210, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script PvP"),
 (@ENTRY, 0, 211, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 9, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script pitons du PvP"),
 (@ENTRY, 0, 212, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 10, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script PvP"),
-(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"):
+(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP");
 
 -- Teleporter spawns:
 

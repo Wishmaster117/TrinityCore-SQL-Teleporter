@@ -2474,7 +2474,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+16, 6, 'ptBR', "Acampamento Escamas de Dragão (Caverna Zaralek)", "Você tem certeza de que deseja ir para o Acampamento Escamas de Dragão?"),
 (@GOSSIP_MENU+16, 6, 'ruRU', "Лагерь Драконьей экспедиции (Пещера Заралек)", "Вы уверены, что хотите отправиться в Лагерь Драконьей экспедиции?"),
 (@GOSSIP_MENU+16, 6, 'zhCN', "龙鳞先遣营地 (查拉雷克洞窟)", "你确定要去龙鳞先遣营地吗？"),
-(@GOSSIP_MENU+16, 6, 'zhTW', "龙鳞先遣营地 (查拉雷克洞窟)", "你確定要去龍鱗先遣營地嗎？");
+(@GOSSIP_MENU+16, 6, 'zhTW', "龙鳞先遣营地 (查拉雷克洞窟)", "你確定要去龍鱗先遣營地嗎？"),
 -- (@GOSSIP_MENU+16, 7, 'enUS', "Dragonflight", "Are you sure, that you want to go to Dragonflight?"),
 -- (@GOSSIP_MENU+16, 7, 'deDE', "Dragonflight", "Bist du sicher, dass du zur Drachenflucht reisen möchtest?"),
 -- (@GOSSIP_MENU+16, 7, 'esES', "Dragonflight", "¿Estás seguro de que quieres ir a Vuelo de Dragón?"),
@@ -2505,7 +2505,6 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 -- (@GOSSIP_MENU+16, 9, 'ruRU', "Dragonflight", "Вы уверены, что хотите отправиться в Полет Драконов?"),
 -- (@GOSSIP_MENU+16, 9, 'zhCN', "Dragonflight", "您确定要去龙飞行吗？"),
 -- (@GOSSIP_MENU+16, 9, 'zhTW', "Dragonflight", "你確定要去飛龍嗎？"),
-(@GOSSIP_MENU+16, 10, 'enUS', "Back..", NULL),
 (@GOSSIP_MENU+16, 10, 'deDE', "Zurück..", NULL),
 (@GOSSIP_MENU+16, 10, 'esES', "Volver..", NULL),
 (@GOSSIP_MENU+16, 10, 'esMX', "Volver..", NULL),
