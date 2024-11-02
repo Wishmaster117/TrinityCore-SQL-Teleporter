@@ -518,7 +518,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- (@GOSSIP_MENU+10, 7, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 -- (@GOSSIP_MENU+10, 8, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 -- (@GOSSIP_MENU+10, 9, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+10, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Pandaria
 (@GOSSIP_MENU+11, 0, NULL, "Sanctuaire des Deux Lunes", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Deux Lunes?"), -- Sanctuaire des deux lunes
 (@GOSSIP_MENU+11, 1, NULL, "Sanctuaire des Sept étoiles", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Sept étoiles?"), -- Sanctuaire des Sept étoiles Alliance
@@ -580,16 +580,16 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+15, 9, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Dragonflight
-(@GOSSIP_MENU+16, 0, NULL, "Valdrakken", 0, 0, 0, 0, "Are you sure, that you want to go to Valdrakken?"),
-(@GOSSIP_MENU+16, 1, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 2, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 3, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 4, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 5, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 6, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 7, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 8, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 9, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
+(@GOSSIP_MENU+16, 0, NULL, "Valdrakken (Thaldraszus)", 0, 0, 0, 0, "Are you sure, that you want to go to Valdrakken?"),
+(@GOSSIP_MENU+16, 1, NULL, "The Concord Observatory(The Waking Shores)", 0, 0, 0, 0, "Are you sure, that you want to go to The Concord Observatory?"),
+(@GOSSIP_MENU+16, 2, NULL, "Maruukai(Ohn'ahran Plains)", 0, 0, 0, 0, "Are you sure, that you want to go to Maruukai?"),
+(@GOSSIP_MENU+16, 3, NULL, "Camp Antonidas(The Azure Span)", 0, 0, 0, 0, "Are you sure, that you want to go to Camp Antonidas?"),
+(@GOSSIP_MENU+16, 4, NULL, "Old Weyrn Grounds(The Forbidden Reach)", 0, 0, 0, 0, "Are you sure, that you want to go to Old Weyrn Grounds?"),
+(@GOSSIP_MENU+16, 5, NULL, "Bel'ameth(Amirdrassil)", 0, 0, 0, 0, "Are you sure, that you want to go to Bel'ameth?"),
+(@GOSSIP_MENU+16, 6, NULL, "Dragonscale Basecamp(Zaralek Cavern)", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonscale Basecamp?"),
+-- (@GOSSIP_MENU+16, 7, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
+-- (@GOSSIP_MENU+16, 8, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
+-- (@GOSSIP_MENU+16, 9, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Viles et Capitales --
 (@GOSSIP_MENU+17, 1, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
@@ -823,16 +823,16 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 190, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 (@ENTRY, 0, 191, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Dragonflight
-(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2526, 0, 0, 0, 0, 0, 7, 0, 0, 0, -2.787829, -850.865723, 838.082947, 5.462425, "Valdrakken"),
-(@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
-(@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
-(@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4017.35, -3403.85, 290, 5.35431, "Zone 4"),
-(@ENTRY, 0, 196, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5560.23, -3211.66, 371.709, 5.55055, "Zone 5"),
-(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5614.67, 5818.86, -69.722, 3.60807, "Zone 6"),
-(@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
-(@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
-(@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
+(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 115.639, -939.723, 836.586, 0, "Valdrakken"),
+(@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2934.35, 188.591, 498.596, 0, "The Concord Observatory"),
+(@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -620.498, 2198.33, 436.668, 0, "Maruukai"),
+(@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3817.34, 505.7, 647.829, 0, "Camp Antonidas"),
+(@ENTRY, 0, 196, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 4, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6510.56, -3318.14, 162.985, 0, "Old Weyrn Grounds"),
+(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1697.679688, 7147.415039, 200.854599, 30, "Bel'ameth"),
+(@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 2454, 0, 0, 0, 0, 0, 7, 0, 0, 0, -982.407410, 3150.312744, 44.202740, 0.891442, "Dragonscale Basecamp"),
+-- (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
+-- (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
+-- (@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Pvp menu
 (@ENTRY, 0, 202, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 (@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script PvP"),
@@ -847,7 +847,6 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 212, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 10, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script PvP"),
 (@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"):
 
--- dornogal Mapid: 2552 X: 2871.7 Y: -2444.6 Z: 266.761 Orientacion:3.93463
 -- Teleporter spawns:
 
 /*INSERT INTO creature (id, map, spawnMask, phaseMask, modelid, position_x, position_y, position_z, orientation, spawntimesecs, wander_distance, curhealth, curmana) VALUES
