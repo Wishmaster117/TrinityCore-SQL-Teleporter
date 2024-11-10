@@ -1,32 +1,34 @@
-This is a NPC teleporter entirely based on SQL!
-This is based upon the excellent work from Rochet2 and ported to TrinityCore Master branche by me.
+This is a NPC teleporter entirely based on SQL!<br/>
 
-1) Adjust the following variables according to your needs.
+This is based upon the excellent work from <a href="https://rochet2.github.io/">Rochet2</a> and ported to TrinityCore Master branche by me.<br/>
 
-@ENTRY          := 9000000,
-@NAME           := "Portal Master",
-@SUBNAME        := "Where do you go ?",
-@MODEL          := 21572,
+1) Adjust the following variables according to your needs.<br/>
 
-@AURA           := "30540", -- "35766" = casting
+@ENTRY          := 9000000,<br/>
+@NAME           := "Portal Master",<br/>
+@SUBNAME        := "Where do you go ?",<br/>
+@MODEL          := 21572,<br/>
 
-@TEXT_ID        := 9000000,
-@GOSSIP_MENU    := 2000000,
-@BROAD_TEXT     := 9000000,
-@VBUILD         := 57388;
+@AURA           := "30540", -- "35766" = casting<br/><br/>
 
-and
+@TEXT_ID        := 9000000,<br/>
+@GOSSIP_MENU    := 2000000,<br/>
+@BROAD_TEXT     := 9000000,<br/>
+@VBUILD         := 57388;<br/>
 
-@BROAD_TEXT     := 9000000,
-@VBUILD         := 57388;
+and<br/>
 
-3) Run the file Trynity Portal Master.sql and Local Translation.sql in your World Database.
-4) Tun the file Hotfix_Translation.sql in your Hotfixes Database
-5) Add NPC's where you want to have teleporters (.npc add 9000000)
+@BROAD_TEXT     := 9000000,<br/>
+@VBUILD         := 57388;<br/>
 
-Enjoy.
+3) Run the file Trynity Portal Master.sql and Local Translation.sql in your World Database.<br/>
+4) Tun the file Hotfix_Translation.sql in your Hotfixes Database<br/>
+5) Add NPC's where you want to have teleporters (.npc add 9000000)<br/>
 
-Features : Multilangual
+Enjoy.<br/>
 
-Credits :
-Rochet2
+Features : Multilangual<br/>
+
+Credits :<br/>
+
+<a href="https://rochet2.github.io/">Rochet2</a>
