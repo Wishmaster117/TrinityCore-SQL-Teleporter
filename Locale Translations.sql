@@ -68,6 +68,17 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU, 2, 'zhCN', "PvP区域", NULL),
 (@GOSSIP_MENU, 2, 'zhTW', "PvP區域", NULL),
 
+(@GOSSIP_MENU, 3, 'deDE', "Neues Startgebiet", NULL),
+(@GOSSIP_MENU, 3, 'esES', "Nueva Zona de Inicio", NULL),
+(@GOSSIP_MENU, 3, 'esMX', "Nueva Zona de Inicio", NULL),
+(@GOSSIP_MENU, 3, 'frFR', "Nouvelle Zone de départ", NULL),
+(@GOSSIP_MENU, 3, 'itIT', "Nuova Zona di Partenza", NULL),
+(@GOSSIP_MENU, 3, 'koKR', "새로운 시작 지역", NULL),
+(@GOSSIP_MENU, 3, 'ptBR', "Nova Zona Inicial", NULL),
+(@GOSSIP_MENU, 3, 'ruRU', "Новая начальная зона", NULL),
+(@GOSSIP_MENU, 3, 'zhCN', "新手区域", NULL),
+(@GOSSIP_MENU, 3, 'zhTW', "新手區域", NULL),
+
 -- (@GOSSIP_MENU, 2, 'deDE', "Orgrimmar", "Bist du sicher, dass du nach Orgrimmar gehen willst?"),
 -- (@GOSSIP_MENU, 2, 'esES', "Orgrimmar", "¿Estás seguro de que quieres ir a Orgrimmar?"),
 -- (@GOSSIP_MENU, 2, 'esMX', "Orgrimmar", "¿Estás seguro de que quieres ir a Orgrimmar?"),
