@@ -10,6 +10,7 @@ DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+1
 
 -- Table Hotfix -- Submenus headers
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES
+('$B You’re about to enter The War Within, where the mobs are no scarier than your own existential problems.$B', '', @BROAD_TEXT+14, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- New starting Zone 
 ('$B Get ready for a cuddle session... with swords!$ Intense moments and maybe a quick death await you...$B', '', @BROAD_TEXT+13, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Pvp Zones 
 ('$B So what city do you want to visit ? $B', '', @BROAD_TEXT+12, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- Capitals and cities 
 ('$B Steady yourself… you’re heading into the heart of conflict. The War Within waits, no turning back from here! $B', '', @BROAD_TEXT+11, 0, 0, 0, 68, 0, 0, 58268, 0, 0, 0, 0, 0, 0, 0, @VBUILD), -- War within 
@@ -159,16 +160,28 @@ INSERT INTO `broadcast_text_locale` (`ID`, `locale`, `Text_lang`, `Text1_lang`, 
 (@BROAD_TEXT+12, 'zhCN', '$B 那么您想参观哪个城市？$B', '', @VBUILD),
 (@BROAD_TEXT+12, 'zhTW', '$B 那麼您想參觀哪個城市？$B', '', @VBUILD),
 -- Pvp ZONE
-(@BROAD_TEXT+13, 'deDE', '$B $B Bereite dich auf eine Kuschelsession... mit Schwertern vor!$B$B Intensive Momente und vielleicht ein schnelles Ende sind garantiert...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'esES', '$B $B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'esMX', '$B $B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'frFR', '$B $B Préparez-vous à une séance de câlins... avec des épées !$B$B On vous promet des moments intenses, et peut-être une mort rapide...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'itIT', '$B $B Preparati per una sessione di abbracci... con spade!$B$B Momenti intensi e forse una fine rapida ti attendono...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'koKR', '$B $B 칼로 하는 포옹 세션을 준비하세요!$B$B 짜릿한 순간과 빠른 죽음이 기다립니다...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'ptBR', '$B $B Prepare-se para uma sessão de abraços... com espadas!$B$B Momentos intensos e, quem sabe, uma morte rápida...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'ruRU', '$B $B Готовьтесь к сеансу обнимашек... с мечами!$B$B Вас ждут напряженные моменты и, возможно, быстрая смерть...$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'zhCN', '$B $B 准备好接受剑刃般的拥抱吧！$B$B 激烈的时刻，或许还有快速的死亡等待着你…$B', '', @VBUILD),
-(@BROAD_TEXT+13, 'zhTW', '$B $B 準備好迎接劍刃般的擁抱吧！$B$B 激烈的時刻，也許還有快速的死亡等著你…$B', '', @VBUILD);
+(@BROAD_TEXT+13, 'deDE', '$B Bereite dich auf eine Kuschelsession... mit Schwertern vor!$B$B Intensive Momente und vielleicht ein schnelles Ende sind garantiert...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'esES', '$B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'esMX', '$B Prepárate para una sesión de abrazos... con espadas!$B$B Momentos intensos y, tal vez, una muerte rápida te esperan...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'frFR', '$B Préparez-vous à une séance de câlins... avec des épées !$B$B On vous promet des moments intenses, et peut-être une mort rapide...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'itIT', '$B Preparati per una sessione di abbracci... con spade!$B$B Momenti intensi e forse una fine rapida ti attendono...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'koKR', '$B 칼로 하는 포옹 세션을 준비하세요!$B$B 짜릿한 순간과 빠른 죽음이 기다립니다...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'ptBR', '$B Prepare-se para uma sessão de abraços... com espadas!$B$B Momentos intensos e, quem sabe, uma morte rápida...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'ruRU', '$B Готовьтесь к сеансу обнимашек... с мечами!$B$B Вас ждут напряженные моменты и, возможно, быстрая смерть...$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'zhCN', '$B 准备好接受剑刃般的拥抱吧！激烈的时刻，或许还有快速的死亡等待着你…$B', '', @VBUILD),
+(@BROAD_TEXT+13, 'zhTW', '$B 準備好迎接劍刃般的擁抱吧！激烈的時刻，也許還有快速的死亡等著你…$B', '', @VBUILD),
+-- New start zone
+(@BROAD_TEXT+14, 'deDE', '$B Sie sind im Begriff, The War Within zu entdecken, wo die Mobs nicht beängstigender sind als Ihre eigenen existenziellen Probleme.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'esES', '$B Estás a punto de descubrir The War Within, donde los enemigos no son más aterradores que tus propios problemas existenciales.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'esMX', '$B Estás a punto de descubrir The War Within, donde los enemigos no son más aterradores que tus propios problemas existenciales.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'frFR', '$B Vous êtes sur le point de découvrir The War Within, où les mobs ne sont pas plus effrayants que vos propres problèmes existentiels.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'itIT', '$B Stai per scoprire The War Within, dove i mob non sono più spaventosi dei tuoi problemi esistenziali.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'koKR', '$B The War Within에 들어갑니다. 그곳의 몹들은 당신의 존재적 문제만큼 무섭지 않습니다.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'ptBR', '$B Você está prestes a descobrir The War Within, onde os mobs não são mais assustadores que os seus próprios problemas existenciais.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'ruRU', '$B Вы на пороге The War Within, где мобы не страшнее ваших собственных экзистенциальных проблем.$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'zhCN', '$B 你即将探索 The War Within，那里的小怪并不比你自己的存在问题更可怕。$B', '', @VBUILD),
+(@BROAD_TEXT+14, 'zhTW', '$B 你即將探索 The War Within，那裡的小怪並不比你自己的存在問題更可怕。$B', '', @VBUILD);
+
 
 
 
