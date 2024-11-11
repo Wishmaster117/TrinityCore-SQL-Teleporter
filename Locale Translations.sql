@@ -6,7 +6,7 @@ SET
 @VBUILD         := 57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
-DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+18;
+DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
 DELETE FROM creature_template_locale WHERE entry = @ENTRY;
 
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `Title`, `TitleAlt`, `VerifiedBuild`) VALUES 
@@ -2753,7 +2753,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+18, 13, 'ptBR', "Voltar..", NULL),
 (@GOSSIP_MENU+18, 13, 'ruRU', "Назад..", NULL),
 (@GOSSIP_MENU+18, 13, 'zhCN', "返回..", NULL),
-(@GOSSIP_MENU+18, 13, 'zhTW', "返回..", NULL);
+(@GOSSIP_MENU+18, 13, 'zhTW', "返回..", NULL),
 -- New Start Zone
 (@GOSSIP_MENU+19, 0, 'deDE', "Unterschlupf der Murlocs", "Bist du sicher, dass du zum Unterschlupf der Murlocs gehen möchtest?"),
 (@GOSSIP_MENU+19, 0, 'esES', "Guarida de los múrlocs", "¿Estás seguro de que quieres ir a la Guarida de los múrlocs?"),
@@ -2764,7 +2764,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+19, 0, 'ptBR', "Covil dos Murlocs", "Tem certeza de que deseja ir para o Covil dos Murlocs?"),
 (@GOSSIP_MENU+19, 0, 'ruRU', "Логово мурлоков", "Вы уверены, что хотите отправиться в Логово мурлоков?"),
 (@GOSSIP_MENU+19, 0, 'zhCN', "鱼人巢穴", "你确定要前往鱼人巢穴吗？"),
-(@GOSSIP_MENU+19, 0, 'zhTW', "魚人巢穴", "你確定要前往魚人巢穴嗎？");
+(@GOSSIP_MENU+19, 0, 'zhTW', "魚人巢穴", "你確定要前往魚人巢穴嗎？"),
 
 (@GOSSIP_MENU+19, 14, 'deDE', "Zurück..", NULL),
 (@GOSSIP_MENU+19, 14, 'esES', "Volver..", NULL),
