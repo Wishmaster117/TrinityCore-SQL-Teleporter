@@ -10,7 +10,7 @@ SET
 @VBUILD         := 57388,
 @ENTRY          := 9000000, -- NPC ID
 @GOSSIP_MENU :=  2000000,
-@GOSSIP_MENU_POSITION :=  4,
+@GOSSIP_CATEGORY_POSITION :=  4,
 @ICON := NULL,
 @CAT_NAME :=  "Custom Location",
 @SUB_MENU :=  20,
@@ -32,7 +32,7 @@ SET
 ;
 
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
-(@GOSSIP_MENU, @GOSSIP_MENU_POSITION, @ICON, @CAT_NAME, @GOSSIP_MENU+@SUB_MENU, 0, 0, 0, NULL);
+(@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION, @ICON, @CAT_NAME, @GOSSIP_MENU+@SUB_MENU, 0, 0, 0, NULL);
 
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
 (@GOSSIP_MENU+@SUB_MENU , @SUB_MENU_ORDER, @ICON , @TELE_NAME, 0, 0, 0, 0, @POPUP),
