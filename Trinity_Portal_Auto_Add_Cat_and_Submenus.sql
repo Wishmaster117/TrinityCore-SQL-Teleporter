@@ -83,7 +83,7 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 -- Text Links
 -- Calcul de @NEW_TEXT_ID basé sur la dernière valeur de textid dans la fourchette [9000000, 9000500]
 SET @NEW_TEXT_ID := (
-    SELECT COALESCE(MAX(textid), 9000000) + 1
+    SELECT COALESCE(MAX(textid), @TEXT_ID) + 1
     FROM gossip_menu
     WHERE textid BETWEEN @TEXT_ID AND 9000500
 );
@@ -135,9 +135,9 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 
 -- Calcul de @NEW_BROAD_TEXT_ID basé sur la dernière valeur de ID dans la fourchette [9000000, 9000500]
 SET @NEW_BROAD_TEXT_ID := (
-    SELECT COALESCE(MAX(ID), 9000000) + 1
+    SELECT COALESCE(MAX(ID), @TEXT_ID) + 1
     FROM broadcast_text
-    WHERE ID BETWEEN 9000000 AND 9000500
+    WHERE ID BETWEEN @TEXT_ID AND 9000500
 );
 
 -- Hotfix broadcast_text table -- Submenu header
