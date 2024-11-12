@@ -44,9 +44,6 @@ SET @SUB_MENU := (
     WHERE MenuID BETWEEN @GOSSIP_MENU AND 2000500
 );
 
-INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
-(@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION, @ICON, @CAT_NAME, @SUB_MENU, 0, 0, 0, NULL);
-
 -- Calcul de @SUB_MENU_ORDER basé sur la dernière valeur de OptionID pour le MenuID = @SUB_MENU
 SET @SUB_MENU_ORDER := (
     CASE 
@@ -67,6 +64,9 @@ SET @SUB_MENU_ORDER := (
 SET @SID := (SELECT `id` FROM `smart_scripts` WHERE `entryorguid` = @ENTRY AND `source_type` = 0 ORDER BY `id` DESC LIMIT 1) + 1;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
 (@ENTRY, 0, IFNULL(@SID, 1), 0, 62, 0, 100, 0, @SUB_MENU, @SUB_MENU_ORDER, 0, 0, 62, @MAP, 0, 0, 0, 0, 0, 7, 0, 0, 0, @X, @Y, @Z, @O, CONCAT("Teleporter script - ", @TELE_NAME));
+
+INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
+(@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION, @ICON, @CAT_NAME, @SUB_MENU, 0, 0, 0, NULL);
 
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
 (@SUB_MENU , @SUB_MENU_ORDER, @ICON , @TELE_NAME, 0, 0, 0, @COST, @POPUP),
