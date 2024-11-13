@@ -6,7 +6,7 @@ SET
 @VBUILD         := 57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
-DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
+DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+999;
 DELETE FROM creature_template_locale WHERE entry = @ENTRY;
 
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `Title`, `TitleAlt`, `VerifiedBuild`) VALUES 
