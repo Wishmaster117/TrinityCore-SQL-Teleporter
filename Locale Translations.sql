@@ -21,19 +21,6 @@ INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `T
 (@ENTRY, 'zhCN', '传送门大师', NULL, '你去哪里？', NULL, @VBUILD ),
 (@ENTRY, 'zhTW', '传送门大师', NULL, '你去哪里？', NULL, @VBUILD );
 
-/*INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES
-(@ENTRY, 0, 0, 'deDE', 'Test'),
-(@ENTRY, 0, 0, 'esES', 'Test'),
-(@ENTRY, 0, 0, 'esMX', 'Test'),
-(@ENTRY, 0, 0, 'frFR', 'Test'),
-(@ENTRY, 0, 0, 'itIT', 'Test'),
-(@ENTRY, 0, 0, 'koKR', 'Test'),
-(@ENTRY, 0, 0, 'ptBR', 'Test'),
-(@ENTRY, 0, 0, 'ruRU', 'Test'),
-(@ENTRY, 0, 0, 'zhCN', 'Test'),
-(@ENTRY, 0, 0, 'zhTW', 'Test');*/
-
-
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES 
 -- (@GOSSIP_MENU, 1, 'deDE', "Stormwind", "Bist du sicher, dass du nach Stormwind gehen willst?"),
 -- (@GOSSIP_MENU, 1, 'esES', "Ventormenta", "¿Estás seguro de que quieres ir a Ventormenta?"),
