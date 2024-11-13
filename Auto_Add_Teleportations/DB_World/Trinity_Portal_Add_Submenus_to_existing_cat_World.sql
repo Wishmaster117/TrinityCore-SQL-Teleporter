@@ -9,7 +9,7 @@ SET
 @ENTRY               := 9000000, -- NPC ID
 @GOSSIP_MENU         := 2000020, -- ID de la catégorie spécifique définie manuellement
 @ICON                := NULL,
-@SUB_MENU_BACK_ORDER := 15,
+-- @SUB_MENU_BACK_ORDER := 15,
 @TELE_NAME           := "Name Of The Teleport Location",
 @POPUP               := "Are you sure?",
 @REQ_LEVEL           := 80,
@@ -28,9 +28,18 @@ SET
 -- Définition manuelle de @SUB_MENU avec le numéro de la catégorie cible
 SET @SUB_MENU := @GOSSIP_MENU;
 
+-- Récupération automatique de la valeur de @SUB_MENU_BACK_ORDER basée sur l'OptionID pour "Back.." et le MenuID
+SET @SUB_MENU_BACK_ORDER := (
+    SELECT OptionID
+    FROM gossip_menu_option
+    WHERE MenuID = @SUB_MENU
+      AND OptionText = 'Back..'
+    LIMIT 1
+);
+
 -- Calcul de @SUB_MENU_ORDER pour obtenir la prochaine valeur disponible (incrémenté de 1)
 SET @SUB_MENU_ORDER := (
-    SELECT MIN(n)
+    SELECT MIN(n) 
     FROM (
         SELECT t1.i + t10.i * 10 AS n
         FROM (SELECT 0 AS i UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 
@@ -38,13 +47,16 @@ SET @SUB_MENU_ORDER := (
         CROSS JOIN (SELECT 0 AS i UNION ALL SELECT 1) AS t10
     ) AS numbers
     WHERE n < @SUB_MENU_BACK_ORDER
-      AND n NOT IN (
-          SELECT OptionID
+      AND n > (
+          SELECT COALESCE(MAX(OptionID), -1)
           FROM gossip_menu_option
           WHERE MenuID = @SUB_MENU
             AND OptionID < @SUB_MENU_BACK_ORDER
       )
 );
+
+-- Vérification du résultat final
+-- SELECT @SUB_MENU_ORDER, @SUB_MENU_BACK_ORDER, @GOSSIP_MENU;
 
 -- Calcul pour l'entrée ID du smart script
 SET @SID := (SELECT `id` FROM `smart_scripts` WHERE `entryorguid` = @ENTRY AND `source_type` = 0 ORDER BY `id` DESC LIMIT 1) + 1;
