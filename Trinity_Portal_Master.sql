@@ -22,11 +22,11 @@ SET
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
-DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
-DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+100;
-DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+999;
+DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+999;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+999;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
-DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
+DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+999;
 DELETE from creature WHERE ID = @ENTRY;
 DELETE from creature_template_model WHERE CreatureID = @ENTRY;
 
