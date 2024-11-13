@@ -105,9 +105,10 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION , 'ptBR', "ADD TRANSLATION", NULL),
 (@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION , 'ruRU', "ADD TRANSLATION", NULL),
 (@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION , 'zhCN', "ADD TRANSLATION", NULL),
-(@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION , 'zhTW', "ADD TRANSLATION", NULL),
+(@GOSSIP_MENU, @GOSSIP_CATEGORY_POSITION , 'zhTW', "ADD TRANSLATION", NULL);
 
 -- Table gossip_menu_option_locale Translations for submenus teleport locations
+INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES 
 (@SUB_MENU, @SUB_MENU_ORDER, 'deDE', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
 (@SUB_MENU, @SUB_MENU_ORDER, 'esES', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
 (@SUB_MENU, @SUB_MENU_ORDER, 'esMX', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
