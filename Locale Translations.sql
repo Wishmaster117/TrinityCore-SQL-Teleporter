@@ -1,8 +1,8 @@
 /* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
-@ENTRY          := 9000000000, -- Entry NPC
-@GOSSIP_MENU    := 2000000000,
+@ENTRY          := 900000000, -- Entry NPC
+@GOSSIP_MENU    := 200000000,
 @VBUILD         := 57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;

@@ -7,14 +7,14 @@ Ported to TrinityCore Master Branch by Wishmaster
 */
 
 SET
-@ENTRY          := 9000000000, -- NPC Entry
+@ENTRY          := 900000000, -- NPC Entry
 @NAME           := "Portal Master", -- NPC Name
 @SUBNAME        := "Where do you go ?", -- NPC Guild
 @MODEL          := 21572, -- New value: 86569 -- Original value: 21572
 @AURA           := "30540", -- "35766" = casting
-@TEXT_ID        := 9000000000,
-@GOSSIP_MENU    := 2000000000,
-@BROAD_TEXT     := 9000000000,
+@TEXT_ID        := 900000000,
+@GOSSIP_MENU    := 200000000,
+@BROAD_TEXT     := 900000000,
 @SCALE          := 1, -- Scale of creature
 @VBUILD         := 57388;
 

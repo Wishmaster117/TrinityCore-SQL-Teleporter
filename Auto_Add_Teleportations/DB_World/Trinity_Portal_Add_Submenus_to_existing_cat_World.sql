@@ -6,7 +6,7 @@ By Wishmaster
 -- AUTO ADD SUBMENUS TO A SPECIFIC CATEGORY --
 
 SET
-@ENTRY               := 9000000000, -- NPC ID
+@ENTRY               := 900000000, -- NPC ID
 @GOSSIP_MENU         := 2000020, -- ID de la catégorie spécifique définie manuellement
 @ICON                := NULL,
 -- @SUB_MENU_BACK_ORDER := 15,

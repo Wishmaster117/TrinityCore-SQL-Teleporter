@@ -6,9 +6,9 @@ By Wishmaster
 -- AUTO ADD A NEW CATEGORY WITH THE FIRST SUBMENU --
 SET
 @VBUILD          := 57388, -- Build Version
-@ENTRY           := 9000000000, -- NPC ID
-@GOSSIP_MENU     := 2000000000,
-@MAX_GOSSIP_MENU := 2000000999,
+@ENTRY           := 900000000, -- NPC ID
+@GOSSIP_MENU     := 200000000,
+@MAX_GOSSIP_MENU := 200000999,
 @ICON            := NULL,
 @CAT_NAME        :=  "Name Of The Main Category",
 @SUB_MENU_BACK_ORDER :=  50,
@@ -21,8 +21,8 @@ SET
 @Y               := 0.0,
 @Z               := 0.0,
 @O               := 0.0,
-@TEXT_ID         := 9000000000,
-@MAX_TEXT_ID     := 9000000999,
+@TEXT_ID         := 900000000,
+@MAX_TEXT_ID     := 900000999,
 @COST            := 0; -- copper
 
 -- -------------------------------------- --

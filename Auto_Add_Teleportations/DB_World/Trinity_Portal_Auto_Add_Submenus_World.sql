@@ -5,9 +5,9 @@ By Wishmaster
 
 -- AUTO ADD SUBMENUS TO THE LAST CAT CREATED --
 SET
-@ENTRY           := 9000000000, -- NPC ID
-@GOSSIP_MENU     := 2000000000,
-@MAX_GOSSIP_MENU := 2000000999,
+@ENTRY           := 900000000, -- NPC ID
+@GOSSIP_MENU     := 200000000,
+@MAX_GOSSIP_MENU := 200000999,
 @ICON            := NULL,
 @SUB_MENU_BACK_ORDER :=  50,
 @TELE_NAME       := "Name Of The Teleport Location",
