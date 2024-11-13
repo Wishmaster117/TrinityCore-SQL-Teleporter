@@ -1,12 +1,12 @@
 /* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
-@BROAD_TEXT     := 9000000,
+@BROAD_TEXT     := 9000000000,
 @VBUILD         := 57388;
 
 -- Deleting code
-DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+14;
-DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+14;
+DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+100;
+DELETE FROM broadcast_text_locale WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+100;
 
 -- Table Hotfix -- Submenus headers
 INSERT INTO `broadcast_text` (`Text`, `Text1`, `ID`, `LanguageID`, `ConditionID`, `EmotesID`, `Flags`, `ChatBubbleDurationMs`, `VoiceOverPriorityID`, `SoundKitID1`, `SoundKitID2`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `VerifiedBuild`) VALUES

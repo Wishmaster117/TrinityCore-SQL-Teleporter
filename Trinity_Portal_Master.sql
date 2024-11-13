@@ -7,26 +7,28 @@ Ported to TrinityCore Master Branch by Wishmaster
 */
 
 SET
-@ENTRY          := 9000000, -- Prendre : 9000000000
+@ENTRY          := 9000000000, -- NPC Entry
 @NAME           := "Portal Master",
 @SUBNAME        := "Where do you go ?",
 @MODEL          := 21572,
 @AURA           := "30540", -- "35766" = casting
-@TEXT_ID        := 9000000, -- Prendre : 9000000000
-@GOSSIP_MENU    := 2000000, -- Prendre : 2000000000
-@BROAD_TEXT     := 9000000, -- Prendre : 9000000000
+@TEXT_ID        := 9000000000,
+@GOSSIP_MENU    := 2000000000,
+@BROAD_TEXT     := 9000000000,
+@SCALE          := 1; -- Scale of creature
 @VBUILD         := 57388;
 
 -- Deleting code
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM creature_template_gossip WHERE CreatureID = @ENTRY ;
-DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
-DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+14;
-DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
+DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+100;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
-DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
+DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
 DELETE from creature WHERE ID = @ENTRY;
+DELETE from creature_template_model WHERE CreatureID = @ENTRY;
 
 -- Teleporter
 -- Create Creature
@@ -36,6 +38,10 @@ VALUES (@ENTRY, 0, 0, @NAME, NULL, @SUBNAME, NULL, 'Directions', 0, 0, 35, 1, 1.
 -- Teleporter aura
 INSERT INTO `creature_template_addon` (`entry`, `PathId`, `mount`, `MountCreatureID`, `StandState`, `AnimTier`, `VisFlags`, `SheathState`, `PvPFlags`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `visibilityDistanceType`, `auras`) 
 VALUES (@ENTRY, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, @AURA);
+
+-- Teleporter MODEL
+INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) 
+VALUES (@ENTRY , 0, @MODEL , @SCALE, 1, @VBUILD);
 
 -- Link menu to creature
 INSERT INTO `creature_template_gossip` (`CreatureID`, `MenuID`, `VerifiedBuild`) 

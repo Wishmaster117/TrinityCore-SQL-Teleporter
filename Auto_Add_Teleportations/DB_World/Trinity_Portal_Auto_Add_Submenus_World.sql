@@ -5,14 +5,14 @@ By Wishmaster
 
 -- AUTO ADD SUBMENUS TO THE LAST CAT CREATED --
 SET
-@ENTRY           := 9000000, -- NPC ID
-@GOSSIP_MENU     :=  2000000,
-@MAX_GOSSIP_MENU :=  2000500,
+@ENTRY           := 9000000000, -- NPC ID
+@GOSSIP_MENU     := 2000000000,
+@MAX_GOSSIP_MENU := 2000000999,
 @ICON            := NULL,
-@SUB_MENU_BACK_ORDER :=  15,
+@SUB_MENU_BACK_ORDER :=  50,
 @TELE_NAME       := "Name Of The Teleport Location",
 @POPUP           := "Are you sure?",
-@REQ_LEVEL       :=  80,
+@REQ_LEVEL       := 80,
 @FACTION         := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
 @MAP             := 0,
 @X               := 0.0,

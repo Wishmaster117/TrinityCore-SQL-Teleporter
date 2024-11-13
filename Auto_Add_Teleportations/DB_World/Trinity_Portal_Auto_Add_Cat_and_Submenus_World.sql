@@ -6,12 +6,12 @@ By Wishmaster
 -- AUTO ADD A NEW CATEGORY WITH THE FIRST SUBMENU --
 SET
 @VBUILD          := 57388, -- Build Version
-@ENTRY           := 9000000, -- NPC ID
-@GOSSIP_MENU     :=  2000000,
-@MAX_GOSSIP_MENU :=  2000500,
+@ENTRY           := 9000000000, -- NPC ID
+@GOSSIP_MENU     := 2000000000,
+@MAX_GOSSIP_MENU := 2000000999,
 @ICON            := NULL,
 @CAT_NAME        :=  "Name Of The Main Category",
-@SUB_MENU_BACK_ORDER :=  15,
+@SUB_MENU_BACK_ORDER :=  50,
 @TELE_NAME       := "Name Of The Teleport Location",
 @POPUP           := "Are you sure?",
 @FACTION         := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
@@ -21,8 +21,8 @@ SET
 @Y               := 0.0,
 @Z               := 0.0,
 @O               := 0.0,
-@TEXT_ID         := 9000000,
-@MAX_TEXT_ID     := 9000500,
+@TEXT_ID         := 9000000000,
+@MAX_TEXT_ID     := 9000000999,
 @COST            := 0; -- copper
 
 -- -------------------------------------- --

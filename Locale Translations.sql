@@ -1,12 +1,12 @@
 /* Ported to TrinityCore Master Branch by Wishmaster */
 
 SET
-@ENTRY          := 9000000, -- Entry NPC
-@GOSSIP_MENU    := 2000000,
+@ENTRY          := 9000000000, -- Entry NPC
+@GOSSIP_MENU    := 2000000000,
 @VBUILD         := 57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
-DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
+DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+100;
 DELETE FROM creature_template_locale WHERE entry = @ENTRY;
 
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `NameAlt`, `Title`, `TitleAlt`, `VerifiedBuild`) VALUES 
