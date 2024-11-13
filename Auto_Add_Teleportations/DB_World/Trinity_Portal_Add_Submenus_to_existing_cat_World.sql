@@ -3,7 +3,7 @@ TrinityCore Portal Master auto add script
 By Wishmaster
 */
 
--- AUTO ASSIGN SUBMENUS TO A SPECIFIC CATEGORY --
+-- AUTO ADD SUBMENUS TO A SPECIFIC CATEGORY --
 
 SET
 @ENTRY               := 9000000, -- NPC ID
