@@ -344,7 +344,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+16, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+16, 0, 27, 77, 3, 0, "Portal Master - Level req"),
 -- New starting Zone
-(15, @GOSSIP_MENU+19, 0, 27, 2, 3, 0, "Portal Master - Level req"),
+(15, @GOSSIP_MENU+19, 0, 27, 2, 3, 0, "Portal Master - Level req");
 
 -- Gossip options:
 INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, ActionMenuID, ActionPoiID, BoxCoded, BoxMoney, BoxText) VALUES
