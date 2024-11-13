@@ -1,8 +1,6 @@
 /*
-TrinityCore Portal Master Option
-By Rochet2
-Downloaded from http://rochet2.github.io/
-Bugs and contact with E-mail: Rochet2@post.com
+TrinityCore Portal Master auto add script
+By Wishmaster
 */
 
 -- Add a category with submenus
