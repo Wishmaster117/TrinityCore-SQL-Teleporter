@@ -10,7 +10,7 @@ SET
 @ENTRY          := 9000000000, -- NPC Entry
 @NAME           := "Portal Master",
 @SUBNAME        := "Where do you go ?",
-@MODEL          := 21572,
+@MODEL          := 21572, -- New value: 86569 -- Original value: 21572
 @AURA           := "30540", -- "35766" = casting
 @TEXT_ID        := 9000000000,
 @GOSSIP_MENU    := 2000000000,
