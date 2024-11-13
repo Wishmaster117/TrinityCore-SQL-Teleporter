@@ -15,7 +15,7 @@ SET
 @TEXT_ID        := 9000000000,
 @GOSSIP_MENU    := 2000000000,
 @BROAD_TEXT     := 9000000000,
-@SCALE          := 1; -- Scale of creature
+@SCALE          := 1, -- Scale of creature
 @VBUILD         := 57388;
 
 -- Deleting code
