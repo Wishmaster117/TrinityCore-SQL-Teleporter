@@ -11,14 +11,11 @@ SET
 @NAME           := "Portal Master",
 @SUBNAME        := "Where do you go ?",
 @MODEL          := 21572,
-
 @AURA           := "30540", -- "35766" = casting
-
 @TEXT_ID        := 9000000,
 @GOSSIP_MENU    := 2000000,
 @BROAD_TEXT     := 9000000,
 @VBUILD         := 57388;
--- @RUNE           := 194394;
 
 -- Deleting code
 DELETE FROM creature_template WHERE entry = @ENTRY;
@@ -30,8 +27,6 @@ DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MEN
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
 DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
 DELETE from creature WHERE ID = @ENTRY;
--- DELETE from gameobject WHERE ID = @RUNE AND guid >= 1000000098;
--- DELETE FROM creature_text WHERE CreatureID = @ENTRY;
 
 -- Teleporter
 -- Create Creature
@@ -86,10 +81,6 @@ INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) V
 (@TEXT_ID+2, 1, @BROAD_TEXT+2, @VBUILD),
 (@TEXT_ID+1, 1, @BROAD_TEXT+1, @VBUILD),
 (@TEXT_ID, 1, @BROAD_TEXT, @VBUILD);
-
--- Test
-/*INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `SoundPlayType`, `BroadcastTextId`, `TextRange`, `comment`) 
-VALUES (@ENTRY, 0, 2, 'For the Horde!', 12, 7, 100, 0, 0, 0, 0, 1867, 0, 'Test'); */
 
 -- Conditions for gossip option and menu factions : ConditionValue1 469 = Alliance, 67 = Horde , [SourceGroup = OptionID of gossip_menu_option table]
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, `Comment`) VALUES
