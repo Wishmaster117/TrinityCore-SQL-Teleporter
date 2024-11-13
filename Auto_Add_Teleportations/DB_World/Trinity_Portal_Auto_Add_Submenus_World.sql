@@ -3,7 +3,7 @@ TrinityCore Portal Master auto add script
 By Wishmaster
 */
 
--- AUTO ASS SUBMENUS TO THE LAST CAT CREATED --
+-- AUTO ADD SUBMENUS TO THE LAST CAT CREATED --
 SET
 @ENTRY           := 9000000, -- NPC ID
 @GOSSIP_MENU     :=  2000000,
