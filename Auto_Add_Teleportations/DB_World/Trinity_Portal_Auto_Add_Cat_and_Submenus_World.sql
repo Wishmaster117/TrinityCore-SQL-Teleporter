@@ -5,24 +5,26 @@ By Wishmaster
 
 -- Add a category with submenus
 SET
-@VBUILD         := 57388, -- Build Version
-@ENTRY          := 9000000, -- NPC ID
-@GOSSIP_MENU :=  2000000,
-@ICON := NULL,
-@CAT_NAME :=  "Name Of The Main Category",
+@VBUILD          := 57388, -- Build Version
+@ENTRY           := 9000000, -- NPC ID
+@GOSSIP_MENU     :=  2000000,
+@MAX_GOSSIP_MENU :=  2000500,
+@ICON            := NULL,
+@CAT_NAME        :=  "Name Of The Main Category",
 @SUB_MENU_BACK_ORDER :=  15,
-@TELE_NAME := "Name Of The Teleport Location",
-@POPUP := "Are you sure?",
-@FACTION := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
-@REQ_LEVEL :=  80,
-@MAP := 0,
-@X := 0.0,
-@Y := 0.0,
-@Z := 0.0,
-@O := 0.0,
-@TEXT_ID        := 9000000,
-@BROADCAST_TEXT     := "Put here the text will appear at the header of téléportation submenu",
-@COST := 0; -- copper
+@TELE_NAME       := "Name Of The Teleport Location",
+@POPUP           := "Are you sure?",
+@FACTION         := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
+@REQ_LEVEL       :=  80,
+@MAP             := 0,
+@X               := 0.0,
+@Y               := 0.0,
+@Z               := 0.0,
+@O               := 0.0,
+@TEXT_ID         := 9000000,
+@MAX_TEXT_ID     := 9000500,
+@BROADCAST_TEXT  := "Put here the text will appear at the header of téléportation submenu",
+@COST            := 0; -- copper
 
 -- -------------------------------------- --
 --            World DB                    --
@@ -35,11 +37,11 @@ SET @GOSSIP_CATEGORY_POSITION := (
     WHERE MenuID = @GOSSIP_MENU
 );
 
--- Calcul de @SUB_MENU basé sur la dernière valeur de MenuID dans la fourchette [2000000, 2000500]
+-- Calcul de @SUB_MENU basé sur la dernière valeur de MenuID dans la fourchette [@GOSSIP_MENU, @MAX_GOSSIP_MENU]
 SET @SUB_MENU := (
     SELECT COALESCE(MAX(MenuID), @GOSSIP_MENU) + 1
     FROM gossip_menu_option
-    WHERE MenuID BETWEEN @GOSSIP_MENU AND 2000500
+    WHERE MenuID BETWEEN @GOSSIP_MENU AND @MAX_GOSSIP_MENU
 );
 
 -- Calcul de @SUB_MENU_ORDER basé sur la dernière valeur de OptionID pour le MenuID = @SUB_MENU
@@ -58,11 +60,11 @@ SET @SUB_MENU_ORDER := (
     END
 );
 
--- Calcul de @NEW_TEXT_ID basé sur la dernière valeur de textid dans la fourchette [9000000, 9000500]
+-- Calcul de @NEW_TEXT_ID basé sur la dernière valeur de textid dans la fourchette [@TEXT_ID, @MAX_TEXT_ID]
 SET @NEW_TEXT_ID := (
     SELECT COALESCE(MAX(textid), @TEXT_ID) + 1
     FROM gossip_menu
-    WHERE textid BETWEEN @TEXT_ID AND 9000500
+    WHERE textid BETWEEN @TEXT_ID AND @MAX_TEXT_ID
 );
 
 -- Calcul pour l'entée ID du smart script

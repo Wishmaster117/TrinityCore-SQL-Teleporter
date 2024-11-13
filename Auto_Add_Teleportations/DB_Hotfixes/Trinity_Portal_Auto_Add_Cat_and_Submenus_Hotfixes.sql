@@ -7,18 +7,19 @@ By Wishmaster
 SET
 @VBUILD         := 57388, -- Build Version
 @TEXT_ID        := 9000000,
-@BROADCAST_TEXT     := "Put here the text will appear at the header of téléportation submenu";
+@MAX_TEXT_ID    := 9000500,
+@BROADCAST_TEXT := "Put here the text will appear at the header of téléportation submenu";
 
 
 -- -------------------------------------- --
 --            Hotfixes DB                 --
 -- -------------------------------------- --
 
--- Calcul de @NEW_BROAD_TEXT_ID basé sur la dernière valeur de ID dans la fourchette [9000000, 9000500]
+-- Calcul de @NEW_BROAD_TEXT_ID basé sur la dernière valeur de ID dans la fourchette [@TEXT_ID, @MAX_TEXT_ID]
 SET @NEW_BROAD_TEXT_ID := (
     SELECT COALESCE(MAX(ID), @TEXT_ID) + 1
     FROM broadcast_text
-    WHERE ID BETWEEN @TEXT_ID AND 9000500
+    WHERE ID BETWEEN @TEXT_ID AND @MAX_TEXT_ID
 );
 
 -- Hotfix broadcast_text table -- Submenu header
