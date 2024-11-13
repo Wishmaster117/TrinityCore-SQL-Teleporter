@@ -8,8 +8,8 @@ Ported to TrinityCore Master Branch by Wishmaster
 
 SET
 @ENTRY          := 9000000000, -- NPC Entry
-@NAME           := "Portal Master",
-@SUBNAME        := "Where do you go ?",
+@NAME           := "Portal Master", -- NPC Name
+@SUBNAME        := "Where do you go ?", -- NPC Guild
 @MODEL          := 21572, -- New value: 86569 -- Original value: 21572
 @AURA           := "30540", -- "35766" = casting
 @TEXT_ID        := 9000000000,
@@ -401,14 +401,14 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+1, 16, NULL, "Sunken Temple", 0, 0, 0, 0, "Are you sure, that you want to go to Sunken Temple?"),
 (@GOSSIP_MENU+1, 17, NULL, "Uldaman", 0, 0, 0, 0, "Are you sure, that you want to go to Uldaman?"),
 (@GOSSIP_MENU+1, 18, NULL, "Zul'Farrak", 0, 0, 0, 0, "Are you sure, that you want to go to Zul'Farrak?"),
-(@GOSSIP_MENU+1, 19, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+1, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+2, 0, NULL, "Auchindoun", 0, 0, 0, 0, "Are you sure, that you want to go to Auchindoun?"),
 (@GOSSIP_MENU+2, 1, NULL, "Caverns of Time", 0, 0, 0, 0, "Are you sure, that you want to go to Caverns of Time?"),
 (@GOSSIP_MENU+2, 2, NULL, "Coilfang Reservoir", 0, 0, 0, 0, "Are you sure, that you want to go to Coilfang Reservoir?"),
 (@GOSSIP_MENU+2, 3, NULL, "Hellfire Citadel", 0, 0, 0, 0, "Are you sure, that you want to go to Hellfire Citadel?"),
 (@GOSSIP_MENU+2, 4, NULL, "Magisters' Terrace", 0, 0, 0, 0, "Are you sure, that you want to go to Magisters' Terrace?"),
 (@GOSSIP_MENU+2, 5, NULL, "Tempest Keep", 0, 0, 0, 0, "Are you sure, that you want to go to Tempest Keep?"),
-(@GOSSIP_MENU+2, 6, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+2, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+3, 0, NULL, "Azjol-Nerub", 0, 0, 0, 0, "Are you sure, that you want to go to Azjol-Nerub?"),
 (@GOSSIP_MENU+3, 1, NULL, "The Culling of Stratholme", 0, 0, 0, 0, "Are you sure, that you want to go to The Culling of Stratholme?"),
 (@GOSSIP_MENU+3, 2, NULL, "Trial of the Champion", 0, 0, 0, 0, "Are you sure, that you want to go to Trial of the Champion?"),
@@ -421,7 +421,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+3, 9, NULL, "Halls of Stone", 0, 0, 0, 0, "Are you sure, that you want to go to Halls of Stone?"),
 (@GOSSIP_MENU+3, 10, NULL, "Utgarde Keep", 0, 0, 0, 0, "Are you sure, that you want to go to Utgarde Keep?"),
 (@GOSSIP_MENU+3, 11, NULL, "Utgarde Pinnacle", 0, 0, 0, 0, "Are you sure, that you want to go to Utgarde Pinnacle?"),
-(@GOSSIP_MENU+3, 12, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+3, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+4, 0, NULL, "Black Temple", 0, 0, 0, 0, "Are you sure, that you want to go to Black Temple?"),
 (@GOSSIP_MENU+4, 1, NULL, "Blackwing Lair", 0, 0, 0, 0, "Are you sure, that you want to go to Blackwing Lair?"),
 (@GOSSIP_MENU+4, 2, NULL, "Hyjal Summit", 0, 0, 0, 0, "Are you sure, that you want to go to Hyjal Summit?"),
@@ -444,7 +444,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+4, 19, NULL, "Vault of Archavon", 0, 0, 0, 0, "Are you sure, that you want to go to Vault of Archavon?"),
 (@GOSSIP_MENU+4, 21, NULL, "Zul'Gurub", 0, 0, 0, 0, "Are you sure, that you want to go to Zul'Gurub?"),
 (@GOSSIP_MENU+4, 22, NULL, "Zul'Aman", 0, 0, 0, 0, "Are you sure, that you want to go to Zul'Aman?"),
-(@GOSSIP_MENU+4, 23, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+4, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+5, 0, NULL, "Elwynn Forest", 0, 0, 0, 0, "Are you sure, that you want to go to Elwynn Forest?"),
 (@GOSSIP_MENU+5, 1, NULL, "Eversong Woods", 0, 0, 0, 0, "Are you sure, that you want to go to Eversong Woods?"),
 (@GOSSIP_MENU+5, 2, NULL, "Dun Morogh", 0, 0, 0, 0, "Are you sure, that you want to go to Dun Morogh?"),
@@ -469,7 +469,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+5, 21, NULL, "Western Plaguelands", 0, 0, 0, 0, "Are you sure, that you want to go to Western Plaguelands?"),
 (@GOSSIP_MENU+5, 22, NULL, "Eastern Plaguelands", 0, 0, 0, 0, "Are you sure, that you want to go to Eastern Plaguelands?"),
 (@GOSSIP_MENU+5, 23, NULL, "Isle of Quel'Danas", 0, 0, 0, 0, "Are you sure, that you want to go to Isle of Quel'Danas?"),
-(@GOSSIP_MENU+5, 24, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+5, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+6, 0, NULL, "Azuremyst Isle", 0, 0, 0, 0, "Are you sure, that you want to go to Azuremyst Isle?"),
 (@GOSSIP_MENU+6, 1, NULL, "Teldrassil", 0, 0, 0, 0, "Are you sure, that you want to go to Teldrassil?"),
 (@GOSSIP_MENU+6, 2, NULL, "Durotar", 0, 0, 0, 0, "Are you sure, that you want to go to Durotar?"),
@@ -489,7 +489,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+6, 16, NULL, "Un'Goro Crater", 0, 0, 0, 0, "Are you sure, that you want to go to Un'Goro Crater?"),
 (@GOSSIP_MENU+6, 17, NULL, "Silithus", 0, 0, 0, 0, "Are you sure, that you want to go to Silithus?"),
 (@GOSSIP_MENU+6, 18, NULL, "Winterspring", 0, 0, 0, 0, "Are you sure, that you want to go to Winterspring?"),
-(@GOSSIP_MENU+6, 19, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+6, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+7, 0, NULL, "Hellfire Peninsula", 0, 0, 0, 0, "Are you sure, that you want to go to Hellfire Peninsula?"),
 (@GOSSIP_MENU+7, 1, NULL, "Zangarmarsh", 0, 0, 0, 0, "Are you sure, that you want to go to Zangarmarsh?"),
 (@GOSSIP_MENU+7, 2, NULL, "Terokkar Forest", 0, 0, 0, 0, "Are you sure, that you want to go to Terokkar Forest?"),
@@ -497,7 +497,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+7, 4, NULL, "Blade's Edge Mountains", 0, 0, 0, 0, "Are you sure, that you want to go to Blade's Edge Mountains?"),
 (@GOSSIP_MENU+7, 5, NULL, "Netherstorm", 0, 0, 0, 0, "Are you sure, that you want to go to Netherstorm?"),
 (@GOSSIP_MENU+7, 6, NULL, "Shadowmoon Valley", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowmoon Valley?"),
-(@GOSSIP_MENU+7, 7, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+7, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+8, 0, NULL, "Borean Tundra", 0, 0, 0, 0, "Are you sure, that you want to go to Borean Tundra?"),
 (@GOSSIP_MENU+8, 1, NULL, "Howling Fjord", 0, 0, 0, 0, "Are you sure, that you want to go to Howling Fjord?"),
 (@GOSSIP_MENU+8, 2, NULL, "Dragonblight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonblight?"),
@@ -508,7 +508,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+8, 7, NULL, "Storm Peaks", 0, 0, 0, 0, "Are you sure, that you want to go to Storm Peaks?"),
 (@GOSSIP_MENU+8, 8, NULL, "Icecrown", 0, 0, 0, 0, "Are you sure, that you want to go to Icecrown?"),
 (@GOSSIP_MENU+8, 9, NULL, "Wintergrasp", 0, 0, 0, 0, "Are you sure, that you want to go to Wintergrasp?"),
-(@GOSSIP_MENU+8, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+8, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Ajout The War Within
 (@GOSSIP_MENU+10, 0, NULL, "Dornogal (Isle of Dorn)", 0, 0, 0, 0, "Are you sure, that you want to go to Dornogal?"),
 (@GOSSIP_MENU+10, 1, NULL, "Taelloch (The Ringing Deeps)", 0, 0, 0, 0, "Are you sure, that you want to go to Taelloch?"),
@@ -520,7 +520,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- (@GOSSIP_MENU+10, 7, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 -- (@GOSSIP_MENU+10, 8, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 -- (@GOSSIP_MENU+10, 9, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
-(@GOSSIP_MENU+10, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+10, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Pandaria
 (@GOSSIP_MENU+11, 0, NULL, "Sanctuaire des Deux Lunes", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Deux Lunes?"), -- Sanctuaire des deux lunes
 (@GOSSIP_MENU+11, 1, NULL, "Sanctuaire des Sept étoiles", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Sept étoiles?"), -- Sanctuaire des Sept étoiles Alliance
@@ -532,7 +532,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+11, 7, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
 (@GOSSIP_MENU+11, 8, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
 (@GOSSIP_MENU+11, 9, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),*/
-(@GOSSIP_MENU+11, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+11, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
   -- Draenor
 (@GOSSIP_MENU+12, 0, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 1, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
@@ -544,7 +544,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+12, 7, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 8, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
 (@GOSSIP_MENU+12, 9, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
-(@GOSSIP_MENU+12, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+12, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Legion
 (@GOSSIP_MENU+13, 0, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 1, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
@@ -556,7 +556,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+13, 7, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 8, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
 (@GOSSIP_MENU+13, 9, NULL, "Legion", 0, 0, 0, 0, "Are you sure, that you want to go to Legion?"),
-(@GOSSIP_MENU+13, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+13, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- BFA
 (@GOSSIP_MENU+14, 0, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 1, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
@@ -568,7 +568,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+14, 7, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 8, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
 (@GOSSIP_MENU+14, 9, NULL, "BFA", 0, 0, 0, 0, "Are you sure, that you want to go to BFA?"),
-(@GOSSIP_MENU+14, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+14, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Shadowlands
 (@GOSSIP_MENU+15, 0, NULL, "Oribos", 0, 0, 0, 0, "Are you sure, that you want to go to Oribos?"),
 (@GOSSIP_MENU+15, 1, NULL, "Maldraxxus", 0, 0, 0, 0, "Are you sure, that you want to go to Maldraxxus?"),
@@ -580,7 +580,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+15, 7, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 8, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
 (@GOSSIP_MENU+15, 9, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),*/
-(@GOSSIP_MENU+15, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+15, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Dragonflight
 (@GOSSIP_MENU+16, 0, NULL, "Valdrakken (Thaldraszus)", 0, 0, 0, 0, "Are you sure, that you want to go to Valdrakken?"),
 (@GOSSIP_MENU+16, 1, NULL, "The Concord Observatory(The Waking Shores)", 0, 0, 0, 0, "Are you sure, that you want to go to The Concord Observatory?"),
@@ -592,7 +592,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 /*(@GOSSIP_MENU+16, 7, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 8, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
 (@GOSSIP_MENU+16, 9, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),*/
-(@GOSSIP_MENU+16, 10, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+16, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Viles et Capitales --
 (@GOSSIP_MENU+17, 1, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
 (@GOSSIP_MENU+17, 2, NULL, "Orgrimmar", 0, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
@@ -605,15 +605,15 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+17, 10, NULL, "Shattrath", 0, 0, 0, 0, "Are you sure, that you want to go to Shattrath?"),
 (@GOSSIP_MENU+17, 9, NULL, "Dalaran", 0, 0, 0, 0, "Are you sure, that you want to go to Dalaran?"),
 (@GOSSIP_MENU+17, 11, NULL, "Booty bay", 0, 0, 0, 0, "Are you sure, that you want to go to Booty bay?"),
-(@GOSSIP_MENU+17, 13, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+17, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Fin villes et Capitales --
 -- Pvp menu
 (@GOSSIP_MENU+18, 0, NULL, "Gurubashi arena", 0, 0, 0, 0, "Are you sure, that you want to go to Gurubashi arena?"),
-(@GOSSIP_MENU+18, 13, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
+(@GOSSIP_MENU+18, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Fin pvp Menu
 -- New start zones
 (@GOSSIP_MENU+19, 0, NULL, "Murloc Lair", 0, 0, 0, 0, "Are you sure, that you want to go to Murloc Lair?"),
-(@GOSSIP_MENU+19, 14, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
+(@GOSSIP_MENU+19, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL);
 
 -- Teleport scripts:
 INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
