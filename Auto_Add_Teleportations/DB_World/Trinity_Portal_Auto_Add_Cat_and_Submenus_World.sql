@@ -23,7 +23,6 @@ SET
 @O               := 0.0,
 @TEXT_ID         := 9000000,
 @MAX_TEXT_ID     := 9000500,
-@BROADCAST_TEXT  := "Put here the text will appear at the header of téléportation submenu",
 @COST            := 0; -- copper
 
 -- -------------------------------------- --
