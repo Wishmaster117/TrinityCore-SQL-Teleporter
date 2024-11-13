@@ -31,7 +31,7 @@ DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
 DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+19;
 DELETE from creature WHERE ID = @ENTRY;
 -- DELETE from gameobject WHERE ID = @RUNE AND guid >= 1000000098;
--- DELETE FROM creature_text WHERE CreatureID = @ENTRY;
+DELETE FROM creature_text WHERE CreatureID = @ENTRY;
 
 -- Teleporter
 -- Create Creature
