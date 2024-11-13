@@ -7,14 +7,14 @@ Ported to TrinityCore Master Branch by Wishmaster
 */
 
 SET
-@ENTRY          := 9000000,
+@ENTRY          := 9000000, -- Prendre : 9000000000
 @NAME           := "Portal Master",
 @SUBNAME        := "Where do you go ?",
 @MODEL          := 21572,
 @AURA           := "30540", -- "35766" = casting
-@TEXT_ID        := 9000000,
-@GOSSIP_MENU    := 2000000,
-@BROAD_TEXT     := 9000000,
+@TEXT_ID        := 9000000, -- Prendre : 9000000000
+@GOSSIP_MENU    := 2000000, -- Prendre : 2000000000
+@BROAD_TEXT     := 9000000, -- Prendre : 9000000000
 @VBUILD         := 57388;
 
 -- Deleting code
