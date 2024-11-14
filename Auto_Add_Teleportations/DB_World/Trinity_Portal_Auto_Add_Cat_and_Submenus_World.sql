@@ -120,6 +120,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@SUB_MENU, @SUB_MENU_ORDER, 'ruRU', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
 (@SUB_MENU, @SUB_MENU_ORDER, 'zhCN', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
 (@SUB_MENU, @SUB_MENU_ORDER, 'zhTW', "TRANSLATED LOCATION NAME", "POPUP TRANSLATION ..Are you sure.......?"),
+-- Don't modify the following lines
 (@SUB_MENU, @SUB_MENU_BACK_ORDER, 'deDE', "Zurück..", NULL),
 (@SUB_MENU, @SUB_MENU_BACK_ORDER, 'esES', "Volver..", NULL),
 (@SUB_MENU, @SUB_MENU_BACK_ORDER, 'esMX', "Volver..", NULL),
