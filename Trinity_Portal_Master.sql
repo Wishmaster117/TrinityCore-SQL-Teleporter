@@ -155,7 +155,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+7, 1, 27, 10, 3, 0, "Portal Master - Level req Zangarmarsh"),
 (15, @GOSSIP_MENU+7, 0, 27, 10, 3, 0, "Portal Master - Level req Hellfire Peninsula"),
 -- Kalimdor teleport level restrictions // Ajouter uldum
-(15, @GOSSIP_MENU+6, 19, 30, 15, 3, 0, "Portal Master - Level req Uldum"),
+(15, @GOSSIP_MENU+6, 19, 27, 15, 3, 0, "Portal Master - Level req Uldum"),
 (15, @GOSSIP_MENU+6, 18, 27, 15, 3, 0, "Portal Master - Level req Winterspring"),
 (15, @GOSSIP_MENU+6, 17, 27, 15, 3, 0, "Portal Master - Level req Silithus"),
 (15, @GOSSIP_MENU+6, 16, 27, 15, 3, 0, "Portal Master - Level req Un'Goro Crater"),
