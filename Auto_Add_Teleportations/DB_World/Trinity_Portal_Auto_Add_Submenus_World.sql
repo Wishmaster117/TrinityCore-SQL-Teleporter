@@ -6,20 +6,20 @@ By Wishmaster
 -- AUTO ADD SUBMENUS TO THE LAST CAT CREATED --
 SET
 @ENTRY           := 900000000, -- NPC ID
-@GOSSIP_MENU     := 200000000,
-@MAX_GOSSIP_MENU := 200000999,
+@GOSSIP_MENU     := 200000000, -- Don't change this
+@MAX_GOSSIP_MENU := 200000999, -- Don't change this
 @ICON            := NULL,
-@SUB_MENU_BACK_ORDER :=  50,
-@TELE_NAME       := "Name Of The Teleport Location",
-@POPUP           := "Are you sure?",
-@REQ_LEVEL       := 80,
+@SUB_MENU_BACK_ORDER :=  50, -- Don't change this
+@TELE_NAME       := "Name Of The Teleport Location", -- Teleportation Location Name
+@POPUP           := "Are you sure?", -- PopUp Menu
+@REQ_LEVEL       := 80, -- Min level required
 @FACTION         := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
-@MAP             := 0,
+@MAP             := 0, -- MapID
 @X               := 0.0,
 @Y               := 0.0,
 @Z               := 0.0,
 @O               := 0.0,
-@COST            := 0; -- copper
+@COST            := 0; -- Amount of the téléportation cost in copper
 
 -- -------------------------------------- --
 --            World DB                    --

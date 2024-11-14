@@ -6,20 +6,19 @@ By Wishmaster
 -- AUTO ADD SUBMENUS TO A SPECIFIC CATEGORY --
 
 SET
-@ENTRY               := 900000000, -- NPC ID
-@GOSSIP_MENU         := 2000020, -- ID de la catégorie spécifique définie manuellement
+@ENTRY               := 900000000, -- Don't change this
+@GOSSIP_MENU         := 2000020, -- ID Of the existing category you want to add a submenu
 @ICON                := NULL,
--- @SUB_MENU_BACK_ORDER := 15,
-@TELE_NAME           := "Name Of The Teleport Location",
-@POPUP               := "Are you sure?",
-@REQ_LEVEL           := 80,
+@TELE_NAME           := "Name Of The Teleport Location", -- Teleportation Location Name
+@POPUP               := "Are you sure?", -- PopUp Menu
+@REQ_LEVEL           := 80, -- Min level required
 @FACTION             := 67, -- ConditionValue1 469 = Alliance, 67 = Horde
-@MAP                 := 0,
+@MAP                 := 0, -- MapID
 @X                   := 0.0,
 @Y                   := 0.0,
 @Z                   := 0.0,
 @O                   := 0.0,
-@COST                := 0; -- copper
+@COST                := 0; -- Amount of the téléportation cost in copper
 
 -- -------------------------------------- --
 --            World DB                    --

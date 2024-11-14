@@ -7,23 +7,23 @@ By Wishmaster
 SET
 @VBUILD          := 57388, -- Build Version
 @ENTRY           := 900000000, -- NPC ID
-@GOSSIP_MENU     := 200000000,
-@MAX_GOSSIP_MENU := 200000999,
+@GOSSIP_MENU     := 200000000, -- Don't change this
+@MAX_GOSSIP_MENU := 200000999, -- Don't change this
 @ICON            := NULL,
-@CAT_NAME        :=  "Name Of The Main Category",
-@SUB_MENU_BACK_ORDER :=  50,
-@TELE_NAME       := "Name Of The Teleport Location",
-@POPUP           := "Are you sure?",
+@CAT_NAME        :=  "Name Of The Main Category", -- Name of the main category
+@SUB_MENU_BACK_ORDER :=  50, -- Don't change this
+@TELE_NAME       := "Name Of The Teleport Location", -- Teleportation Location Name
+@POPUP           := "Are you sure?", -- PopUp Menu
 @FACTION         := 67, -- ConditionValue1 469 = Alliance, 67 = Horde 
-@REQ_LEVEL       :=  80,
-@MAP             := 0,
+@REQ_LEVEL       :=  80, -- Min level required
+@MAP             := 0, -- MapID
 @X               := 0.0,
 @Y               := 0.0,
 @Z               := 0.0,
 @O               := 0.0,
-@TEXT_ID         := 900000000,
-@MAX_TEXT_ID     := 900000999,
-@COST            := 0; -- copper
+@TEXT_ID         := 900000000, -- Don't change this
+@MAX_TEXT_ID     := 900000999, -- Don't change this
+@COST            := 0; -- Amount of the téléportation cost in copper
 
 -- -------------------------------------- --
 --            World DB                    --
