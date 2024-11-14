@@ -255,35 +255,25 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+1, 1, 27, 7, 3, 0, "Portal Master - Level req The Deadmines"),
 (15, @GOSSIP_MENU+1, 0, 27, 10, 3, 0, "Portal Master - Level req Gnomeregan"),
 -- Main Cats level restrictions
-(15, @GOSSIP_MENU, 21, 27, 57, 3, 0, "Portal Master - Level req The War Within"),
+(15, @GOSSIP_MENU, 21, 27, 70, 3, 0, "Portal Master - Level req The War Within"),
 (15, @GOSSIP_MENU, 22, 27, 57, 3, 0, "Portal Master - Level req Pandaria"),
 (15, @GOSSIP_MENU, 23, 27, 57, 3, 0, "Portal Master - Level req Draenor"),
 (15, @GOSSIP_MENU, 24, 27, 57, 3, 0, "Portal Master - Level req Legion"),
 (15, @GOSSIP_MENU, 25, 27, 57, 3, 0, "Portal Master - Level req BFA"),
-(15, @GOSSIP_MENU, 26, 27, 57, 3, 0, "Portal Master - Level req Shadowlands"),
-(15, @GOSSIP_MENU, 27, 27, 57, 3, 0, "Portal Master - Level req Dragonflight"),
+(15, @GOSSIP_MENU, 26, 27, 10, 3, 0, "Portal Master - Level req Shadowlands"),
+(15, @GOSSIP_MENU, 27, 27, 10, 3, 0, "Portal Master - Level req Dragonflight"),
 (15, @GOSSIP_MENU, 20, 27, 30, 3, 0, "Portal Master - Level req Old Raid Teleports"),
 (15, @GOSSIP_MENU, 19, 27, 15, 3, 0, "Portal Master - Level req Wrath Dungeons"),
 (15, @GOSSIP_MENU, 18, 27, 10, 3, 0, "Portal Master - Level req BC Dungeons"),
 (15, @GOSSIP_MENU, 17, 27, 7, 3, 0, "Portal Master - Level req Classic Dungeons"),
 (15, @GOSSIP_MENU, 16, 27, 10, 3, 0, "Portal Master - Level req Northrend"),
 (15, @GOSSIP_MENU, 15, 27, 10, 3, 0, "Portal Master - Level req Outland"),
-
--- (15, @GOSSIP_MENU, 11, 27, 30, 3, 0, "Portal Master - Level req"), To be deleted?
--- (15, @GOSSIP_MENU, 10, 27, 57, 3, 0, "Portal Master - Level req"), To be deleted?
--- (15, @GOSSIP_MENU, 9, 27, 67, 3, 0, "Portal Master - Level req"), To be deleted?
 -- Fin
 -- Ajout The War Within
--- (15, @GOSSIP_MENU+10, 9, 27, 77, 3, 0, "Portal Master - Level req"),
--- (15, @GOSSIP_MENU+10, 8, 27, 77, 3, 0, "Portal Master - Level req"),
--- (15, @GOSSIP_MENU+10, 7, 27, 77, 3, 0, "Portal Master - Level req"),
--- (15, @GOSSIP_MENU+10, 6, 27, 77, 3, 0, "Portal Master - Level req"),
--- (15, @GOSSIP_MENU+10, 5, 27, 77, 3, 0, "Portal Master - Level req"),
--- (15, @GOSSIP_MENU+10, 4, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+10, 3, 27, 78, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+10, 2, 27, 75, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+10, 1, 27, 73, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+10, 0, 27, 70, 3, 0, "Portal Master - Level req"),
+(15, @GOSSIP_MENU+10, 3, 27, 78, 3, 0, "Portal Master - Level req Weaver's Lair(Azj-Kahet)"),
+(15, @GOSSIP_MENU+10, 2, 27, 75, 3, 0, "Portal Master - Level req Mereldar (Hallowfall)"),
+(15, @GOSSIP_MENU+10, 1, 27, 73, 3, 0, "Portal Master - Level req Taelloch (The Ringing Deeps"),
+(15, @GOSSIP_MENU+10, 0, 27, 70, 3, 0, "Portal Master - Level req Dornogal (Isle of Dorn)"),
 -- Pandaria
 /*(15, @GOSSIP_MENU+11, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+11, 8, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -329,10 +319,6 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+14, 1, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+14, 0, 27, 77, 3, 0, "Portal Master - Level req"),
 -- Shadowlands
-/*(15, @GOSSIP_MENU+15, 9, 27, 77, 3, 0, "Portal Master - Level req - "),
-(15, @GOSSIP_MENU+15, 8, 27, 77, 3, 0, "Portal Master - Level req - "),
-(15, @GOSSIP_MENU+15, 7, 27, 77, 3, 0, "Portal Master - Level req - "),
-(15, @GOSSIP_MENU+15, 6, 27, 77, 3, 0, "Portal Master - Level req - "),*/
 (15, @GOSSIP_MENU+15, 5, 27, 10, 3, 0, "Portal Master - Level req - The Maw"),
 (15, @GOSSIP_MENU+15, 4, 27, 10, 3, 0, "Portal Master - Level req - Revendreth"),
 (15, @GOSSIP_MENU+15, 3, 27, 10, 3, 0, "Portal Master - Level req - Ardenweald"),
@@ -340,21 +326,18 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+15, 1, 27, 10, 3, 0, "Portal Master - Level req - Maldraxxus"),
 (15, @GOSSIP_MENU+15, 0, 27, 10, 3, 0, "Portal Master - Level req - Oribos"),
 -- Dragonflight
-(15, @GOSSIP_MENU+16, 9, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 8, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 7, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 6, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 5, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 4, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 3, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 2, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 1, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+16, 0, 27, 77, 3, 0, "Portal Master - Level req"),
+(15, @GOSSIP_MENU+16, 6, 27, 70, 3, 0, "Portal Master - Level req Dragonscale Basecamp(Zaralek Cavern)"),
+(15, @GOSSIP_MENU+16, 5, 27, 70, 3, 0, "Portal Master - Level req Bel'ameth(Amirdrassil)"),
+(15, @GOSSIP_MENU+16, 4, 27, 70, 3, 0, "Portal Master - Level req Old Weyrn Grounds(The Forbidden Reach)"),
+(15, @GOSSIP_MENU+16, 3, 27, 30, 3, 0, "Portal Master - Level req Camp Antonidas(The Azure Span)"),
+(15, @GOSSIP_MENU+16, 2, 27, 20, 3, 0, "Portal Master - Level req Maruukai(Ohn'ahran Plains)"),
+(15, @GOSSIP_MENU+16, 1, 27, 10, 3, 0, "Portal Master - Level req The Concord Observatory(The Waking Shores)"),
+(15, @GOSSIP_MENU+16, 0, 27, 40, 3, 0, "Portal Master - Level req Valdrakken (Thaldraszus)"),
 -- Cities
 (15, @GOSSIP_MENU+17, 9, 27, 10, 3, 0, "Portal Master - Level req Dalaran"),
 (15, @GOSSIP_MENU+17, 10, 27, 10, 3, 0, "Portal Master - Level req Shattrath"),
 -- Pvp
-(15, @GOSSIP_MENU+18, 0, 27, 30, 3, 0, "Portal Master - Level req Gurubashi"),
+(15, @GOSSIP_MENU+18, 0, 27, 10, 3, 0, "Portal Master - Level req Gurubashi"),
 -- New starting Zone
 (15, @GOSSIP_MENU+19, 0, 27, 2, 3, 0, "Portal Master - Level req");
 
@@ -512,12 +495,6 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+10, 1, NULL, "Taelloch (The Ringing Deeps)", 0, 0, 0, 0, "Are you sure, that you want to go to Taelloch?"),
 (@GOSSIP_MENU+10, 2, NULL, "Mereldar (Hallowfall)", 0, 0, 0, 0, "Are you sure, that you want to go to Hallowfall?"),
 (@GOSSIP_MENU+10, 3, NULL, "Weaver's Lair(Azj-Kahet)", 0, 0, 0, 0, "Are you sure, that you want to go to The Weaver's Lair?"),
--- (@GOSSIP_MENU+10, 4, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 5, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 6, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 7, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 8, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
--- (@GOSSIP_MENU+10, 9, NULL, "The War Within", 0, 0, 0, 0, "Are you sure, that you want to go to The War Within?"),
 (@GOSSIP_MENU+10, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Pandaria
 (@GOSSIP_MENU+11, 0, NULL, "Sanctuaire des Deux Lunes", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Deux Lunes?"), -- Sanctuaire des deux lunes
@@ -574,10 +551,6 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+15, 3, NULL, "Ardenweald", 0, 0, 0, 0, "Are you sure, that you want to go to Ardenweald?"),
 (@GOSSIP_MENU+15, 4, NULL, "Revendreth", 0, 0, 0, 0, "Are you sure, that you want to go to Revendreth?"),
 (@GOSSIP_MENU+15, 5, NULL, "The Maw", 0, 0, 0, 0, "Are you sure, that you want to go to The Maw?"),
-/*(@GOSSIP_MENU+15, 6, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
-(@GOSSIP_MENU+15, 7, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
-(@GOSSIP_MENU+15, 8, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),
-(@GOSSIP_MENU+15, 9, NULL, "Shadowlands", 0, 0, 0, 0, "Are you sure, that you want to go to Shadowlands?"),*/
 (@GOSSIP_MENU+15, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Dragonflight
 (@GOSSIP_MENU+16, 0, NULL, "Valdrakken (Thaldraszus)", 0, 0, 0, 0, "Are you sure, that you want to go to Valdrakken?"),
@@ -587,9 +560,6 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+16, 4, NULL, "Old Weyrn Grounds(The Forbidden Reach)", 0, 0, 0, 0, "Are you sure, that you want to go to Old Weyrn Grounds?"),
 (@GOSSIP_MENU+16, 5, NULL, "Bel'ameth(Amirdrassil)", 0, 0, 0, 0, "Are you sure, that you want to go to Bel'ameth?"),
 (@GOSSIP_MENU+16, 6, NULL, "Dragonscale Basecamp(Zaralek Cavern)", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonscale Basecamp?"),
-/*(@GOSSIP_MENU+16, 7, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 8, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),
-(@GOSSIP_MENU+16, 9, NULL, "Dragonflight", 0, 0, 0, 0, "Are you sure, that you want to go to Dragonflight?"),*/
 (@GOSSIP_MENU+16, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 -- Viles et Capitales --
 (@GOSSIP_MENU+17, 1, NULL, "Stormwind", 0, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
@@ -749,23 +719,17 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 133, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 1, 0, 0, 62, 2601, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1024.496338, -4057.271973, 127.450256, 4.602788, "Taelloch"),
 (@ENTRY, 0, 134, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 2, 0, 0, 62, 2601, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1889.526611, 902.888611, 126.953232, 5.164327, "Mereldar"),
 (@ENTRY, 0, 135, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 3, 0, 0, 62, 2601, 0, 0, 0, 0, 0, 7, 0, 0, 0, -351.960938, -1401.111328, -1087.506348, 5.839779, "Weaver's Lair"),
--- (@ENTRY, 0, 136, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5560.23, -3211.66, 371.709, 5.55055, "Zone 5"),
--- (@ENTRY, 0, 137, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 5, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5614.67, 5818.86, -69.722, 3.60807, "Zone 6"),
--- (@ENTRY, 0, 138, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
--- (@ENTRY, 0, 139, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
--- (@ENTRY, 0, 140, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
--- (@ENTRY, 0, 141, 0, 62, 0, 100, 0, @GOSSIP_MENU+10, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Pandaria 
-(@ENTRY, 0, 142, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 0, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1581.477051, 918.753906, 473.700897, 6.224266, "Sanctuaire des deux lunes"), -- Sanctuaire des deux lunes Horde
-(@ENTRY, 0, 143, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 1, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 891.921082, 305.094269, 506.095520, 3.648135, "Sanctuaire des Sept étoiles"),-- Sanctuaire des Sept étoiles Alliance
-/*(@ENTRY, 0, 144, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
-(@ENTRY, 0, 145, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 3, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4017.35, -3403.85, 290, 5.35431, "Zone 4"),
-(@ENTRY, 0, 146, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5560.23, -3211.66, 371.709, 5.55055, "Zone 5"),
-(@ENTRY, 0, 147, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 5, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5614.67, 5818.86, -69.722, 3.60807, "Zone 6"),
-(@ENTRY, 0, 148, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
-(@ENTRY, 0, 149, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
-(@ENTRY, 0, 150, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 151, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),*/
+(@ENTRY, 0, 136, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 0, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1581.477051, 918.753906, 473.700897, 6.224266, "Sanctuaire des deux lunes"), -- Sanctuaire des deux lunes Horde
+(@ENTRY, 0, 137, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 1, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 891.921082, 305.094269, 506.095520, 3.648135, "Sanctuaire des Sept étoiles"),-- Sanctuaire des Sept étoiles Alliance
+/*(@ENTRY, 0, 138, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
+(@ENTRY, 0, 139, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 3, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4017.35, -3403.85, 290, 5.35431, "Zone 4"),
+(@ENTRY, 0, 140, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5560.23, -3211.66, 371.709, 5.55055, "Zone 5"),
+(@ENTRY, 0, 141, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 5, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5614.67, 5818.86, -69.722, 3.60807, "Zone 6"),
+(@ENTRY, 0, 142, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
+(@ENTRY, 0, 143, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
+(@ENTRY, 0, 144, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
+(@ENTRY, 0, 145, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),*/
 -- Draenor
 (@ENTRY, 0, 152, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 153, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
@@ -806,34 +770,15 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 185, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 3, 0, 0, 62, 2222, 0, 0, 0, 0, 0, 7, 0, 0, 0, -6927.196289, 884.558716, 5668.544434, 1.134904, "Ardenweald"),
 (@ENTRY, 0, 186, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 4, 0, 0, 62, 2222, 0, 0, 0, 0, 0, 7, 0, 0, 0, -2628.641846, 6034.142578, 4115.692871, 4.708455, "Revendreth"),
 (@ENTRY, 0, 187, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 5, 0, 0, 62, 2222, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4608.442871, 6795.189941, 4868.089844, 5.749121, "The Maw"),
-/*(@ENTRY, 0, 188, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 6, 0, 0, 62, 2222, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
-(@ENTRY, 0, 189, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
-(@ENTRY, 0, 190, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 191, 0, 62, 0, 100, 0, @GOSSIP_MENU+15, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),*/
 -- Dragonflight
-(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 115.639, -939.723, 836.586, 0, "Valdrakken"),
-(@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2934.35, 188.591, 498.596, 0, "The Concord Observatory"),
-(@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -620.498, 2198.33, 436.668, 0, "Maruukai"),
-(@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3817.34, 505.7, 647.829, 0, "Camp Antonidas"),
-(@ENTRY, 0, 196, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 4, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6510.56, -3318.14, 162.985, 0, "Old Weyrn Grounds"),
-(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1697.679688, 7147.415039, 200.854599, 0, "Bel'ameth"),
-(@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 2454, 0, 0, 0, 0, 0, 7, 0, 0, 0, -982.407410, 3150.312744, 44.202740, 0.891442, "Dragonscale Basecamp"),
--- (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
--- (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
--- (@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
+(@ENTRY, 0, 188, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 0, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 115.639, -939.723, 836.586, 0, "Valdrakken"),
+(@ENTRY, 0, 189, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 1, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2934.35, 188.591, 498.596, 0, "The Concord Observatory"),
+(@ENTRY, 0, 190, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -620.498, 2198.33, 436.668, 0, "Maruukai"),
+(@ENTRY, 0, 191, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3817.34, 505.7, 647.829, 0, "Camp Antonidas"),
+(@ENTRY, 0, 192, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 4, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6510.56, -3318.14, 162.985, 0, "Old Weyrn Grounds"),
+(@ENTRY, 0, 193, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1697.679688, 7147.415039, 200.854599, 0, "Bel'ameth"),
+(@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 2454, 0, 0, 0, 0, 0, 7, 0, 0, 0, -982.407410, 3150.312744, 44.202740, 0.891442, "Dragonscale Basecamp"),
 -- Pvp menu
-(@ENTRY, 0, 202, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
-(@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 0, "Teleporter script PvP"),
-(@ENTRY, 0, 204, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 2, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script PvP"),
-(@ENTRY, 0, 205, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 3, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script PvP"),
-(@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script PvP"),
-(@ENTRY, 0, 207, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 5, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script PvP"),
-(@ENTRY, 0, 208, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 6, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9869.91, 2493.58, 1315.88, 2.78897, "Teleporter script PvP"),
-(@ENTRY, 0, 209, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 7, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -4900.47, -962.585, 501.455, 5.40538, "Teleporter script PvP"),
-(@ENTRY, 0, 210, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 8, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3864.92, -11643.7, -137.644, 5.50862, "Teleporter script PvP"),
-(@ENTRY, 0, 211, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 9, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1274.45, 71.8601, 128.159, 2.80623, "Teleporter script pitons du PvP"),
-(@ENTRY, 0, 212, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 10, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1633.75, 240.167, -43.1034, 6.26128, "Teleporter script PvP"),
-(@ENTRY, 0, 213, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 11, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, 9738.28, -7454.19, 13.5605, 0.043914, "Teleporter script PvP"),
-
+(@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 -- New starting Zone
-(@ENTRY, 0, 214, 0, 62, 0, 100, 0, @GOSSIP_MENU+19, 0, 0, 0, 62, 2175, 0, 0, 0, 0, 0, 7, 0, 0, 0, -447.384033, -2160.622803, 0.340489, 0.195470, "Murloc Lair");
+(@ENTRY, 0, 196, 0, 62, 0, 100, 0, @GOSSIP_MENU+19, 0, 0, 0, 62, 2175, 0, 0, 0, 0, 0, 7, 0, 0, 0, -447.384033, -2160.622803, 0.340489, 0.195470, "Murloc Lair");
