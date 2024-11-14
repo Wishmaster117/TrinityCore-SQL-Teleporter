@@ -611,7 +611,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- Teleport scripts:
 INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
 (@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script Hurlevent"),
-(@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script Orgrimmar"),
+(@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 0.543025, "Teleporter script Orgrimmar"),
 (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script Baie du butin"),
 (@ENTRY, 0, 4, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 10, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script Shattrath"),
 (@ENTRY, 0, 5, 0, 62, 0, 100, 0, @GOSSIP_MENU+17, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script Dalaran"),
@@ -813,14 +813,14 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 194, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 2, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -620.498, 2198.33, 436.668, 0, "Maruukai"),
 (@ENTRY, 0, 195, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 3, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -3817.34, 505.7, 647.829, 0, "Camp Antonidas"),
 (@ENTRY, 0, 196, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 4, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6510.56, -3318.14, 162.985, 0, "Old Weyrn Grounds"),
-(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1697.679688, 7147.415039, 200.854599, 30, "Bel'ameth"),
+(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 5, 0, 0, 62, 2444, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1697.679688, 7147.415039, 200.854599, 0, "Bel'ameth"),
 (@ENTRY, 0, 198, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 6, 0, 0, 62, 2454, 0, 0, 0, 0, 0, 7, 0, 0, 0, -982.407410, 3150.312744, 44.202740, 0.891442, "Dragonscale Basecamp"),
 -- (@ENTRY, 0, 199, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
 -- (@ENTRY, 0, 200, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
 -- (@ENTRY, 0, 201, 0, 62, 0, 100, 0, @GOSSIP_MENU+16, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),
 -- Pvp menu
 (@ENTRY, 0, 202, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
-(@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 16.305311, "Teleporter script PvP"),
+(@ENTRY, 0, 203, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 1, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1579.580933, -4392.408203, 16.305311, 0, "Teleporter script PvP"),
 (@ENTRY, 0, 204, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 2, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script PvP"),
 (@ENTRY, 0, 205, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 3, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -1887.62, 5359.09, -12.4279, 4.40435, "Teleporter script PvP"),
 (@ENTRY, 0, 206, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5809.55, 503.975, 657.526, 2.38338, "Teleporter script PvP"),
