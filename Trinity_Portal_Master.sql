@@ -155,6 +155,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+7, 1, 27, 10, 3, 0, "Portal Master - Level req Zangarmarsh"),
 (15, @GOSSIP_MENU+7, 0, 27, 10, 3, 0, "Portal Master - Level req Hellfire Peninsula"),
 -- Kalimdor teleport level restrictions // Ajouter uldum
+(15, @GOSSIP_MENU+6, 19, 30, 15, 3, 0, "Portal Master - Level req Uldum"),
 (15, @GOSSIP_MENU+6, 18, 27, 15, 3, 0, "Portal Master - Level req Winterspring"),
 (15, @GOSSIP_MENU+6, 17, 27, 15, 3, 0, "Portal Master - Level req Silithus"),
 (15, @GOSSIP_MENU+6, 16, 27, 15, 3, 0, "Portal Master - Level req Un'Goro Crater"),
@@ -228,7 +229,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+3, 1, 27, 25, 3, 0, "Portal Master - Level req The Culling of Stratholme"),
 (15, @GOSSIP_MENU+3, 0, 27, 15, 3, 0, "Portal Master - Level req Azjol-Nerub"),
 -- BC Dungeons level restrictions
-(15, @GOSSIP_MENU+2, 5, 27, 10, 3, 0, "Portal Master - Level req Tempest Keep"),
+(15, @GOSSIP_MENU+2, 5, 27, 30, 3, 0, "Portal Master - Level req Tempest Keep"),
 (15, @GOSSIP_MENU+2, 4, 27, 25, 3, 0, "Portal Master - Level req Magisters' Terrace"),
 (15, @GOSSIP_MENU+2, 3, 27, 10, 3, 0, "Portal Master - Level req Hellfire Citadel"),
 (15, @GOSSIP_MENU+2, 2, 27, 10, 3, 0, "Portal Master - Level req Coilfang Reservoir"),
@@ -471,6 +472,7 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 (@GOSSIP_MENU+6, 16, NULL, "Un'Goro Crater", 0, 0, 0, 0, "Are you sure, that you want to go to Un'Goro Crater?"),
 (@GOSSIP_MENU+6, 17, NULL, "Silithus", 0, 0, 0, 0, "Are you sure, that you want to go to Silithus?"),
 (@GOSSIP_MENU+6, 18, NULL, "Winterspring", 0, 0, 0, 0, "Are you sure, that you want to go to Winterspring?"),
+(@GOSSIP_MENU+6, 19, NULL, "Uldum", 0, 0, 0, 0, "Are you sure, that you want to go to Uldum?"),
 (@GOSSIP_MENU+6, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
 (@GOSSIP_MENU+7, 0, NULL, "Hellfire Peninsula", 0, 0, 0, 0, "Are you sure, that you want to go to Hellfire Peninsula?"),
 (@GOSSIP_MENU+7, 1, NULL, "Zangarmarsh", 0, 0, 0, 0, "Are you sure, that you want to go to Zangarmarsh?"),
@@ -698,6 +700,7 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 (@ENTRY, 0, 112, 0, 62, 0, 100, 0, @GOSSIP_MENU+6, 16, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -6291.55, -1158.62, -258.138, 0.457099, "Teleporter script"),
 (@ENTRY, 0, 113, 0, 62, 0, 100, 0, @GOSSIP_MENU+6, 17, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -6815.25, 730.015, 40.9483, 2.39066, "Teleporter script"),
 (@ENTRY, 0, 114, 0, 62, 0, 100, 0, @GOSSIP_MENU+6, 18, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6658.57, -4553.48, 718.019, 5.18088, "Teleporter script"),
+(@ENTRY, 0, 197, 0, 62, 0, 100, 0, @GOSSIP_MENU+6, 19, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, -9565.059570, -925.044983, 100.353996, 3.106690, "Teleporter script Uldum"),
 (@ENTRY, 0, 115, 0, 62, 0, 100, 0, @GOSSIP_MENU+7, 0, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -207.335, 2035.92, 96.464, 1.59676, "Teleporter script"),
 (@ENTRY, 0, 116, 0, 62, 0, 100, 0, @GOSSIP_MENU+7, 1, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -220.297, 5378.58, 23.3223, 1.61718, "Teleporter script"),
 (@ENTRY, 0, 117, 0, 62, 0, 100, 0, @GOSSIP_MENU+7, 2, 0, 0, 62, 530, 0, 0, 0, 0, 0, 7, 0, 0, 0, -2266.23, 4244.73, 1.47728, 3.68426, "Teleporter script"),

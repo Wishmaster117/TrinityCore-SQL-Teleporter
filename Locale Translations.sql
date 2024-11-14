@@ -1556,6 +1556,18 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 (@GOSSIP_MENU+6, 18, 'zhCN', "冬泉谷", "您确定要去冬泉谷吗？"),
 (@GOSSIP_MENU+6, 18, 'zhTW', "冬泉谷", "你確定要去冬泉谷嗎？"),
 
+(@GOSSIP_MENU+6, 19, 'enUS', "Uldum", "Are you sure, that you want to go to Uldum?"),
+(@GOSSIP_MENU+6, 19, 'deDE', "Uldum", "Bist du sicher, dass du nach Uldum gehen möchtest?"),
+(@GOSSIP_MENU+6, 19, 'esES', "Uldum", "¿Estás seguro de que quieres ir a Uldum?"),
+(@GOSSIP_MENU+6, 19, 'esMX', "Uldum", "¿Estás seguro de que quieres ir a Uldum?"),
+(@GOSSIP_MENU+6, 19, 'frFR', "Uldum", "Êtes-vous sûr de vouloir aller à Uldum?"),
+(@GOSSIP_MENU+6, 19, 'itIT', "Uldum", "Sei sicuro di voler andare a Uldum?"),
+(@GOSSIP_MENU+6, 19, 'koKR', "울둠", "겨울손아귀로 가시겠습니까?"),
+(@GOSSIP_MENU+6, 19, 'ptBR', "Uldum", "Você tem certeza de que deseja ir para Uldum?"),
+(@GOSSIP_MENU+6, 19, 'ruRU', "Ульдум", "Вы уверены, что хотите отправиться в Ульдум?"),
+(@GOSSIP_MENU+6, 19, 'zhCN', "奥丹姆", "您确定要去冬泉谷吗？"),
+(@GOSSIP_MENU+6, 19, 'zhTW', "奥丹姆", "你確定要去冬泉谷嗎？"),
+
 (@GOSSIP_MENU+6, 50, 'enUS', "Back..", NULL),
 (@GOSSIP_MENU+6, 50, 'deDE', "Zurück..", NULL),
 (@GOSSIP_MENU+6, 50, 'esES', "Volver..", NULL),
