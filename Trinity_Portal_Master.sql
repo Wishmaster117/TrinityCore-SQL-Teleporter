@@ -268,6 +268,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU, 17, 27, 7, 3, 0, "Portal Master - Level req Classic Dungeons"),
 (15, @GOSSIP_MENU, 16, 27, 10, 3, 0, "Portal Master - Level req Northrend"),
 (15, @GOSSIP_MENU, 15, 27, 10, 3, 0, "Portal Master - Level req Outland"),
+(15, @GOSSIP_MENU, 2, 27, 10, 3, 0, "Portal Master - Level req PvP Zones"),
 -- Fin
 -- Ajout The War Within
 (15, @GOSSIP_MENU+10, 3, 27, 78, 3, 0, "Portal Master - Level req Weaver's Lair(Azj-Kahet)"),
