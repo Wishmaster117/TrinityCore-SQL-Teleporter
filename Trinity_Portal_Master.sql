@@ -90,14 +90,6 @@ INSERT INTO npc_text (`ID`, Probability0, `BroadcastTextID0`, `VerifiedBuild`) V
 
 -- Conditions for gossip option and menu factions : ConditionValue1 469 = Alliance, 67 = Horde , [SourceGroup = OptionID of gossip_menu_option table]
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, `Comment`) VALUES
--- (15, @GOSSIP_MENU, 1, 6, 469, "Stormwind"),
--- (15, @GOSSIP_MENU, 2, 6, 67, "Orgrimmar"),
--- (15, @GOSSIP_MENU, 3, 6, 469, "Darnassus"),
--- (15, @GOSSIP_MENU, 4, 6, 469, "Ironforge"),
--- (15, @GOSSIP_MENU, 5, 6, 469, "Exodar"),
--- (15, @GOSSIP_MENU, 6, 6, 67, "Thunder bluff"),
--- (15, @GOSSIP_MENU, 7, 6, 67, "Undercity"),
--- (15, @GOSSIP_MENU, 8, 6, 67, "Silvermoon city"),
 (15, @GOSSIP_MENU+1, 0, 6, 469, "Gnomeregan"),
 (15, @GOSSIP_MENU+1, 1, 6, 469, "The Deadmines"),
 (15, @GOSSIP_MENU+1, 2, 6, 469, "The Stockade"),
@@ -140,7 +132,6 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+17, 6, 6, 67, "Thunder bluff"),
 (15, @GOSSIP_MENU+17, 7, 6, 67, "Undercity"),
 (15, @GOSSIP_MENU+17, 8, 6, 67, "Silvermoon city");
--- End Capitals and cities
 
 -- Conditions for gossip option levels (SourceEntry /* Référence au numéro du menu dans  gossip_menu_option*/, ConditionTypeOrReference/* Niveau requis */)
 INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
