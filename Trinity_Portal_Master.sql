@@ -11,10 +11,10 @@ SET
 @NAME           := "Portal Master", -- NPC Name
 @SUBNAME        := "Where do you go ?", -- NPC Guild
 @MODEL          := 21572, -- New value: 86569 -- Original value: 21572
-@AURA           := "30540", -- "35766" = casting
-@TEXT_ID        := 900000000,
-@GOSSIP_MENU    := 200000000,
-@BROAD_TEXT     := 900000000,
+@AURA           := "30540", -- "35766" = casting (Visual effect of the NPC)
+@TEXT_ID        := 900000000, -- Don't change this
+@GOSSIP_MENU    := 200000000, -- Don't change this
+@BROAD_TEXT     := 900000000, -- Don't change this
 @SCALE          := 1, -- Scale of creature
 @VBUILD         := 57388;
 
