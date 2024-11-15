@@ -121,7 +121,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+6, 9, 6, 67, "Thousand Needles"),
 (15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Pandarie Horde
 (15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
-(15, @GOSSIP_MENU+11, 3, 6, 649, "Portal Master - Level req Pao'don Alliance"),
+(15, @GOSSIP_MENU+11, 3, 6, 469, "Portal Master - Level req Pao'don Alliance"),
 (15, @GOSSIP_MENU+11, 2, 6, 67, "Portal Master - Level req Rosée de Miel Horde"),
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 67, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 469, "For the Horde"),
