@@ -121,6 +121,8 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+6, 9, 6, 67, "Thousand Needles"),
 (15, @GOSSIP_MENU+11, 0, 6, 67, "Sanctuaire des deux lunes"), -- Pandarie Horde
 (15, @GOSSIP_MENU+11, 1, 6, 469, "Sanctuaire des sept étoiles"), -- Pandarie Alliance
+(15, @GOSSIP_MENU+11, 3, 6, 649, "Portal Master - Level req Pao'don Alliance"),
+(15, @GOSSIP_MENU+11, 2, 6, 67, "Portal Master - Level req Rosée de Miel Horde"),
 (14, @GOSSIP_MENU, @TEXT_ID+1, 6, 67, "For the Alliance"),
 (14, @GOSSIP_MENU, @TEXT_ID, 6, 469, "For the Horde"),
 -- Capitals and cities
@@ -257,7 +259,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+1, 0, 27, 10, 3, 0, "Portal Master - Level req Gnomeregan"),
 -- Main Cats level restrictions
 (15, @GOSSIP_MENU, 21, 27, 70, 3, 0, "Portal Master - Level req The War Within"),
-(15, @GOSSIP_MENU, 22, 27, 57, 3, 0, "Portal Master - Level req Pandaria"),
+(15, @GOSSIP_MENU, 22, 27, 23, 3, 0, "Portal Master - Level req Pandaria"),
 (15, @GOSSIP_MENU, 23, 27, 57, 3, 0, "Portal Master - Level req Draenor"),
 (15, @GOSSIP_MENU, 24, 27, 57, 3, 0, "Portal Master - Level req Legion"),
 (15, @GOSSIP_MENU, 25, 27, 57, 3, 0, "Portal Master - Level req BFA"),
@@ -277,16 +279,10 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 (15, @GOSSIP_MENU+10, 1, 27, 73, 3, 0, "Portal Master - Level req Taelloch (The Ringing Deeps"),
 (15, @GOSSIP_MENU+10, 0, 27, 70, 3, 0, "Portal Master - Level req Dornogal (Isle of Dorn)"),
 -- Pandaria
-/*(15, @GOSSIP_MENU+11, 9, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 8, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 7, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 6, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 5, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 4, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 3, 27, 77, 3, 0, "Portal Master - Level req"),
-(15, @GOSSIP_MENU+11, 2, 27, 77, 3, 0, "Portal Master - Level req"),*/
-(15, @GOSSIP_MENU+11, 1, 27, 77, 3, 0, "Portal Master - Level req"), -- Sanctuaire des Sept étoiles Alliance
-(15, @GOSSIP_MENU+11, 0, 27, 77, 3, 0, "Portal Master - Level req"), -- Sanctuaire des deux lunes Horde
+(15, @GOSSIP_MENU+11, 3, 27, 23, 3, 0, "Portal Master - Level req Pao'don Alliance"),
+(15, @GOSSIP_MENU+11, 2, 27, 23, 3, 0, "Portal Master - Level req Rosée de Miel Horde"),
+(15, @GOSSIP_MENU+11, 1, 27, 23, 3, 0, "Portal Master - Level req Sanctuaire des Sept étoiles Alliance"), -- Sanctuaire des Sept étoiles Alliance
+(15, @GOSSIP_MENU+11, 0, 27, 23, 3, 0, "Portal Master - Level req Sanctuaire des deux lunes Horde"), -- Sanctuaire des deux lunes Horde
 -- Draenor
 (15, @GOSSIP_MENU+12, 9, 27, 77, 3, 0, "Portal Master - Level req"), 
 (15, @GOSSIP_MENU+12, 8, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -502,14 +498,8 @@ INSERT INTO gossip_menu_option (MenuID, OptionID, OverrideIconID, OptionText, Ac
 -- Pandaria
 (@GOSSIP_MENU+11, 0, NULL, "Sanctuaire des Deux Lunes", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Deux Lunes?"), -- Sanctuaire des deux lunes
 (@GOSSIP_MENU+11, 1, NULL, "Sanctuaire des Sept étoiles", 0, 0, 0, 0, "Are you sure, that you want to go to Sanctuaire des Sept étoiles?"), -- Sanctuaire des Sept étoiles Alliance
-/*(@GOSSIP_MENU+11, 2, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 3, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 4, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 5, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 6, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 7, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 8, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),
-(@GOSSIP_MENU+11, 9, NULL, "Pandaria", 0, 0, 0, 0, "Are you sure, that you want to go to Pandaria?"),*/
+(@GOSSIP_MENU+11, 2, NULL, "Honeydew Village", 0, 0, 0, 0, "Are you sure, that you want to go to Honeydew Village?"),
+(@GOSSIP_MENU+11, 3, NULL, "Paw'don Village", 0, 0, 0, 0, "Are you sure, that you want to go to Paw'don Village?"),
 (@GOSSIP_MENU+11, 50, NULL, "Back..", @GOSSIP_MENU, 0, 0, 0, NULL),
   -- Draenor
 (@GOSSIP_MENU+12, 0, NULL, "Draenor", 0, 0, 0, 0, "Are you sure, that you want to go to Draenor?"),
@@ -726,14 +716,8 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 -- Pandaria 
 (@ENTRY, 0, 136, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 0, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1581.477051, 918.753906, 473.700897, 6.224266, "Sanctuaire des deux lunes"), -- Sanctuaire des deux lunes Horde
 (@ENTRY, 0, 137, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 1, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 891.921082, 305.094269, 506.095520, 3.648135, "Sanctuaire des Sept étoiles"),-- Sanctuaire des Sept étoiles Alliance
-/*(@ENTRY, 0, 138, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 2, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2678.17, 891.826, 4.37494, 0.101121, "Zone 3"),
-(@ENTRY, 0, 139, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 3, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4017.35, -3403.85, 290, 5.35431, "Zone 4"),
-(@ENTRY, 0, 140, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 4, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5560.23, -3211.66, 371.709, 5.55055, "Zone 5"),
-(@ENTRY, 0, 141, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 5, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5614.67, 5818.86, -69.722, 3.60807, "Zone 6"),
-(@ENTRY, 0, 142, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 6, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 5411.17, -966.37, 167.082, 1.57167, "Zone 7"),
-(@ENTRY, 0, 143, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 7, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6120.46, -1013.89, 408.39, 5.12322, "Zone 8"),
-(@ENTRY, 0, 144, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 8, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8323.28, 2763.5, 655.093, 2.87223, "Zone 9"),
-(@ENTRY, 0, 145, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 9, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 4522.23, 2828.01, 389.975, 0.215009, "Zone 10"),*/
+(@ENTRY, 0, 138, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 2, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, 3013.943604, -561.714844, 251.631882, 4.730609, "Rosée de Miel Horde"),
+(@ENTRY, 0, 139, 0, 62, 0, 100, 0, @GOSSIP_MENU+11, 3, 0, 0, 62, 870, 0, 0, 0, 0, 0, 7, 0, 0, 0, -268.999146, -1749.277344, 61.838829, 0.010637, "Pao'don Alliance"),
 -- Draenor
 (@ENTRY, 0, 152, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 0, 0, 0, 62, 2552, 0, 0, 0, 0, 0, 7, 0, 0, 0, 2871.7, -2444.6, 266.761, 3.93463, "Dornogal"),
 (@ENTRY, 0, 153, 0, 62, 0, 100, 0, @GOSSIP_MENU+12, 1, 0, 0, 62, 571, 0, 0, 0, 0, 0, 7, 0, 0, 0, 682.848, -3978.3, 230.161, 1.54207, "Zone 2"),
