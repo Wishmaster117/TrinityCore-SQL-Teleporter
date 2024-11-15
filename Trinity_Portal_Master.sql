@@ -733,4 +733,4 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 -- Pvp menu
 (@ENTRY, 0, 171, 0, 62, 0, 100, 0, @GOSSIP_MENU+18, 0/*position from gossipMenuOption*/, 0, 0, 62, 0/*map*/, 0, 0, 0, 0, 0, 7, 0, 0, 0, -13181.8, 339.356, 42.9805, 1.18013, "Teleporter script Gurubashi"),
 -- New starting Zone
-(@ENTRY, 0, 172, 0, 62, 0, 100, 0, @GOSSIP_MENU+19, 0, 0, 0, 62, 2175, 0, 0, 0, 0, 0, 7, 0, 0, 0, -447.384033, -2160.622803, 0.340489, 0.195470, "Murloc Lair");
+(@ENTRY, 0, 172, 0, 62, 0, 100, 0, @GOSSIP_MENU+19, 0, 0, 0, 62, 2175, 0, 0, 0, 0, 0, 7, 0, 0, 0, -441.209320, -2610.271729, 0.497681, 0.266132, "Murloc Lair");
