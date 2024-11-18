@@ -5,7 +5,7 @@ By Wishmaster
 
 -- AUTO ADD A NEW CATEGORY WITH THE FIRST SUBMENU --
 SET
-@VBUILD          := 57388, -- Build Version
+@VBUILD          := -57388, -- Build Version
 @ENTRY           := 900000000, -- NPC ID
 @GOSSIP_MENU     := 200000000, -- Don't change this
 @MAX_GOSSIP_MENU := 200000999, -- Don't change this
