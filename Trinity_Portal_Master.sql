@@ -16,7 +16,7 @@ SET
 @GOSSIP_MENU    := 200000000, -- Don't change this
 @BROAD_TEXT     := 900000000, -- Don't change this
 @SCALE          := 1, -- Scale of creature
-@VBUILD         := 57388;
+@VBUILD         := -57388;
 
 -- Deleting code
 DELETE FROM creature_template WHERE entry = @ENTRY;
