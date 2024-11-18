@@ -5,7 +5,7 @@ By Wishmaster
 
 -- AUTO ADD A NEW CATEGORY WITH THE FIRST SUBMENU FOR TABLE HOTFIXES--
 SET
-@VBUILD         := 57388, -- Build Version
+@VBUILD         := -57388, -- Build Version
 @TEXT_ID        := 900000000, -- Don't change this
 @MAX_TEXT_ID    := 900000999, -- Don't change this
 @BROADCAST_TEXT := "Put here the text will appear at the header of téléportation submenu"; -- Header Of The category
