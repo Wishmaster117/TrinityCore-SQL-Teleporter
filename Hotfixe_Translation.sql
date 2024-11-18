@@ -2,7 +2,7 @@
 
 SET
 @BROAD_TEXT     := 900000000,
-@VBUILD         := 57388;
+@VBUILD         := -57388;
 
 -- Deleting code
 DELETE FROM broadcast_text WHERE ID BETWEEN @BROAD_TEXT AND @BROAD_TEXT+999;
