@@ -3,7 +3,7 @@
 SET
 @ENTRY          := 900000000, -- Entry NPC
 @GOSSIP_MENU    := 200000000,
-@VBUILD         := 57388;
+@VBUILD         := -57388;
 
 -- DELETE FROM creature_text_locale WHERE CreatureID = @ENTRY;
 DELETE FROM gossip_menu_option_locale WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+999;
