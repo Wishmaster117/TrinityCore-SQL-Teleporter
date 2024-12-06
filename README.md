@@ -4,7 +4,7 @@ This is based upon the excellent work from <a href="https://rochet2.github.io/">
 
 1) First run <b>Trinity_Portal_Master.sql</b> and <b>Locale Translations.sql</b> in the World Database.<br/>
 2) Run <b>Hotfixe_Translation.sql</b> in the Hotfixes Database.<br/>
-3) Add NPC's where you want to have teleporters (.npc add 9000000000)<br/>
+3) Add NPC's where you want to have teleporters (.npc add 900000000)<br/>
 
 After thar i provide several sql scripts to auto add teleportations locations:<br/>
 
